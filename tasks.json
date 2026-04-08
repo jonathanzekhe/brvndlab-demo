@@ -1,0 +1,222 @@
+{
+  "updated_at": "2026-04-08T14:15:00+02:00",
+  "total": 27,
+  "tasks": [
+    {
+      "id": 1,
+      "ts": "2026-04-08T02:02",
+      "category": "design",
+      "module": "Calendrier",
+      "title": "Read-only publication calendar view",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "ts": "2026-04-08T02:16",
+      "category": "design",
+      "module": "Calendrier",
+      "title": "Dark mode calendar mockup",
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "ts": "2026-04-08T03:07",
+      "category": "design",
+      "module": "Contenu",
+      "title": "5-column kanban with integrated chat",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "ts": "2026-04-08T03:28",
+      "category": "design",
+      "module": "Dashboard client",
+      "title": "Morning dashboard with bento grid",
+      "status": "done"
+    },
+    {
+      "id": 5,
+      "ts": "2026-04-08T03:55",
+      "category": "design",
+      "module": "Coach",
+      "title": "Coach-client messaging with Chat/Note toggle",
+      "status": "done"
+    },
+    {
+      "id": 6,
+      "ts": "2026-04-08T04:05",
+      "category": "design",
+      "module": "Coach",
+      "title": "Coach Dashboard with portfolio management",
+      "status": "done"
+    },
+    {
+      "id": 7,
+      "ts": "2026-04-08T04:25",
+      "category": "design",
+      "module": "Coach",
+      "title": "Coach cockpit with AI recommendations",
+      "status": "done"
+    },
+    {
+      "id": 8,
+      "ts": "2026-04-08T04:34",
+      "category": "design",
+      "module": "Coach",
+      "title": "Mémoire dorée vault UI",
+      "status": "done"
+    },
+    {
+      "id": 9,
+      "ts": "2026-04-08T04:46",
+      "category": "design",
+      "module": "Coach",
+      "title": "Fiche membre with Avant/Pendant/Après slide",
+      "status": "done"
+    },
+    {
+      "id": 10,
+      "ts": "2026-04-08T11:55",
+      "category": "design",
+      "module": "Recherche",
+      "title": "Recherche mockup 7 écrans avec radar FR+EN",
+      "status": "done"
+    },
+    {
+      "id": 11,
+      "ts": "2026-04-08T12:15",
+      "category": "design",
+      "module": "Recherche",
+      "title": "Ajout galerie thumbnails qui convertissent",
+      "status": "done"
+    },
+    {
+      "id": 12,
+      "ts": "2026-04-08T12:40",
+      "category": "design",
+      "module": "Analytics",
+      "title": "Analytics mockup 10 écrans complets",
+      "status": "done"
+    },
+    {
+      "id": 13,
+      "ts": "2026-04-08T12:55",
+      "category": "design",
+      "module": "Analytics",
+      "title": "Timeline moments clés publication",
+      "status": "done"
+    },
+    {
+      "id": 14,
+      "ts": "2026-04-08T13:05",
+      "category": "design",
+      "module": "Analytics",
+      "title": "Signaux de valeur (saves, reposts, partages)",
+      "status": "done"
+    },
+    {
+      "id": 15,
+      "ts": "2026-04-08T13:25",
+      "category": "design",
+      "module": "Veille",
+      "title": "Veille mockup 8 écrans observation pure",
+      "status": "done"
+    },
+    {
+      "id": 16,
+      "ts": "2026-04-08T13:40",
+      "category": "design",
+      "module": "Veille",
+      "title": "Alertes thématiques (vagues, angles, hooks)",
+      "status": "done"
+    },
+    {
+      "id": 17,
+      "ts": "2026-04-08T13:50",
+      "category": "design",
+      "module": "Veille",
+      "title": "Cartographie stratégique 2 axes",
+      "status": "done"
+    },
+    {
+      "id": 18,
+      "ts": "2026-04-08T14:00",
+      "category": "memory",
+      "module": "Rules",
+      "title": "Règle Radar FR+EN scellée",
+      "status": "done"
+    },
+    {
+      "id": 19,
+      "ts": "2026-04-08T14:00",
+      "category": "memory",
+      "module": "Rules",
+      "title": "Règle transcripts toujours reformatés",
+      "status": "done"
+    },
+    {
+      "id": 20,
+      "ts": "2026-04-08T14:00",
+      "category": "memory",
+      "module": "Rules",
+      "title": "Règle live status messages",
+      "status": "done"
+    },
+    {
+      "id": 21,
+      "ts": "2026-04-08T14:00",
+      "category": "memory",
+      "module": "Rules",
+      "title": "Règle séparation stricte des modules",
+      "status": "done"
+    },
+    {
+      "id": 22,
+      "ts": "2026-04-08T14:00",
+      "category": "memory",
+      "module": "Rules",
+      "title": "Règle création cross-module via modal",
+      "status": "done"
+    },
+    {
+      "id": 23,
+      "ts": "2026-04-08T14:05",
+      "category": "deploy",
+      "module": "Demo",
+      "title": "Repo brvndlab-demo créé sur GitHub",
+      "status": "done"
+    },
+    {
+      "id": 24,
+      "ts": "2026-04-08T14:08",
+      "category": "deploy",
+      "module": "Demo",
+      "title": "Page d'index premium des 66 mockups",
+      "status": "done"
+    },
+    {
+      "id": 25,
+      "ts": "2026-04-08T14:12",
+      "category": "deploy",
+      "module": "Demo",
+      "title": "Déploiement Vercel production READY",
+      "status": "done"
+    },
+    {
+      "id": 26,
+      "ts": "2026-04-08T14:18",
+      "category": "deploy",
+      "module": "Demo",
+      "title": "Correction esthétique index (noir profond, font-light)",
+      "status": "done"
+    },
+    {
+      "id": 27,
+      "ts": "2026-04-08T14:20",
+      "category": "milestone",
+      "module": "Chantier A",
+      "title": "Présentation équipe réussie, démo validée",
+      "status": "done"
+    }
+  ]
+}
