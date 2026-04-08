@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brvndlab — Module Veille</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #EEF0F4;
+            color: #1A1A2E;
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .frosted {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .text-orange-brand { color: #f97316; }
+        .bg-orange-brand { background-color: #f97316; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="antialiased pb-20">
+
+    <div class="max-w-7xl mx-auto px-6 py-12 space-y-20">
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 1</span>
+                <h2 class="text-sm font-semibold text-slate-400">Header et 2 onglets</h2>
+            </div>
+
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-[#1A1A2E]">Veille</h1>
+                    <p class="text-[13px] text-[#6B7280] mt-1">On regarde ce que font les autres, pour que tu n'aies pas à le faire</p>
+                </div>
+                <div class="flex gap-1 bg-slate-200/50 p-1 rounded-xl">
+                    <button class="bg-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2 shadow-sm uppercase tracking-wider">
+                        Concurrents <span class="bg-orange-50 text-[#f97316] px-1.5 py-0.5 rounded text-[10px]">8</span>
+                    </button>
+                    <button class="px-4 py-2 rounded-lg text-xs font-bold text-slate-500 flex items-center gap-2 uppercase tracking-wider hover:text-slate-700 transition-colors">
+                        Références <span class="bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded text-[10px]">14</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 pb-4 border-b border-slate-200">
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Plateforme</span>
+                    <select class="bg-transparent text-xs font-semibold focus:outline-none cursor-pointer">
+                        <option>Tous</option>
+                        <option>YouTube</option>
+                        <option>Instagram</option>
+                        <option>TikTok</option>
+                    </select>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Période</span>
+                    <div class="flex gap-3 text-xs font-semibold">
+                        <span class="text-[#f97316] cursor-pointer">7j</span>
+                        <span class="text-slate-400 cursor-pointer hover:text-slate-600">30j</span>
+                        <span class="text-slate-400 cursor-pointer hover:text-slate-600">3 mois</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Langue</span>
+                    <select class="bg-transparent text-xs font-semibold focus:outline-none cursor-pointer">
+                        <option>Les deux</option>
+                        <option>Francophone</option>
+                        <option>Anglophone</option>
+                    </select>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Signal</span>
+                    <select class="bg-transparent text-xs font-semibold focus:outline-none cursor-pointer">
+                        <option>Tout</option>
+                        <option>Pics viraux</option>
+                        <option>Nouveaux sujets</option>
+                        <option>Patterns similaires</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 2</span>
+                <h2 class="text-sm font-semibold text-slate-400">Résumé hebdo en langage naturel</h2>
+            </div>
+
+            <div class="bg-[#1A1A2E] rounded-[28px] p-8 shadow-2xl relative overflow-hidden text-white">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="radar" class="w-32 h-32 animate-pulse"></i>
+                </div>
+
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="p-2 bg-orange-500 rounded-lg">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">Cette semaine dans ton radar</h3>
+                </div>
+
+                <div class="space-y-6 relative z-10">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 p-1 bg-white/10 rounded"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-orange-400"></i></div>
+                        <p class="text-[13px] text-slate-300 leading-relaxed font-medium">3 concurrents ont publié sur le pricing cette semaine, on observe un signal de vague thématique forte.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 p-1 bg-white/10 rounded"><i data-lucide="award" class="w-3.5 h-3.5 text-blue-400"></i></div>
+                        <p class="text-[13px] text-slate-300 leading-relaxed font-medium">Ali Abdaal vient de dépasser 1.2M sur sa vidéo de productivité, son meilleur score du mois en cours.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 p-1 bg-white/10 rounded"><i data-lucide="users" class="w-3.5 h-3.5 text-emerald-400"></i></div>
+                        <p class="text-[13px] text-slate-300 leading-relaxed font-medium">Nouveau dans ton radar, Thomas Frank a sorti une série de 3 vidéos sur les frameworks de décision.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 p-1 bg-white/10 rounded"><i data-lucide="layers" class="w-3.5 h-3.5 text-violet-400"></i></div>
+                        <p class="text-[13px] text-slate-300 leading-relaxed font-medium">Olivier Roland a changé son pattern de titre, tous ses titres récents commencent par un chiffre.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 p-1 bg-white/10 rounded"><i data-lucide="zap" class="w-3.5 h-3.5 text-yellow-400"></i></div>
+                        <p class="text-[13px] text-slate-300 leading-relaxed font-medium">Chris Williamson a fait une vidéo sur un sujet absent de ton Brand OS, opportunité libre en francophone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 3</span>
+                <h2 class="text-sm font-semibold text-slate-400">Feed chronologique principal</h2>
+            </div>
+
+            <div class="mb-6 flex justify-between items-center">
+                <h3 class="text-sm font-bold text-[#1A1A2E]">Publications récentes</h3>
+                <span class="text-[11px] text-[#6B7280] font-medium uppercase tracking-wider">24 nouvelles publications cette semaine</span>
+            </div>
+
+            <div class="grid gap-4">
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <span class="bg-orange-50 text-[#f97316] text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Pic viral détecté</span>
+                    </div>
+                    <div class="w-48 h-28 rounded-2xl bg-gradient-to-br from-slate-800 to-[#1A1A2E] flex items-center justify-center relative overflow-hidden flex-shrink-0 shadow-inner">
+                        <span class="text-yellow-400 font-black text-lg tracking-tighter drop-shadow-lg">4H / DAY</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-[10px] text-white font-bold">AA</div>
+                                <span class="text-xs font-bold">Ali Abdaal</span>
+                                <span class="bg-blue-50 text-blue-600 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Référence</span>
+                                <span class="bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">EN</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">How I built a $5M business working 4h/day</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 6h</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">1.2M vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">8.4% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="w-48 h-28 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-white font-black text-lg tracking-tighter drop-shadow-lg">3 ERREURS</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 flex items-center justify-center text-[10px] text-white font-bold">OR</div>
+                                <span class="text-xs font-bold">Olivier Roland</span>
+                                <span class="bg-orange-50 text-[#f97316] rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Concurrent</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">FR</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">3 erreurs que j'ai faites à 10k/mois</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> hier</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">67k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">5.2% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Sujet inédit</span>
+                    </div>
+                    <div class="w-48 h-28 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-white font-black text-base tracking-tighter drop-shadow-lg">FRAMEWORK</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-white font-bold">TF</div>
+                                <span class="text-xs font-bold">Thomas Frank</span>
+                                <span class="bg-blue-50 text-blue-600 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Référence</span>
+                                <span class="bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">EN</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">The 3-Part Decision Framework</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 2j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">340k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">6.8% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="w-48 h-28 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-white font-black text-base tracking-tighter drop-shadow-lg">1 MILLION</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-fuchsia-500 to-orange-400 flex items-center justify-center text-[10px] text-white font-bold">YD</div>
+                                <span class="text-xs font-bold">Yomi Denzel</span>
+                                <span class="bg-orange-50 text-[#f97316] rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Concurrent</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">FR</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">Comment j'ai passé mon premier million</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram Reel</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 2j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">145k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">9.1% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-violet-50 text-violet-600 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Pattern similaire à toi</span>
+                    </div>
+                    <div class="w-48 h-28 rounded-2xl bg-gradient-to-br from-zinc-900 to-slate-800 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner border-l-4 border-yellow-400">
+                        <span class="text-white font-black text-base tracking-tighter drop-shadow-lg">PRICING</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-zinc-800 flex items-center justify-center text-[10px] text-zinc-300 font-bold">CW</div>
+                                <span class="text-xs font-bold">Chris Williamson</span>
+                                <span class="bg-blue-50 text-blue-600 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Référence</span>
+                                <span class="bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">EN</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">Why most coaches undercharge</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 3j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">540k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">7.2% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="w-48 h-28 rounded-2xl bg-slate-100 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-[#1A1A2E] font-black text-base tracking-tighter">NEURO</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center text-[10px] text-slate-700 font-bold">SL</div>
+                                <span class="text-xs font-bold">Stan Leloup</span>
+                                <span class="bg-orange-50 text-[#f97316] rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Concurrent</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">FR</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">Le neuromarketing appliqué aux offres</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 4j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">98k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">4.8% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-orange-50 text-[#f97316] text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">Meilleur score de la semaine</span>
+                    </div>
+                    <div class="w-48 h-28 rounded-2xl bg-black flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-white font-black text-base tracking-tighter drop-shadow-lg">OS</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-zinc-900 flex items-center justify-center text-[10px] text-white font-bold">DK</div>
+                                <span class="text-xs font-bold">Dan Koe</span>
+                                <span class="bg-blue-50 text-blue-600 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Référence</span>
+                                <span class="bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">EN</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">The solopreneur operating system</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="youtube" class="w-3.5 h-3.5"></i> YouTube</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 5j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">680k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">6.4% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted rounded-[28px] p-5 shadow-xl shadow-slate-200/50 flex gap-6 relative group">
+                    <div class="w-48 h-28 rounded-2xl bg-pink-50 flex items-center justify-center relative flex-shrink-0 overflow-hidden shadow-inner">
+                        <span class="text-pink-600 font-black text-xl tracking-tighter">NON!</span>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between py-1">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-6 h-6 rounded-full bg-pink-200 flex items-center justify-center text-[10px] text-pink-700 font-bold">NR</div>
+                                <span class="text-xs font-bold">Nina Ramen</span>
+                                <span class="bg-orange-50 text-[#f97316] rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Concurrent</span>
+                                <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">FR</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#1A1A2E] leading-snug">Freelance arrête de brader</h4>
+                            <div class="flex items-center gap-4 mt-2 text-[#9CA3AF]">
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="instagram" class="w-3.5 h-3.5"></i> Instagram Reel</div>
+                                <div class="flex items-center gap-1.5 text-[11px]"><i data-lucide="clock" class="w-3.5 h-3.5"></i> il y a 6j</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex gap-5">
+                                <span class="text-[11px] font-semibold text-slate-400">82k vues</span>
+                                <span class="text-[11px] font-semibold text-slate-400">7.8% eng.</span>
+                            </div>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-[#f97316] flex items-center gap-1 transition-colors">
+                                Voir l'analyse dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 4</span>
+                <h2 class="text-sm font-semibold text-slate-400">Liste des personnes surveillées</h2>
+            </div>
+
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 md:col-span-7 space-y-10">
+                    <div>
+                        <h3 class="text-sm font-bold text-[#1A1A2E] mb-4 flex items-center gap-2">
+                            Concurrents <span class="bg-orange-50 text-[#f97316] px-1.5 py-0.5 rounded text-[10px]">8</span>
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="frosted p-3 rounded-2xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-xs font-bold text-orange-600">OR</div>
+                                    <div>
+                                        <p class="text-xs font-bold">Olivier Roland</p>
+                                        <p class="text-[10px] text-slate-400">Blogueur business français, 47 pubs scannées</p>
+                                    </div>
+                                </div>
+                                <div class="text-right flex items-center gap-4">
+                                    <span class="text-[10px] font-medium text-slate-400">il y a 1j</span>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-fuchsia-500 to-orange-400 flex items-center justify-center text-xs font-bold text-white">YD</div>
+                                    <div>
+                                        <p class="text-xs font-bold">Yomi Denzel</p>
+                                        <p class="text-[10px] text-slate-400">E-commerce et branding, 31 pubs scannées</p>
+                                    </div>
+                                </div>
+                                <div class="text-right flex items-center gap-4">
+                                    <span class="text-[10px] font-medium text-slate-400">il y a 2j</span>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">SL</div>
+                                    <div>
+                                        <p class="text-xs font-bold">Stan Leloup</p>
+                                        <p class="text-[10px] text-slate-400">Neuromarketing, 22 pubs scannées</p>
+                                    </div>
+                                </div>
+                                <div class="text-right flex items-center gap-4">
+                                    <span class="text-[10px] font-medium text-slate-400">il y a 4j</span>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-xs font-bold text-pink-700">NR</div>
+                                    <div>
+                                        <p class="text-xs font-bold">Nina Ramen</p>
+                                        <p class="text-[10px] text-slate-400">Copywriting freelance, 18 pubs scannées</p>
+                                    </div>
+                                </div>
+                                <div class="text-right flex items-center gap-4">
+                                    <span class="text-[10px] font-medium text-slate-400">il y a 6j</span>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center justify-between opacity-70">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">CA</div>
+                                    <div>
+                                        <p class="text-xs font-bold">Cédric Annicette</p>
+                                        <p class="text-[10px] text-slate-400">Business immobilier, 12 pubs scannées</p>
+                                    </div>
+                                </div>
+                                <div class="text-right flex items-center gap-4">
+                                    <span class="text-[10px] font-medium text-slate-400">1 semaine</span>
+                                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+                                </div>
+                            </div>
+                            <p class="text-center pt-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">+ 3 autres concurrents</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-bold text-[#1A1A2E] mb-4 flex items-center gap-2">
+                            Références <span class="bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded text-[10px]">14</span>
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">AA</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Ali Abdaal</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">Productivity</p>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold text-white">AH</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Alex Hormozi</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">High ticket</p>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-zinc-300">CW</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Chris Williamson</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">Modern Wisdom</p>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-xs font-bold text-white">DK</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Dan Koe</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">Solopreneur</p>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">TF</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Thomas Frank</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">College info geek</p>
+                                </div>
+                            </div>
+                            <div class="frosted p-3 rounded-2xl flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold text-blue-800">JW</div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold truncate">Justin Welsh</p>
+                                    <p class="text-[10px] text-slate-400 italic truncate">LinkedIn solo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center pt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">+ 8 autres références surveillées</p>
+                    </div>
+                </div>
+
+                <div class="col-span-12 md:col-span-5">
+                    <div class="frosted p-6 rounded-[28px] border-2 border-dashed border-slate-200/50 flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="plus" class="w-5 h-5 text-orange-brand"></i>
+                        </div>
+                        <h4 class="text-sm font-bold mb-1">Ajouter à surveiller</h4>
+                        <p class="text-[11px] text-[#6B7280] mb-4 leading-relaxed">Colle une URL YouTube, Instagram ou TikTok, on s'occupe du reste.</p>
+
+                        <input type="text" placeholder="https://youtube.com/@username..." class="w-full bg-slate-100/50 border-none rounded-xl px-4 py-3 text-xs mb-4 focus:ring-1 focus:ring-orange-200 outline-none">
+
+                        <div class="grid grid-cols-2 gap-2 w-full">
+                            <button class="bg-orange-brand text-white text-[10px] font-bold py-2.5 rounded-lg uppercase tracking-wide px-2">Concurrent</button>
+                            <button class="bg-[#1A1A2E] text-white text-[10px] font-bold py-2.5 rounded-lg uppercase tracking-wide px-2">Référence</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 5</span>
+                <h2 class="text-sm font-semibold text-slate-400">Alertes proactives dans le feed</h2>
+            </div>
+
+            <p class="text-[13px] text-slate-500 mb-6 max-w-2xl">On ne te dit pas "Untel a fait un score", on te dit quels sujets, angles, hooks et thèmes vibrent dans ton écosystème en ce moment.</p>
+
+            <div class="space-y-3">
+                <div class="frosted p-5 rounded-[28px] flex gap-5 border-l-4 border-l-orange-500">
+                    <div class="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="trending-up" class="w-5 h-5 text-orange-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="text-xs font-bold text-orange-500 uppercase tracking-wide mb-1">Vague thématique</h4>
+                            <span class="text-[10px] text-slate-400">Cette semaine</span>
+                        </div>
+                        <p class="text-[13px] text-slate-600 leading-relaxed font-medium">Le sujet <span class="font-bold text-[#1A1A2E]">"fixation de prix en consulting"</span> explose sur ta cible. 3 vidéos ont dépassé 500k vues en 7 jours, dont 2 anglophones et 1 francophone. La vague est clairement en train de monter sur ton écosystème.</p>
+                        <div class="mt-3 flex items-center gap-3">
+                            <span class="text-[10px] font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded-full uppercase">3 vidéos · 1.6M vues cumulées</span>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-orange-500 flex items-center gap-1">
+                                Creuser dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted p-5 rounded-[28px] flex gap-5 border-l-4 border-l-emerald-500">
+                    <div class="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="lightbulb" class="w-5 h-5 text-emerald-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-1">Angle sous-exploité</h4>
+                            <span class="text-[10px] text-slate-400">Hier</span>
+                        </div>
+                        <p class="text-[13px] text-slate-600 leading-relaxed font-medium">L'angle <span class="font-bold text-[#1A1A2E]">"psychologie du pricing"</span> est traité abondamment en anglophone (4 vidéos au-dessus de 300k vues sur 30 jours) mais aucun créateur francophone ne l'a encore adapté. Opportunité libre, pas de concurrence directe.</p>
+                        <div class="mt-3 flex items-center gap-3">
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full uppercase">4 vidéos EN · 0 FR</span>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-emerald-600 flex items-center gap-1">
+                                Creuser dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted p-5 rounded-[28px] flex gap-5 border-l-4 border-l-violet-500">
+                    <div class="w-10 h-10 bg-violet-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="zap" class="w-5 h-5 text-violet-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="text-xs font-bold text-violet-600 uppercase tracking-wide mb-1">Hook qui résonne</h4>
+                            <span class="text-[10px] text-slate-400">il y a 2j</span>
+                        </div>
+                        <p class="text-[13px] text-slate-600 leading-relaxed font-medium">Les vidéos qui commencent par <span class="font-bold text-[#1A1A2E]">"Arrêtez de..."</span> font 2.3x la performance moyenne cette semaine. 4 créateurs différents l'utilisent sur 3 sujets différents, le hook fonctionne transversalement, pas juste sur une niche.</p>
+                        <div class="mt-3 flex items-center gap-3">
+                            <span class="text-[10px] font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded-full uppercase">2.3x la moyenne · 4 créateurs</span>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-violet-600 flex items-center gap-1">
+                                Creuser dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frosted p-5 rounded-[28px] flex gap-5 border-l-4 border-l-blue-500">
+                    <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="target" class="w-5 h-5 text-blue-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="text-xs font-bold text-blue-600 uppercase tracking-wide mb-1">Thème qui parle à ton ICP</h4>
+                            <span class="text-[10px] text-slate-400">il y a 3j</span>
+                        </div>
+                        <p class="text-[13px] text-slate-600 leading-relaxed font-medium">Les entrepreneurs solo francophones engagent <span class="font-bold text-[#1A1A2E]">3.1x plus</span> sur les contenus qui parlent de <span class="font-bold text-[#1A1A2E]">"premier client à 5k"</span> que sur les contenus généraux de productivité. Le thème résonne spécifiquement avec ton cœur d'audience.</p>
+                        <div class="mt-3 flex items-center gap-3">
+                            <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full uppercase">Engagement 3.1x · cible solo FR</span>
+                            <a href="#" class="text-[11px] font-semibold text-slate-400 hover:text-blue-600 flex items-center gap-1">
+                                Creuser dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 6</span>
+                <h2 class="text-sm font-semibold text-slate-400">Cartographie stratégique du marché</h2>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl font-bold text-[#1A1A2E] mb-2">Cartographie stratégique de ton marché</h3>
+                <p class="text-[13px] text-slate-500 max-w-2xl leading-relaxed">On te positionne, toi et 6 acteurs clés, sur deux dimensions stratégiques pour identifier instantanément les territoires occupés et les zones libres.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-8 frosted rounded-[28px] p-10 border border-white/40 shadow-xl relative overflow-hidden">
+
+                    <div class="absolute top-6 right-8 flex gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#f97316] shadow-lg shadow-orange-200"></span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Toi et concurrents</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Références</span>
+                        </div>
+                    </div>
+
+                    <div class="relative w-full aspect-square md:aspect-video mt-12 mb-14 border-l-2 border-b-2 border-slate-200/50">
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-full h-[1px] border-t border-dashed border-slate-300/60"></div>
+                            <div class="h-full w-[1px] border-l border-dashed border-slate-300/60 absolute left-1/2"></div>
+                        </div>
+
+                        <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-slate-300 italic">Niche premium</span>
+                        <span class="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-widest text-slate-300 italic">Saturation TOFU</span>
+                        <span class="absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-widest text-slate-300 italic">Conversion discrète</span>
+                        <span class="absolute bottom-4 right-4 text-[10px] font-bold uppercase tracking-widest text-slate-300 italic">Autorité complète</span>
+
+                        <div class="absolute -left-14 top-1/2 -rotate-90 flex flex-col items-center gap-1">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 whitespace-nowrap">Positionnement funnel</span>
+                        </div>
+                        <div class="absolute -left-2 top-4 text-[9px] text-slate-300 font-bold">TOFU</div>
+                        <div class="absolute -left-2 bottom-4 text-[9px] text-slate-300 font-bold">BOFU</div>
+
+                        <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+                            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Fréquence de publication</span>
+                        </div>
+                        <div class="absolute left-4 -bottom-6 text-[9px] text-slate-300 font-bold">RARE</div>
+                        <div class="absolute right-4 -bottom-6 text-[9px] text-slate-300 font-bold">DENSE</div>
+
+                        <div class="absolute group" style="top: 45%; left: 30%;">
+                            <div class="relative">
+                                <div class="absolute -inset-2 bg-orange-400/30 rounded-full animate-pulse"></div>
+                                <div class="w-7 h-7 bg-[#f97316] rounded-full ring-4 ring-white shadow-lg flex items-center justify-center text-white">
+                                    <i data-lucide="user" class="w-3.5 h-3.5"></i>
+                                </div>
+                            </div>
+                            <div class="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-center">
+                                <span class="text-xs font-bold text-[#1A1A2E] bg-white px-2 py-0.5 rounded shadow-sm border border-slate-100 whitespace-nowrap">Toi</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute group" style="top: 15%; left: 82%;">
+                            <div class="w-5 h-5 bg-[#f97316] rounded-full ring-2 ring-white shadow-md opacity-80"></div>
+                            <span class="absolute left-6 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-slate-600 whitespace-nowrap">Olivier Roland</span>
+                        </div>
+
+                        <div class="absolute group" style="top: 25%; left: 75%;">
+                            <div class="w-6 h-6 bg-[#f97316] rounded-full ring-2 ring-white shadow-md opacity-70"></div>
+                            <span class="absolute right-8 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-slate-600 whitespace-nowrap">Yomi Denzel</span>
+                        </div>
+
+                        <div class="absolute group" style="top: 50%; left: 18%;">
+                            <div class="w-5 h-5 bg-[#f97316] rounded-full ring-2 ring-white shadow-md opacity-70"></div>
+                            <span class="absolute left-6 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-slate-600 whitespace-nowrap">Stan Leloup</span>
+                        </div>
+
+                        <div class="absolute group" style="top: 75%; left: 80%;">
+                            <div class="w-5 h-5 bg-[#f97316] rounded-full ring-2 ring-white shadow-md opacity-70"></div>
+                            <span class="absolute left-6 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-slate-600 whitespace-nowrap">Nina Ramen</span>
+                        </div>
+
+                        <div class="absolute group" style="top: 10%; left: 88%;">
+                            <div class="w-7 h-7 bg-blue-500 rounded-full ring-2 ring-white shadow-md opacity-80"></div>
+                            <span class="absolute right-9 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-blue-600 whitespace-nowrap">Ali Abdaal</span>
+                        </div>
+
+                        <div class="absolute group" style="top: 80%; left: 12%;">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full ring-2 ring-white shadow-md opacity-70"></div>
+                            <span class="absolute left-7 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-blue-600 whitespace-nowrap">Dan Koe</span>
+                        </div>
+                    </div>
+
+                    <p class="text-[10px] text-slate-400 text-center italic mt-4">La taille des points reflète le volume d'abonnés de chaque créateur</p>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col gap-4">
+                    <div class="mb-2">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Lecture stratégique</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-orange-50 border border-orange-100 flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-lg bg-white flex items-center justify-center text-[#f97316] shadow-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] leading-relaxed text-[#1A1A2E]">Le quadrant <span class="font-bold">Niche premium</span> est libre, aucun concurrent francophone majeur n'y opère. Tu es l'acteur le plus proche naturellement.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-100 border border-slate-200/50 flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-lg bg-white flex items-center justify-center text-slate-500 shadow-sm">
+                            <i data-lucide="zap-off" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] leading-relaxed text-slate-600">La zone <span class="font-bold">Saturation TOFU</span> concentre Olivier Roland, Yomi Denzel et Ali Abdaal, la compétition y est intense. Déconseillé d'y aller frontalement.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-blue-50 border border-blue-100 flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-lg bg-white flex items-center justify-center text-blue-500 shadow-sm">
+                            <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-[11px] leading-relaxed text-blue-700">Ton pivot naturel, descendre vers le BOFU sans augmenter le volume. Avec <span class="font-bold">2 à 3 vidéos bien calibrées</span>, tu bascules dans la niche premium.</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-[11px] font-semibold text-slate-400 hover:text-[#f97316] transition-colors">
+                        Creuser cette opportunité dans Recherche <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 7</span>
+                <h2 class="text-sm font-semibold text-slate-400">Fiche créateur détaillée</h2>
+            </div>
+
+            <div class="frosted rounded-[28px] overflow-hidden">
+                <div class="p-8 pb-0">
+                    <div class="flex items-start justify-between">
+                        <div class="flex gap-6">
+                            <div class="w-16 h-16 rounded-[22px] bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-xl font-bold text-white shadow-xl shadow-indigo-100">AA</div>
+                            <div>
+                                <h3 class="text-xl font-bold">Ali Abdaal</h3>
+                                <p class="text-xs text-slate-400 mt-1 max-w-sm">Productivity YouTuber, on l'observe pour ses structures de scripts et ses patterns visuels.</p>
+                                <div class="mt-3 flex gap-2">
+                                    <span class="bg-blue-50 text-blue-600 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase">Référence</span>
+                                    <span class="bg-slate-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">EN</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-10">
+                            <div class="text-center">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Abonnés</p>
+                                <p class="text-sm font-bold">5.2M</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">Scannés</p>
+                                <p class="text-sm font-bold">52</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-[10px] font-bold text-emerald-500 uppercase tracking-tighter mb-1">Croissance</p>
+                                <p class="text-sm font-bold text-emerald-500">+8.4%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
+                    <div>
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Patterns détectés</h4>
+                        <div class="space-y-3">
+                            <div class="bg-slate-100/50 p-3 rounded-xl border border-white/40">
+                                <p class="text-xs font-semibold leading-relaxed text-slate-700">Durée sweet spot : 12 à 18 min</p>
+                            </div>
+                            <div class="bg-slate-100/50 p-3 rounded-xl border border-white/40">
+                                <p class="text-xs font-semibold leading-relaxed text-slate-700">Hook basé sur l'utilisation d'un framework</p>
+                            </div>
+                            <div class="bg-slate-100/50 p-3 rounded-xl border border-white/40">
+                                <p class="text-xs font-semibold leading-relaxed text-slate-700">Thumbnails : visage net + texte jaune vif</p>
+                            </div>
+                            <div class="bg-slate-100/50 p-3 rounded-xl border border-white/40">
+                                <p class="text-xs font-semibold leading-relaxed text-slate-700">Call to action vers newsletter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Sujets couverts dernièrement</h4>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Productivity</span>
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Focus</span>
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Notion</span>
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Business</span>
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Study techniques</span>
+                            <span class="px-2 py-1 bg-white rounded border border-slate-200 text-[10px] font-semibold text-slate-600">Habits</span>
+                        </div>
+
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Évolution vues sur 6 mois</h4>
+                        <div class="h-20 flex items-end gap-1.5">
+                            <div class="w-full bg-indigo-100 rounded-t-sm" style="height: 40%"></div>
+                            <div class="w-full bg-indigo-200 rounded-t-sm" style="height: 55%"></div>
+                            <div class="w-full bg-indigo-300 rounded-t-sm" style="height: 48%"></div>
+                            <div class="w-full bg-indigo-400 rounded-t-sm" style="height: 72%"></div>
+                            <div class="w-full bg-indigo-500 rounded-t-sm" style="height: 85%"></div>
+                            <div class="w-full bg-indigo-600 rounded-t-sm" style="height: 100%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[9px] text-slate-400 font-medium">
+                            <span>Nov</span><span>Déc</span><span>Jan</span><span>Fév</span><span>Mar</span><span>Avr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="pt-12 border-b border-orange-200 pb-2 mb-8">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em]">ÉCRAN 8</span>
+                <h2 class="text-sm font-semibold text-slate-400">Mur des thumbnails récentes</h2>
+            </div>
+
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-sm font-bold text-[#1A1A2E]">Moodboard visuel du marché</h3>
+                <div class="flex gap-3">
+                    <select class="bg-white border border-slate-200 text-[10px] font-bold rounded-lg px-2 py-1.5 outline-none">
+                        <option>7 derniers jours</option>
+                        <option>30 derniers jours</option>
+                    </select>
+                    <select class="bg-white border border-slate-200 text-[10px] font-bold rounded-lg px-2 py-1.5 outline-none">
+                        <option>Tous</option>
+                        <option>Concurrents</option>
+                        <option>Références</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-5 gap-3">
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-xl tracking-tighter drop-shadow-md">3 ERREURS</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Olivier</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-slate-800 to-[#1A1A2E] flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-yellow-400 font-black text-xl tracking-tighter drop-shadow-md">4H/DAY</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Ali</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-lg tracking-tighter drop-shadow-md">1 MILLION</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Yomi</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-indigo-600 to-violet-700 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-sm tracking-tighter drop-shadow-md">FRAMEWORK</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Thomas</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-zinc-900 flex items-center justify-center relative group overflow-hidden shadow-sm border-l-4 border-yellow-400">
+                    <span class="text-white font-black text-sm tracking-tighter drop-shadow-md">PRICING</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Chris</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+
+                <div class="aspect-video rounded-xl bg-black flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-orange-400 font-black text-xl tracking-tighter drop-shadow-md">OS</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Dan Koe</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-slate-100 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-[#1A1A2E] font-black text-lg tracking-tighter">NEURO</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Stan</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-pink-50 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-pink-600 font-black text-2xl tracking-tighter">NON!</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Nina</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-indigo-900 to-indigo-700 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-xl tracking-tighter drop-shadow-md">FREE</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Alex</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-amber-300 to-orange-500 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-sm tracking-tighter drop-shadow-md">CASHFLOW</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Cédric</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+
+                <div class="aspect-video rounded-xl bg-blue-900 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-yellow-300 font-black text-xl tracking-tighter drop-shadow-md">STOP</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Justin</span>
+                        <span class="bg-slate-800 text-white text-[7px] font-bold px-0.5 rounded">EN</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-white border border-slate-200 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-[#1A1A2E] font-black text-lg tracking-tighter">+300%</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Caroline</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-rose-500 to-red-600 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-xl tracking-tighter drop-shadow-md">L'OFFRE</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Théo</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-600 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-sm tracking-tighter drop-shadow-md">SYSTEM</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Anthony</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-emerald-600 flex items-center justify-center relative group overflow-hidden shadow-sm">
+                    <span class="text-white font-black text-xl tracking-tighter drop-shadow-md">5K/MO</span>
+                    <div class="absolute bottom-1.5 left-1.5 flex items-center gap-1 px-1.5 py-0.5 bg-black/40 backdrop-blur-md rounded-md">
+                        <span class="text-[8px] text-white font-bold">Yomi</span>
+                        <span class="bg-slate-100 text-slate-800 text-[7px] font-bold px-0.5 rounded">FR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

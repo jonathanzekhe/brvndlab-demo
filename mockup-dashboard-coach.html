@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Coach — Brvndlab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 24px 24px; color: #1A1A2E; }
+        .frosted { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen">
+
+<div class="flex">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="w-60 bg-white/60 backdrop-blur-xl border-r border-white/40 min-h-screen p-5 flex flex-col sticky top-0">
+        <div class="flex items-center gap-2 pb-5 border-b border-slate-100">
+            <div class="w-9 h-9 bg-[#f97316] rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-orange-200">B</div>
+            <span class="font-bold text-lg tracking-tight">Brvndlab</span>
+        </div>
+
+        <!-- Mode switcher -->
+        <div class="mt-4 p-1 bg-slate-100 rounded-xl flex">
+            <button class="flex-1 px-3 py-1.5 rounded-lg text-[11px] font-bold text-[#6B7280]">Créateur</button>
+            <button class="flex-1 px-3 py-1.5 rounded-lg text-[11px] font-bold bg-[#1A1A2E] text-white shadow-sm">Coach</button>
+        </div>
+
+        <nav class="space-y-1 mt-5 flex-1">
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white shadow-sm text-[#f97316]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <span class="text-[13px] font-semibold">Dashboard</span>
+                <div class="ml-auto w-1.5 h-1.5 rounded-full bg-[#f97316]"></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <span class="text-[13px] font-medium">Membres</span>
+                <span class="ml-auto bg-slate-100 text-[#6B7280] text-[9px] font-bold px-1.5 py-0.5 rounded-full">8</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span class="text-[13px] font-medium">Submissions</span>
+                <span class="ml-auto bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                <span class="text-[13px] font-medium">Notes privées</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span class="text-[13px] font-medium">Calendrier coaching</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                <span class="text-[13px] font-medium">Messagerie</span>
+                <span class="ml-auto bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">5</span>
+            </a>
+        </nav>
+
+        <div class="pt-4 border-t border-slate-100">
+            <div class="flex items-center gap-2">
+                <img src="/jonathan.jpg" alt="Jonathan" class="w-9 h-9 rounded-full object-cover">
+                <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-semibold truncate">Jonathan Zekhe</p>
+                    <p class="text-[10px] text-[#f97316] truncate font-semibold">Mode Coach</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="flex-1 p-10 max-w-[1400px]">
+
+        <!-- Header -->
+        <div class="flex items-start justify-between mb-10">
+            <div>
+                <p class="text-[12px] font-bold uppercase tracking-widest text-[#9CA3AF] mb-2">Mercredi 8 avril 2026</p>
+                <h1 class="text-4xl font-bold tracking-tight text-[#1A1A2E]">Ton coaching aujourd'hui</h1>
+                <p class="text-[14px] text-[#6B7280] mt-2">3 clients ont besoin de toi ce matin. Un l'est plus que les autres.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <!-- Mini revenu 30 jours -->
+                <div class="bg-white border border-slate-200 rounded-2xl px-4 py-2.5 flex items-center gap-3 shadow-sm">
+                    <div class="w-8 h-8 bg-emerald-50 rounded-lg flex items-center justify-center">
+                        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">30 derniers jours</p>
+                        <div class="flex items-baseline gap-1.5">
+                            <p class="text-[15px] font-bold text-[#1A1A2E]">28 400€</p>
+                            <span class="text-[9px] font-bold text-emerald-600">+12%</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="relative w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-50">
+                    <svg class="w-4 h-4 text-[#6B7280]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- HERO : Qui a besoin de toi aujourd'hui -->
+        <div class="frosted rounded-[28px] p-8 mb-6 bg-gradient-to-br from-white/90 to-orange-50/60 relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-[#f97316]/10 rounded-full blur-3xl"></div>
+            <div class="relative">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-9 h-9 bg-[#f97316] rounded-xl flex items-center justify-center shadow-lg shadow-orange-200">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#f97316]">Priorités du jour · Qui a besoin de toi</h2>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Priorité 1 : Emma (rouge) -->
+                    <div class="bg-white rounded-2xl p-5 border-2 border-red-200 shadow-lg shadow-red-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center text-white text-sm font-bold relative">
+                                E
+                                <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-red-500 border-2 border-white"></div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[13px] font-bold">Emma Lemoine</p>
+                                <p class="text-[10px] text-red-600 font-semibold uppercase tracking-wider">Urgence absolue</p>
+                            </div>
+                        </div>
+                        <p class="text-[12px] font-semibold text-[#1A1A2E] leading-snug mb-2">Elle décroche, 14 jours sans activité</p>
+                        <p class="text-[11px] text-[#6B7280] leading-relaxed mb-4">Elle était sur le Module 3 et bloquée sur l'exercice "Définir ton persona idéal". Elle n'a plus rien ouvert depuis. Classique pattern de procrastination sur cet exercice.</p>
+                        <div class="bg-red-50 border border-red-100 rounded-xl p-3 mb-3">
+                            <p class="text-[10px] font-bold text-red-700 uppercase tracking-wider mb-1">Action suggérée</p>
+                            <p class="text-[11px] text-[#1A1A2E] leading-relaxed">Vocal chaleureux de 2min pour la relancer sans la culpabiliser. Tu as fait ça avec Julie en février, ça a marché.</p>
+                        </div>
+                        <button class="w-full bg-red-500 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-red-200">Envoyer un vocal à Emma</button>
+                    </div>
+
+                    <!-- Priorité 2 : Sarah (vert - moment fort) -->
+                    <div class="bg-white rounded-2xl p-5 border-2 border-emerald-200 shadow-lg shadow-emerald-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-sm font-bold relative">
+                                S
+                                <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white"></div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[13px] font-bold">Sarah Moreau</p>
+                                <p class="text-[10px] text-emerald-600 font-semibold uppercase tracking-wider">Moment fort</p>
+                            </div>
+                        </div>
+                        <p class="text-[12px] font-semibold text-[#1A1A2E] leading-snug mb-2">Sa dernière vidéo cartonne à +28%</p>
+                        <p class="text-[11px] text-[#6B7280] leading-relaxed mb-4">Son hook est enfin net, elle applique exactement ce que tu lui as dit la semaine dernière. C'est le moment de la féliciter pour consolider le comportement.</p>
+                        <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-3 mb-3">
+                            <p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider mb-1">Action suggérée</p>
+                            <p class="text-[11px] text-[#1A1A2E] leading-relaxed">Note du jour courte et puissante pour célébrer et pointer exactement ce qui a changé.</p>
+                        </div>
+                        <button class="w-full bg-emerald-500 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-emerald-200">Féliciter Sarah</button>
+                    </div>
+
+                    <!-- Priorité 3 : Marc (jaune - ralentit) -->
+                    <div class="bg-white rounded-2xl p-5 border-2 border-amber-200 shadow-lg shadow-amber-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white text-sm font-bold relative">
+                                M
+                                <div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-amber-500 border-2 border-white"></div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-[13px] font-bold">Marc Dupont</p>
+                                <p class="text-[10px] text-amber-600 font-semibold uppercase tracking-wider">Ralentit</p>
+                            </div>
+                        </div>
+                        <p class="text-[12px] font-semibold text-[#1A1A2E] leading-snug mb-2">Bloqué sur Audience depuis 5 jours</p>
+                        <p class="text-[11px] text-[#6B7280] leading-relaxed mb-4">Il a commencé l'exercice Personas mais n'a plus bougé depuis vendredi. D'expérience, c'est l'étape où les clients ont peur de se positionner trop précisément.</p>
+                        <div class="bg-amber-50 border border-amber-100 rounded-xl p-3 mb-3">
+                            <p class="text-[10px] font-bold text-amber-700 uppercase tracking-wider mb-1">Action suggérée</p>
+                            <p class="text-[11px] text-[#1A1A2E] leading-relaxed">Message court qui normalise sa peur et propose un mini-exercice en 10 min pour débloquer.</p>
+                        </div>
+                        <button class="w-full bg-amber-500 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-amber-200">Débloquer Marc</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 2 : À faire coach + Submissions -->
+        <div class="grid grid-cols-4 gap-5 mb-6">
+            <!-- À faire coach -->
+            <div class="col-span-2 frosted rounded-[28px] p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-[#f97316]/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-4 h-4 text-[#f97316]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">À faire côté coach</h2>
+                    </div>
+                    <span class="text-[10px] font-bold text-[#f97316] bg-orange-100 px-2 py-1 rounded-full">4 tâches</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 bg-white p-3 rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-5 h-5 rounded-full border-2 border-slate-300 shrink-0 mt-0.5"></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Reviewer le script d'Alex Dubois</p>
+                            <p class="text-[10px] text-[#6B7280] mt-0.5">Soumis hier soir, attend ton retour</p>
+                        </div>
+                        <span class="text-[9px] font-bold text-red-600 bg-red-50 px-2 py-1 rounded-full shrink-0">Urgent</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white p-3 rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-5 h-5 rounded-full border-2 border-slate-300 shrink-0 mt-0.5"></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Valider le Brand OS complet de Léa</p>
+                            <p class="text-[10px] text-[#6B7280] mt-0.5">Elle a complété à 100% ce matin</p>
+                        </div>
+                        <span class="text-[9px] font-bold text-[#f97316] bg-orange-50 px-2 py-1 rounded-full shrink-0">Important</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white p-3 rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-5 h-5 rounded-full border-2 border-slate-300 shrink-0 mt-0.5"></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Répondre à Nathan Benoit</p>
+                            <p class="text-[10px] text-[#6B7280] mt-0.5">Question sur son positionnement, 2h d'attente</p>
+                        </div>
+                        <span class="text-[9px] font-bold text-[#f97316] bg-orange-50 px-2 py-1 rounded-full shrink-0">À faire</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white p-3 rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-5 h-5 rounded-full border-2 border-slate-300 shrink-0 mt-0.5"></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Appel de clarté avec Julie Martin</p>
+                            <p class="text-[10px] text-[#6B7280] mt-0.5">Prévu aujourd'hui à 16:00</p>
+                        </div>
+                        <span class="text-[9px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full shrink-0">16:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submissions à reviewer -->
+            <div class="col-span-2 frosted rounded-[28px] p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-blue-50 rounded-xl flex items-center justify-center">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Submissions à reviewer</h2>
+                    </div>
+                    <span class="text-[10px] font-bold text-red-600 bg-red-50 px-2 py-1 rounded-full">3 en attente</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white text-[11px] font-bold shrink-0">A</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Alex Dubois</p>
+                            <p class="text-[11px] text-[#6B7280] mt-0.5">Script "3 mythes sur la vente"</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-[9px] font-bold text-violet-600 bg-violet-50 px-1.5 py-0.5 rounded-full">SCRIPT</span>
+                                <span class="text-[9px] text-[#9CA3AF]">Hier, 22:14</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-[11px] font-bold shrink-0">L</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Léa Fontaine</p>
+                            <p class="text-[11px] text-[#6B7280] mt-0.5">Brand OS complet</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-[9px] font-bold text-[#f97316] bg-orange-50 px-1.5 py-0.5 rounded-full">BRAND OS</span>
+                                <span class="text-[9px] text-[#9CA3AF]">Ce matin, 08:32</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white text-[11px] font-bold shrink-0">J</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-[12px] font-bold">Julie Martin</p>
+                            <p class="text-[11px] text-[#6B7280] mt-0.5">Vidéo "Comment j'ai changé de vie en 6 mois"</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full">VIDÉO</span>
+                                <span class="text-[9px] text-[#9CA3AF]">Il y a 2h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 3 : État qualitatif de tes clients (liste complète) -->
+        <div class="frosted rounded-[28px] p-6 mb-6">
+            <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-slate-100 rounded-xl flex items-center justify-center">
+                        <div class="flex gap-0.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                        </div>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Tes 8 clients, état du jour</h2>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2 text-[10px]">
+                        <div class="flex items-center gap-1">
+                            <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                            <span class="text-[#6B7280]">5 avancent</span>
+                        </div>
+                        <span class="text-slate-300">·</span>
+                        <div class="flex items-center gap-1">
+                            <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                            <span class="text-[#6B7280]">2 ralentissent</span>
+                        </div>
+                        <span class="text-slate-300">·</span>
+                        <div class="flex items-center gap-1">
+                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                            <span class="text-[#6B7280]">1 bloqué</span>
+                        </div>
+                    </div>
+                    <a href="#" class="text-[11px] text-[#f97316] font-semibold hover:underline">Voir tous</a>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <!-- Sarah GREEN -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        S
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Sarah Moreau</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Cliente depuis 4 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 5, en train de tourner sa vidéo du mercredi</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Momentum fort</p>
+                        <p class="text-[10px] text-[#9CA3AF]">3 publications cette semaine</p>
+                    </div>
+                </div>
+
+                <!-- Alex GREEN -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        A
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Alex Dubois</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Client depuis 6 semaines</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 4, script soumis hier soir pour ta review</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">En attente de toi</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Script soumis il y a 12h</p>
+                    </div>
+                </div>
+
+                <!-- Léa GREEN nouveau -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        L
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Léa Fontaine</p>
+                            <span class="text-[8px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-full uppercase">Nouvelle</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Brand OS terminé à 100% ce matin, prête pour Module 1</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Jalon franchi</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Brand OS validé, à débloquer</p>
+                    </div>
+                </div>
+
+                <!-- Nathan GREEN -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        N
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Nathan Benoit</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Client depuis 2 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 3, a posé une question sur son positionnement</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Actif</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Question en attente de réponse</p>
+                    </div>
+                </div>
+
+                <!-- Julie GREEN -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border border-slate-100 hover:border-[#f97316]/30 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-slate-400 to-slate-600 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        J
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Julie Martin</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Cliente depuis 8 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 8, vient de soumettre une vidéo + appel prévu à 16h</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Appel 16h</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Prépare ses retours avant</p>
+                    </div>
+                </div>
+
+                <!-- Marc YELLOW -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border-2 border-amber-100 hover:border-amber-300 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        M
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-amber-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Marc Dupont</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Client depuis 3 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Bloqué sur Module 2 "Définir ton audience" depuis 5 jours</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Ralentit</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Peur de se positionner</p>
+                    </div>
+                </div>
+
+                <!-- Camille YELLOW -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border-2 border-amber-100 hover:border-amber-300 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-red-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        C
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-amber-500 border-2 border-white"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Camille Legrand</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Cliente depuis 5 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 6, a publié 1 vidéo mais l'engagement est en baisse</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Stagne</p>
+                        <p class="text-[10px] text-[#9CA3AF]">Besoin d'une discussion fond</p>
+                    </div>
+                </div>
+
+                <!-- Emma RED -->
+                <div class="flex items-center gap-4 p-3 bg-white rounded-2xl border-2 border-red-200 hover:border-red-300 cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center text-white text-sm font-bold shrink-0 relative">
+                        E
+                        <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-red-500 border-2 border-white animate-pulse"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <p class="text-[13px] font-bold">Emma Lemoine</p>
+                            <span class="text-[9px] text-[#9CA3AF]">· Cliente depuis 2 mois</span>
+                        </div>
+                        <p class="text-[11px] text-[#6B7280]">Module 3 exercice Persona, plus aucune activité depuis 14 jours</p>
+                    </div>
+                    <div class="shrink-0 text-right">
+                        <p class="text-[10px] font-bold text-red-600 uppercase tracking-wider">Risque de churn</p>
+                        <p class="text-[10px] text-[#9CA3AF]">À rattraper en 48h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 4 : Amplificateur + Suggestions de contenu IA -->
+        <div class="grid grid-cols-4 gap-5 mb-6">
+
+            <!-- Amplificateur de tes connaissances -->
+            <div class="col-span-2 frosted rounded-[28px] p-6 bg-gradient-to-br from-violet-50/60 to-white/80 border border-violet-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-violet-500 rounded-xl flex items-center justify-center shadow-lg shadow-violet-200">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-violet-700">Amplificateur de tes connaissances</h2>
+                </div>
+                <h3 class="text-[18px] font-bold text-[#1A1A2E] leading-tight mb-3">Marc est dans la même situation que Julie il y a 2 mois.</h3>
+                <p class="text-[13px] text-[#6B7280] leading-relaxed mb-4">
+                    Tu as envoyé un vocal de 3 minutes à Julie le 12 février sur la peur de se positionner. Elle a débloqué dans les 24h. Tu peux réutiliser le même angle avec Marc, je t'ai préparé un résumé de ce que tu lui as dit.
+                </p>
+                <div class="bg-white border border-violet-100 rounded-xl p-4 mb-4">
+                    <p class="text-[10px] font-bold text-violet-700 uppercase tracking-wider mb-2">Ton message à Julie du 12 février</p>
+                    <p class="text-[12px] text-[#1A1A2E] italic leading-relaxed">"La peur de perdre des gens quand tu te positionnes précisément c'est normal, mais c'est l'inverse qui se passe. Plus tu cibles, plus ceux qui restent sont aimantés. Vise petit d'abord, élargis après."</p>
+                </div>
+                <button class="w-full bg-violet-500 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-violet-200">Envoyer un vocal similaire à Marc</button>
+            </div>
+
+
+            <!-- Suggestions de contenu depuis ton coaching -->
+            <div class="col-span-2 frosted rounded-[28px] p-6 bg-gradient-to-br from-emerald-50/60 to-white/80 border border-emerald-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-200">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Idées de contenu depuis ton coaching</h2>
+                </div>
+                <h3 class="text-[14px] font-bold text-[#1A1A2E] leading-tight mb-4">3 de tes clients t'ont posé des questions similaires cette semaine.</h3>
+                <div class="space-y-2 mb-4">
+                    <div class="bg-white border border-emerald-100 rounded-xl p-3">
+                        <p class="text-[11px] text-[#6B7280] uppercase tracking-wider font-bold mb-1">Question récurrente</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold leading-snug">"Comment savoir si mon pricing est trop bas sans tester le marché pendant 6 mois ?"</p>
+                        <div class="flex items-center gap-1 mt-2">
+                            <div class="flex -space-x-1">
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 border-2 border-white flex items-center justify-center text-white text-[9px] font-bold">A</div>
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white flex items-center justify-center text-white text-[9px] font-bold">N</div>
+                                <div class="w-5 h-5 rounded-full bg-gradient-to-br from-slate-400 to-slate-600 border-2 border-white flex items-center justify-center text-white text-[9px] font-bold">J</div>
+                            </div>
+                            <span class="text-[10px] text-[#9CA3AF] ml-1">Alex, Nathan et Julie</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full bg-emerald-500 text-white py-2.5 rounded-xl text-[11px] font-bold shadow-lg shadow-emerald-200 flex items-center justify-center gap-2">
+                    Créer une vidéo YouTube sur ce sujet
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Row 5 : Recommandations IA dark card -->
+        <div class="bg-[#1A1A2E] rounded-[28px] p-8 shadow-2xl relative overflow-hidden text-white mb-6">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-[#f97316]/10 rounded-full blur-3xl"></div>
+            <div class="relative">
+                <div class="flex items-center justify-between mb-5">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur">
+                            <svg class="w-4 h-4 text-[#f97316]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Recommandations intelligentes</h2>
+                    </div>
+                    <span class="text-[10px] text-slate-400">Générées à 07:42</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-4 hover:bg-white/10 cursor-pointer">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-amber-400"></div>
+                            <p class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Opportunité</p>
+                        </div>
+                        <p class="text-[13px] font-semibold text-white leading-snug mb-3">Léa est prête pour ton offre Premium</p>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">Elle a complété son Brand OS à 100% en 3 semaines, au-dessus de la moyenne. Elle a déjà publié 5 contenus depuis. C'est un profil typique qui upgrade.</p>
+                        <button class="mt-3 text-[10px] font-bold text-[#f97316] hover:text-orange-400">Proposer Premium →</button>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-4 hover:bg-white/10 cursor-pointer">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-violet-400"></div>
+                            <p class="text-[10px] font-bold text-violet-400 uppercase tracking-wider">Pattern détecté</p>
+                        </div>
+                        <p class="text-[13px] font-semibold text-white leading-snug mb-3">Tes clients bloquent tous sur Module 2</p>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">4 clients sur 8 ont mis plus d'une semaine sur l'exercice Persona. C'est le plus gros goulet d'étranglement de ton parcours. Tu devrais peut-être ajouter une masterclass ou un exemple concret à cet endroit.</p>
+                        <button class="mt-3 text-[10px] font-bold text-[#f97316] hover:text-orange-400">Améliorer ce module →</button>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-4 hover:bg-white/10 cursor-pointer">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
+                            <p class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Validation de méthode</p>
+                        </div>
+                        <p class="text-[13px] font-semibold text-white leading-snug mb-3">Ton conseil sur le hook marche à 100%</p>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">3 clients ont appliqué ta méthode sur le hook cette semaine, tous ont vu leurs vues augmenter en moyenne de +22%. Tu peux capitaliser sur ce succès dans ton contenu public.</p>
+                        <button class="mt-3 text-[10px] font-bold text-[#f97316] hover:text-orange-400">Faire une vidéo dessus →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

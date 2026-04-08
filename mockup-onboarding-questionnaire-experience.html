@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" class="bg-[#0a0a14]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire onboarding, expérience client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a14; color: #f5f5f7; }
+        .dot-bg { background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 24px 24px; }
+        .screen-frame { background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.04) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+        input, textarea { font-family: 'Inter', sans-serif; }
+        .scroll-snap { scroll-snap-type: y mandatory; }
+        .scroll-section { scroll-snap-align: start; }
+    </style>
+</head>
+<body class="min-h-screen relative dot-bg pb-32">
+
+    <div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#f97316]/10 blur-[120px] rounded-full -z-10"></div>
+    <div class="fixed bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#8b5cf6]/10 blur-[120px] rounded-full -z-10"></div>
+
+    <header class="px-8 pt-10 pb-6 flex items-center justify-between max-w-5xl mx-auto">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-[#f97316] flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.4)]">
+                <span class="text-white font-black text-sm">B</span>
+            </div>
+            <span class="text-[#f5f5f7] font-bold tracking-tight text-xl">Brvndlab</span>
+        </div>
+        <span class="text-[11px] font-bold text-[#71717a] uppercase tracking-[0.2em]">Aperçu de l'expérience client, 6 écrans représentatifs</span>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 mt-10 space-y-8">
+
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-[#f5f5f7] tracking-tight mb-3">Le questionnaire vu par ton client</h1>
+            <p class="text-[15px] text-[#a1a1aa] leading-relaxed max-w-xl mx-auto">22 questions, 7 minutes, une question par écran. Voilà ce que tes clients voient quand ils remplissent. Les vraies questions de ton code original.</p>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center text-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran 1, accueil</div>
+            <div class="w-12 h-12 bg-gradient-to-br from-[#f97316] to-[#ea580c] rounded-xl flex items-center justify-center shadow-lg shadow-[#f97316]/20 mb-8">
+                <span class="text-xl font-bold text-white">B</span>
+            </div>
+            <h2 class="text-4xl font-extrabold text-[#f5f5f7] tracking-tight mb-4 max-w-md">Prêt à construire ta marque ?</h2>
+            <p class="text-[16px] text-[#a1a1aa] leading-relaxed max-w-md mb-8">Quelques questions pour qu'on comprenne ta situation et qu'on prépare au mieux ton accompagnement.</p>
+            <div class="flex gap-3 mb-10">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+                    <span class="text-[#f97316] text-sm">⏱</span>
+                    <span class="text-[12px] text-[#a1a1aa]">7 minutes</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+                    <span class="text-[#f97316] text-sm">🔒</span>
+                    <span class="text-[12px] text-[#a1a1aa]">100% confidentiel</span>
+                </div>
+            </div>
+            <button class="bg-[#f97316] text-white px-10 py-4 rounded-2xl text-base font-bold shadow-[0_0_40px_rgba(249,115,22,0.3)]">Commencer →</button>
+            <p class="text-[#71717a] text-[11px] mt-8">hey@brvndlab.com</p>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran 2, contact</div>
+            <div class="absolute top-6 right-6 text-[10px] font-bold text-[#71717a]">Question 1 sur 22</div>
+            <div class="w-full max-w-md">
+                <h2 class="text-2xl font-bold text-[#f5f5f7] text-center mb-8">Tes coordonnées</h2>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <input type="text" placeholder="Prénom" class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-[#f5f5f7] placeholder-[#71717a] outline-none focus:border-[#f97316]" value="Marc">
+                    <input type="text" placeholder="Nom" class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-[#f5f5f7] placeholder-[#71717a] outline-none focus:border-[#f97316]" value="Dupont">
+                </div>
+                <input type="tel" placeholder="Téléphone" class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-[#f5f5f7] placeholder-[#71717a] outline-none focus:border-[#f97316] w-full mb-4">
+                <input type="text" placeholder="Entreprise" class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-[#f5f5f7] placeholder-[#71717a] outline-none focus:border-[#f97316] w-full">
+            </div>
+            <div class="flex gap-3 mt-10">
+                <button class="bg-white/[0.06] border border-white/[0.15] text-[#f5f5f7] px-6 py-3 rounded-xl text-sm font-bold">← Retour</button>
+                <button class="bg-[#f97316] text-white px-8 py-3 rounded-xl text-sm font-bold shadow-[0_0_30px_rgba(249,115,22,0.3)]">Continuer →</button>
+            </div>
+            <div class="absolute bottom-6 left-12 right-12">
+                <div class="h-1 bg-white/[0.06] rounded-full overflow-hidden">
+                    <div class="h-full bg-[#f97316] w-[5%] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran 3, choix multiple</div>
+            <div class="absolute top-6 right-6 text-[10px] font-bold text-[#71717a]">Question 2 sur 22</div>
+            <div class="w-full max-w-md text-center">
+                <h2 class="text-2xl font-bold text-[#f5f5f7] mb-3">Comment tu nous as découvert ?</h2>
+                <p class="text-[13px] text-[#71717a] mb-8">Tu peux sélectionner plusieurs réponses.</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="px-6 py-3 rounded-full text-sm font-bold border bg-[#f97316]/10 text-[#f97316] border-[#f97316]">Instagram</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">YouTube</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">Publicité</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-bold border bg-[#f97316]/10 text-[#f97316] border-[#f97316]">Recommandation</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">TikTok</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">LinkedIn</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">Podcast</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">Email</button>
+                    <button class="px-6 py-3 rounded-full text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">Twitter</button>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-12">
+                <button class="bg-white/[0.06] border border-white/[0.15] text-[#f5f5f7] px-6 py-3 rounded-xl text-sm font-bold">← Retour</button>
+                <button class="bg-[#f97316] text-white px-8 py-3 rounded-xl text-sm font-bold shadow-[0_0_30px_rgba(249,115,22,0.3)]">Continuer →</button>
+            </div>
+            <div class="absolute bottom-6 left-12 right-12">
+                <div class="h-1 bg-white/[0.06] rounded-full overflow-hidden">
+                    <div class="h-full bg-[#f97316] w-[10%] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran 4, range slider chiffres</div>
+            <div class="absolute top-6 right-6 text-[10px] font-bold text-[#71717a]">Question 7 sur 23</div>
+            <div class="w-full max-w-lg">
+                <h2 class="text-2xl font-bold text-[#f5f5f7] text-center mb-8">Cash collecté ou contracté sur les 3 derniers mois ?</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="px-5 py-4 rounded-xl text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">0 à 5k</button>
+                    <button class="px-5 py-4 rounded-xl text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">5k à 15k</button>
+                    <button class="px-5 py-4 rounded-xl text-sm font-bold border bg-[#f97316]/10 text-[#f97316] border-[#f97316]">15k à 30k</button>
+                    <button class="px-5 py-4 rounded-xl text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">30k à 50k</button>
+                    <button class="px-5 py-4 rounded-xl text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">50k à 100k</button>
+                    <button class="px-5 py-4 rounded-xl text-sm font-medium border bg-white/[0.04] text-[#a1a1aa] border-white/[0.08]">100k et plus</button>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-10">
+                <button class="bg-white/[0.06] border border-white/[0.15] text-[#f5f5f7] px-6 py-3 rounded-xl text-sm font-bold">← Retour</button>
+                <button class="bg-[#f97316] text-white px-8 py-3 rounded-xl text-sm font-bold shadow-[0_0_30px_rgba(249,115,22,0.3)]">Continuer →</button>
+            </div>
+            <div class="absolute bottom-6 left-12 right-12">
+                <div class="h-1 bg-white/[0.06] rounded-full overflow-hidden">
+                    <div class="h-full bg-[#f97316] w-[30%] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran 5, slider</div>
+            <div class="absolute top-6 right-6 text-[10px] font-bold text-[#71717a]">Question 17 sur 22</div>
+            <div class="w-full max-w-lg flex flex-col items-center">
+                <h2 class="text-2xl font-bold text-[#f5f5f7] text-center mb-3">Niveau de conviction avant ton premier appel</h2>
+                <p class="text-[13px] text-[#71717a] text-center mb-10">Sur une échelle de 0 à 10</p>
+                <div class="text-7xl font-bold bg-gradient-to-r from-[#f97316] to-[#ea580c] bg-clip-text text-transparent mb-6">8</div>
+                <div class="w-full">
+                    <div class="h-2 rounded-lg bg-white/[0.06] relative">
+                        <div class="absolute inset-y-0 left-0 w-[80%] bg-gradient-to-r from-[#f97316] to-[#ea580c] rounded-lg"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 left-[80%] -translate-x-1/2 w-5 h-5 rounded-full bg-white shadow-[0_0_20px_rgba(249,115,22,0.5)]"></div>
+                    </div>
+                    <div class="flex justify-between mt-3 text-xs text-[#71717a]">
+                        <span>0</span>
+                        <span>5</span>
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-3 mt-12">
+                <button class="bg-white/[0.06] border border-white/[0.15] text-[#f5f5f7] px-6 py-3 rounded-xl text-sm font-bold">← Retour</button>
+                <button class="bg-[#f97316] text-white px-8 py-3 rounded-xl text-sm font-bold shadow-[0_0_30px_rgba(249,115,22,0.3)]">Continuer →</button>
+            </div>
+            <div class="absolute bottom-6 left-12 right-12">
+                <div class="h-1 bg-white/[0.06] rounded-full overflow-hidden">
+                    <div class="h-full bg-[#f97316] w-[77%] rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-frame rounded-[32px] p-12 min-h-[600px] flex flex-col items-center justify-center text-center relative">
+            <div class="absolute top-6 left-6 text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Écran final, merci et booking</div>
+            <div class="w-16 h-16 bg-gradient-to-br from-[#f97316] to-[#ea580c] rounded-2xl flex items-center justify-center shadow-[0_0_40px_rgba(249,115,22,0.3)] mb-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h2 class="text-5xl font-extrabold text-[#f5f5f7] tracking-tight mb-12">C'est tout bon, Marc.</h2>
+            <button class="bg-[#f97316] text-white px-10 py-4 rounded-2xl text-base font-bold shadow-[0_0_40px_rgba(249,115,22,0.3)]">
+                Bloquer mon appel
+            </button>
+        </div>
+
+        <div class="screen-frame rounded-3xl p-8 mt-12">
+            <h3 class="text-xl font-bold text-[#f5f5f7] mb-2">Les 23 questions optimisées, dans le nouvel ordre</h3>
+            <p class="text-[13px] text-[#a1a1aa] mb-6">Réorganisées selon un flow émotionnel progressif (factuel d'abord, émotionnel ensuite). Le format de chaque question est précisé entre parenthèses.</p>
+
+            <div class="mb-6">
+                <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest mb-3 block">Phase 1, coordonnées</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px] text-[#a1a1aa]">
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">01</span><span>Prénom, Nom (texte)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">02</span><span>Téléphone, Entreprise (texte)</span></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest mb-3 block">Phase 2, ton business actuel (factuel)</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px] text-[#a1a1aa]">
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">03</span><span>Décris ton offre actuelle (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">04</span><span>Tu travailles seul ou en équipe ? (Solo, 1 à 2, 3 à 5, 6 et plus)</span></div>
+                    <div class="flex gap-3 pl-4 border-l border-[#f97316]/30 ml-2"><span class="text-[#f97316] font-bold text-[11px]">04b</span><span class="text-[12px]"><span class="text-[#f97316] font-bold uppercase tracking-wider">Conditionnelle, si pas solo : </span>De quoi est composée ton équipe ? (multi-choice : setter, closer, monteur vidéo, assistant, community manager, copywriter, ops manager, autre)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">05</span><span>Tes 3 à 5 concurrents principaux (liste)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">06</span><span>Décris ton client idéal (texte long)</span></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest mb-3 block">Phase 3, ta situation chiffrée et marché</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px] text-[#a1a1aa]">
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">07</span><span>Cash collecté ou contracté sur les 3 derniers mois (range)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">08</span><span>Ton objectif de revenu dans les 90 prochains jours (range)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">09</span><span>Quels sont les obstacles principaux de ton marché (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">10</span><span>Quels sont les désirs principaux de ton marché (texte long)</span></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest mb-3 block">Phase 4, blocages, priorités et engagement</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px] text-[#a1a1aa]">
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">11</span><span>Quelle est ta priorité business en ce moment (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">12</span><span>Quel est ton blocage principal en ce moment (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">13</span><span>À quel point es-tu prêt à appliquer ce qu'on va te montrer (slider 0 à 10) NOUVELLE</span></div>
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest mb-3 block">Phase 5, toi et nous (le plus émotionnel)</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[13px] text-[#a1a1aa]">
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">14</span><span>Comment tu nous as découvert (multi-choice : Instagram, YouTube, Publicité, Recommandation, TikTok, LinkedIn, Podcast, Email, Twitter)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">15</span><span>Pourquoi nous, et pas un autre programme (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">16</span><span>Combien de temps tu as réfléchi avant de signer (Aujourd'hui, Cette semaine, Ce mois, Ce trimestre, Plus de 3 mois)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">17</span><span>Niveau de conviction avant ton premier appel (slider 0 à 10)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">18</span><span>Quelles étaient tes hésitations avant de nous rejoindre (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">19</span><span>Un contenu spécifique qui t'a marqué (texte long, optionnel)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">20</span><span>Qu'est-ce qui t'a attiré chez nous sans que tu l'attendes (texte long, optionnel)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">21</span><span>Le contenu qui a eu le plus d'impact sur toi (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">22</span><span>Qu'est-ce qui t'a poussé à passer à l'action (texte long)</span></div>
+                    <div class="flex gap-3"><span class="text-[#71717a] font-bold">23</span><span>Merci et booking de l'appel de clarté</span></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

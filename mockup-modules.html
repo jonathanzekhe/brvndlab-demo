@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Brvndlab · Mockup Recommandations</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="bg-[#EEF0F4] text-[#1A1A2E] p-8">
+
+  <div class="max-w-5xl mx-auto space-y-16">
+
+    <header>
+      <h1 class="text-3xl font-extrabold text-[#1A1A2E]">Brainstorm · Recommandations Coach</h1>
+      <p class="text-[#6B7280] mt-2">3 cas concrets : 1 reco · 2 recos · 3 recos. Toutes les cards sont au même niveau visuel.</p>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CAS 1 : UNE SEULE RECOMMANDATION                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">CAS 1</span>
+        <h2 class="text-xl font-bold">Une seule recommandation active</h2>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-lg rounded-[28px] p-6 shadow-xl shadow-slate-200/50 border border-white/60">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="/jonathan.jpg" alt="Jonathan" class="w-10 h-10 rounded-xl object-cover shadow-md shadow-orange-200" />
+          <div>
+            <h3 class="text-sm font-bold text-[#1A1A2E]">Recommandations de Jonathan</h3>
+            <p class="text-[10px] text-[#9CA3AF]">1 recommandation active</p>
+          </div>
+        </div>
+
+        <!-- Recommandation 1 -->
+        <div class="bg-orange-50/70 border border-orange-100 rounded-2xl p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#f97316] flex items-center justify-center shrink-0 shadow-md shadow-orange-200">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1 flex-wrap">
+                <span class="inline-flex text-[9px] font-bold text-[#f97316] bg-white px-2 py-0.5 rounded uppercase tracking-wider">Module complet</span>
+                <span class="text-[10px] text-[#9CA3AF]">il y a 2h</span>
+              </div>
+              <h4 class="text-base font-bold text-[#1A1A2E] mb-1">Module 4 · Système d'acquisition</h4>
+              <p class="text-[11px] text-[#9CA3AF] mb-3">8 vidéos · 1h20 au total</p>
+              <p class="text-sm text-[#1A1A2E] italic leading-relaxed mb-4">
+                "Tu as la matière mais il te manque la structure pour transformer tes vues en appels. Ce module va te débloquer."
+              </p>
+              <button class="bg-[#f97316] text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md shadow-orange-200 hover:scale-[1.02] transition-all">
+                Commencer le module →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CAS 2 : DEUX RECOMMANDATIONS                                -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">CAS 2</span>
+        <h2 class="text-xl font-bold">Deux recommandations actives</h2>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-lg rounded-[28px] p-6 shadow-xl shadow-slate-200/50 border border-white/60">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="/jonathan.jpg" alt="Jonathan" class="w-10 h-10 rounded-xl object-cover shadow-md shadow-orange-200" />
+          <div>
+            <h3 class="text-sm font-bold text-[#1A1A2E]">Recommandations de Jonathan</h3>
+            <p class="text-[10px] text-[#9CA3AF]">2 recommandations actives</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <!-- Reco 1 : Module -->
+          <div class="bg-orange-50/70 border border-orange-100 rounded-2xl p-5">
+            <div class="w-10 h-10 rounded-xl bg-[#f97316] flex items-center justify-center mb-3 shadow-md shadow-orange-200">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+            </div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="inline-flex text-[9px] font-bold text-[#f97316] bg-white px-2 py-0.5 rounded uppercase tracking-wider">Module</span>
+              <span class="text-[10px] text-[#9CA3AF]">il y a 2h</span>
+            </div>
+            <h4 class="text-sm font-bold text-[#1A1A2E] mb-0.5">Système d'acquisition</h4>
+            <p class="text-[10px] text-[#9CA3AF] mb-3">8 vidéos · 1h20</p>
+            <p class="text-xs text-[#1A1A2E] italic leading-relaxed mb-3">
+              "Pour structurer ton tunnel et convertir tes vues."
+            </p>
+            <button class="bg-[#f97316] text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-md shadow-orange-200">
+              Commencer →
+            </button>
+          </div>
+
+          <!-- Reco 2 : Vidéo -->
+          <div class="bg-violet-50/70 border border-violet-100 rounded-2xl p-5">
+            <div class="w-10 h-10 rounded-xl bg-violet-500 flex items-center justify-center mb-3 shadow-md shadow-violet-200">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+            </div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="inline-flex text-[9px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded uppercase tracking-wider">Vidéo</span>
+              <span class="text-[10px] text-[#9CA3AF]">il y a 1j</span>
+            </div>
+            <h4 class="text-sm font-bold text-[#1A1A2E] mb-0.5">Construire un hook scroll-stop</h4>
+            <p class="text-[10px] text-[#9CA3AF] mb-3">Module 7 · 9 min</p>
+            <p class="text-xs text-[#1A1A2E] italic leading-relaxed mb-3">
+              "Pour ton problème de rétention sur Reels."
+            </p>
+            <button class="bg-violet-600 text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-md shadow-violet-200">
+              Regarder →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CAS 3 : TROIS RECOMMANDATIONS                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">CAS 3</span>
+        <h2 class="text-xl font-bold">Trois recommandations actives</h2>
+      </div>
+
+      <div class="bg-white/80 backdrop-blur-lg rounded-[28px] p-6 shadow-xl shadow-slate-200/50 border border-white/60">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="/jonathan.jpg" alt="Jonathan" class="w-10 h-10 rounded-xl object-cover shadow-md shadow-orange-200" />
+          <div>
+            <h3 class="text-sm font-bold text-[#1A1A2E]">Recommandations de Jonathan</h3>
+            <p class="text-[10px] text-[#9CA3AF]">3 recommandations actives</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <!-- Reco 1 : Module -->
+          <div class="bg-orange-50/70 border border-orange-100 rounded-2xl p-5">
+            <div class="w-10 h-10 rounded-xl bg-[#f97316] flex items-center justify-center mb-3 shadow-md shadow-orange-200">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/></svg>
+            </div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="inline-flex text-[9px] font-bold text-[#f97316] bg-white px-2 py-0.5 rounded uppercase tracking-wider">Module</span>
+              <span class="text-[10px] text-[#9CA3AF]">il y a 2h</span>
+            </div>
+            <h4 class="text-sm font-bold text-[#1A1A2E] mb-0.5">Système d'acquisition</h4>
+            <p class="text-[10px] text-[#9CA3AF] mb-3">8 vidéos · 1h20</p>
+            <p class="text-xs text-[#1A1A2E] italic leading-relaxed mb-3">
+              "Pour structurer ton tunnel."
+            </p>
+            <button class="bg-[#f97316] text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-md shadow-orange-200">
+              Commencer →
+            </button>
+          </div>
+
+          <!-- Reco 2 : Vidéo en cours -->
+          <div class="bg-violet-50/70 border border-violet-100 rounded-2xl p-5">
+            <div class="w-10 h-10 rounded-xl bg-violet-500 flex items-center justify-center mb-3 shadow-md shadow-violet-200">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+            </div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="inline-flex text-[9px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded uppercase tracking-wider">Vidéo</span>
+              <span class="inline-flex text-[9px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">À 60%</span>
+            </div>
+            <h4 class="text-sm font-bold text-[#1A1A2E] mb-0.5">Framework de pricing high-ticket</h4>
+            <p class="text-[10px] text-[#9CA3AF] mb-3">Module 3 · 14 min</p>
+            <p class="text-xs text-[#1A1A2E] italic leading-relaxed mb-3">
+              "Reprends où tu en étais."
+            </p>
+            <button class="bg-violet-600 text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-md shadow-violet-200">
+              Reprendre →
+            </button>
+          </div>
+
+          <!-- Reco 3 : Vidéo -->
+          <div class="bg-violet-50/70 border border-violet-100 rounded-2xl p-5">
+            <div class="w-10 h-10 rounded-xl bg-violet-500 flex items-center justify-center mb-3 shadow-md shadow-violet-200">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+            </div>
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="inline-flex text-[9px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded uppercase tracking-wider">Vidéo</span>
+              <span class="text-[10px] text-[#9CA3AF]">il y a 3j</span>
+            </div>
+            <h4 class="text-sm font-bold text-[#1A1A2E] mb-0.5">Construire un hook scroll-stop</h4>
+            <p class="text-[10px] text-[#9CA3AF] mb-3">Module 7 · 9 min</p>
+            <p class="text-xs text-[#1A1A2E] italic leading-relaxed mb-3">
+              "Pour ta rétention sur Reels."
+            </p>
+            <button class="bg-violet-600 text-white px-3 py-1.5 rounded-lg text-[11px] font-bold shadow-md shadow-violet-200">
+              Regarder →
+            </button>
+          </div>
+        </div>
+
+        <!-- Si plus de 3 recos -->
+        <div class="mt-4 text-center">
+          <a href="#" class="text-[11px] font-bold text-[#9CA3AF] hover:text-[#f97316]">
+            + 2 autres recommandations · Voir toutes →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Récap ═══ -->
+    <div class="bg-white/60 backdrop-blur-md border border-white/60 rounded-2xl p-5">
+      <h3 class="text-sm font-bold text-[#1A1A2E] mb-2">La logique</h3>
+      <ul class="text-xs text-[#6B7280] leading-relaxed space-y-2">
+        <li><strong class="text-[#1A1A2E]">1 reco</strong> = grande carte horizontale (impact maximum)</li>
+        <li><strong class="text-[#1A1A2E]">2 recos</strong> = 2 cards côte à côte (50/50)</li>
+        <li><strong class="text-[#1A1A2E]">3 recos</strong> = 3 cards en grille (33/33/33)</li>
+        <li><strong class="text-[#1A1A2E]">4+ recos</strong> = 3 cards visibles + lien "voir toutes" (rare en pratique)</li>
+        <li><strong class="text-[#f97316]">Orange</strong> = Module complet · <strong class="text-violet-600">Violet</strong> = Vidéo</li>
+        <li>Chaque card a une note du coach (le pourquoi de la reco)</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

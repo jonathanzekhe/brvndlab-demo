@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Brvndlab · Mockup Vidéo + Ressources (Final)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-[#EEF0F4] text-[#1A1A2E] p-8">
+
+  <div class="max-w-7xl mx-auto space-y-12">
+
+    <header>
+      <h1 class="text-3xl font-extrabold text-[#1A1A2E]">Modale Vidéo · Version finale</h1>
+      <p class="text-[#6B7280] mt-2">Split 2 colonnes · Player Wistia sécurisé · Tabs Document / Fichiers / Notes</p>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- MODALE SPLIT FINALE                                        -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="relative bg-slate-900/40 rounded-[32px] p-8 min-h-[720px]">
+        <div class="absolute inset-0 backdrop-blur-md rounded-[32px]"></div>
+
+        <!-- Modale -->
+        <div class="relative z-10 max-w-6xl mx-auto bg-white rounded-[28px] shadow-2xl overflow-hidden">
+          <!-- Header modale -->
+          <div class="flex items-center justify-between p-5 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center font-black text-xs">04</div>
+              <div>
+                <h3 class="text-sm font-bold text-[#1A1A2E]">Construire ton tunnel pas à pas</h3>
+                <p class="text-[10px] text-[#9CA3AF]">Système d'acquisition · Vidéo 2/8</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="text-[11px] font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Marquer comme vue
+              </button>
+              <button class="w-8 h-8 rounded-lg hover:bg-slate-100 flex items-center justify-center text-[#6B7280]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Split 2 colonnes -->
+          <div class="grid grid-cols-[1.4fr_1fr] h-[620px]">
+            <!-- Colonne gauche : Player Wistia -->
+            <div class="bg-slate-50 p-6 flex flex-col">
+              <!-- Player sécurisé Wistia (simulé) -->
+              <div class="bg-[#1A1A2E] rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden flex-1 max-h-[420px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-rose-500/20"></div>
+                <!-- Play button -->
+                <div class="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+                  <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                </div>
+
+                <!-- Badge Wistia secure (en haut à droite) -->
+                <div class="absolute top-3 right-3 bg-black/40 backdrop-blur-md rounded-lg px-2 py-1 flex items-center gap-1.5">
+                  <svg class="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                  <span class="text-[9px] font-bold text-white uppercase tracking-wider">Sécurisé</span>
+                </div>
+
+                <!-- Controls bottom -->
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <div class="w-full h-1 bg-white/20 rounded-full mb-2 cursor-pointer">
+                    <div class="h-full bg-[#f97316] rounded-full relative" style="width: 45%">
+                      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-white shadow-lg"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between text-[11px] text-white font-medium">
+                    <div class="flex items-center gap-3">
+                      <button><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg></button>
+                      <button><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414z"/></svg></button>
+                      <span>5:12 / 11:30</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-[10px] opacity-60">HD · 1080p</span>
+                      <!-- NOTE: pas de bouton partage, download, ou ouverture externe -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation vidéos -->
+              <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-200">
+                <button class="flex items-center gap-2 text-[11px] font-bold text-[#6B7280] hover:text-[#f97316]">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                  Introduction au tunnel
+                </button>
+                <span class="text-[10px] text-[#9CA3AF] font-bold">2 / 8</span>
+                <button class="flex items-center gap-2 text-[11px] font-bold text-[#f97316]">
+                  Landing page qui convertit
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Colonne droite : Ressources avec tabs -->
+            <div class="border-l border-slate-100 flex flex-col">
+              <!-- Tabs -->
+              <div class="flex items-center border-b border-slate-100 px-2">
+                <button class="px-4 py-3 text-[11px] font-bold text-[#f97316] border-b-2 border-[#f97316]">
+                  📄 Document
+                </button>
+                <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF] hover:text-[#1A1A2E]">
+                  📎 Fichiers <span class="text-[9px] ml-0.5">3</span>
+                </button>
+                <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF] hover:text-[#1A1A2E]">
+                  📝 Mes notes
+                </button>
+              </div>
+
+              <!-- Contenu tab Document -->
+              <div class="flex-1 overflow-y-auto p-5">
+                <h4 class="text-sm font-bold text-[#1A1A2E] mb-3">L'anatomie d'un tunnel qui convertit</h4>
+
+                <div class="space-y-4 text-xs text-[#1A1A2E] leading-relaxed">
+                  <p class="text-[#6B7280]">Un bon tunnel repose sur 3 étapes qui s'enchaînent naturellement. Chacune doit résoudre une objection précise avant de passer à la suivante.</p>
+
+                  <div>
+                    <p class="font-bold text-xs mb-2 text-[#1A1A2E]">Les 3 étapes clés :</p>
+                    <ol class="space-y-2">
+                      <li class="flex gap-2">
+                        <span class="w-5 h-5 rounded-full bg-orange-100 text-[#f97316] flex items-center justify-center text-[10px] font-black shrink-0">1</span>
+                        <span class="text-[11px] text-[#6B7280]">Identifier le <strong class="text-[#1A1A2E]">problème exact</strong> que tu résous</span>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="w-5 h-5 rounded-full bg-orange-100 text-[#f97316] flex items-center justify-center text-[10px] font-black shrink-0">2</span>
+                        <span class="text-[11px] text-[#6B7280]">Créer un <strong class="text-[#1A1A2E]">lead magnet ciblé</strong> sur ce problème</span>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="w-5 h-5 rounded-full bg-orange-100 text-[#f97316] flex items-center justify-center text-[10px] font-black shrink-0">3</span>
+                        <span class="text-[11px] text-[#6B7280]">Construire une <strong class="text-[#1A1A2E]">séquence email de 5 jours</strong></span>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div class="bg-orange-50 border-l-2 border-[#f97316] rounded-xl p-3">
+                    <p class="text-[9px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Exemple concret</p>
+                    <p class="text-[11px] text-[#1A1A2E] leading-relaxed">Coach personal branding : problème = "je sais pas quoi poster", lead magnet = "50 hooks testés", séquence = 5 emails qui enseignent la méthode.</p>
+                  </div>
+
+                  <!-- Screenshot intégré (hébergé chez Brvndlab, pas téléchargeable) -->
+                  <div class="bg-slate-100 rounded-xl overflow-hidden select-none">
+                    <div class="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+                      <svg class="w-12 h-12 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                    </div>
+                    <p class="text-[10px] text-[#9CA3AF] text-center py-2">Schéma · Structure d'un tunnel</p>
+                  </div>
+
+                  <div>
+                    <p class="font-bold text-xs text-[#1A1A2E] mb-1.5">📌 À retenir</p>
+                    <p class="text-[11px] text-[#6B7280]">Un bon tunnel ne vend pas tout de suite. Il éduque, crée la confiance, puis propose la solution au bon moment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- PREVIEW : TAB "FICHIERS"                                   -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-violet-500 px-3 py-1 rounded-full">PREVIEW</span>
+        <h2 class="text-xl font-bold">Tab "Fichiers" · PDF viewer intégré + liens iframe</h2>
+      </div>
+      <p class="text-sm text-[#6B7280] mb-6">Quand tu cliques sur l'onglet "Fichiers", tu vois la liste. Clic sur un fichier = ouverture inline (pas de download, pas d'ouverture externe).</p>
+
+      <div class="bg-white rounded-[28px] shadow-xl border border-white/60 overflow-hidden">
+        <!-- Tabs -->
+        <div class="flex items-center border-b border-slate-100 px-2 bg-slate-50/50">
+          <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF] hover:text-[#1A1A2E]">📄 Document</button>
+          <button class="px-4 py-3 text-[11px] font-bold text-[#f97316] border-b-2 border-[#f97316]">📎 Fichiers <span class="text-[9px] ml-0.5">3</span></button>
+          <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF] hover:text-[#1A1A2E]">📝 Mes notes</button>
+        </div>
+
+        <div class="p-6 grid grid-cols-2 gap-4">
+          <!-- Liste des fichiers à gauche -->
+          <div class="space-y-2">
+            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider mb-2">3 fichiers disponibles</p>
+
+            <!-- Fichier 1 : PDF sélectionné -->
+            <div class="flex items-center gap-3 p-3 bg-orange-50 border border-orange-200 rounded-2xl cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-[#1A1A2E] truncate">Workbook · Tunnel d'acquisition</p>
+                <p class="text-[10px] text-[#9CA3AF]">PDF · 12 pages · Hébergé par Brvndlab</p>
+              </div>
+            </div>
+
+            <!-- Fichier 2 : lien Notion -->
+            <div class="flex items-center gap-3 p-3 hover:bg-slate-50 rounded-2xl cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-[#1A1A2E] text-white flex items-center justify-center shrink-0 text-sm font-black">N</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-[#1A1A2E] truncate">Template · Séquence email</p>
+                <p class="text-[10px] text-[#9CA3AF]">Notion · Iframe intégrée</p>
+              </div>
+            </div>
+
+            <!-- Fichier 3 : lien GenSpark -->
+            <div class="flex items-center gap-3 p-3 hover:bg-slate-50 rounded-2xl cursor-pointer">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-[#1A1A2E] truncate">Genspark · Recherche niche</p>
+                <p class="text-[10px] text-[#9CA3AF]">Lien iframe intégré</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview PDF inline à droite -->
+          <div class="bg-slate-100 rounded-2xl overflow-hidden relative select-none">
+            <!-- Toolbar PDF -->
+            <div class="flex items-center justify-between px-3 py-2 bg-white border-b border-slate-200">
+              <div class="flex items-center gap-2">
+                <button class="w-6 h-6 rounded hover:bg-slate-100 flex items-center justify-center text-[#6B7280]">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <span class="text-[10px] font-bold text-[#6B7280]">Page 3 / 12</span>
+                <button class="w-6 h-6 rounded hover:bg-slate-100 flex items-center justify-center text-[#6B7280]">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <div class="text-[9px] text-[#9CA3AF] font-bold">🔒 Non téléchargeable</div>
+            </div>
+
+            <!-- Page PDF simulée -->
+            <div class="bg-white m-3 rounded-lg shadow-inner p-4 aspect-[3/4] flex flex-col">
+              <p class="text-[10px] font-black text-[#1A1A2E] mb-2">TUNNEL D'ACQUISITION</p>
+              <p class="text-[8px] text-[#6B7280] mb-3">Chapitre 3 · Le lead magnet irrésistible</p>
+              <div class="space-y-1">
+                <div class="h-1 bg-slate-200 rounded w-full"></div>
+                <div class="h-1 bg-slate-200 rounded w-5/6"></div>
+                <div class="h-1 bg-slate-200 rounded w-4/6"></div>
+                <div class="h-1 bg-slate-200 rounded w-full"></div>
+              </div>
+              <div class="mt-3 space-y-1">
+                <div class="h-1 bg-slate-200 rounded w-full"></div>
+                <div class="h-1 bg-slate-200 rounded w-3/4"></div>
+                <div class="h-1 bg-slate-200 rounded w-5/6"></div>
+              </div>
+              <div class="mt-auto text-[7px] text-slate-300 text-center">— Brvndlab · Document confidentiel —</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- PREVIEW : TAB "MES NOTES"                                  -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-emerald-500 px-3 py-1 rounded-full">PREVIEW</span>
+        <h2 class="text-xl font-bold">Tab "Mes notes" · Prise de notes pendant la vidéo</h2>
+      </div>
+      <p class="text-sm text-[#6B7280] mb-6">Le client peut prendre ses propres notes en regardant. Sauvegardées dans Brvndlab, liées à la vidéo.</p>
+
+      <div class="bg-white rounded-[28px] shadow-xl border border-white/60 overflow-hidden max-w-xl">
+        <div class="flex items-center border-b border-slate-100 px-2 bg-slate-50/50">
+          <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF]">📄 Document</button>
+          <button class="px-4 py-3 text-[11px] font-bold text-[#9CA3AF]">📎 Fichiers</button>
+          <button class="px-4 py-3 text-[11px] font-bold text-[#f97316] border-b-2 border-[#f97316]">📝 Mes notes</button>
+        </div>
+        <div class="p-5">
+          <textarea class="w-full text-xs text-[#1A1A2E] bg-transparent outline-none resize-none leading-relaxed" rows="12" placeholder="Écris tes notes ici pendant que tu regardes la vidéo…">Pour mon tunnel personal branding :
+
+· Problème client = "je passe des heures à créer du contenu sans résultats"
+· Lead magnet = "Les 10 hooks qui m'ont fait passer de 0 à 10k abonnés"
+· Séquence 5 jours = J1 hook, J2 framework, J3 cas client, J4 offre, J5 urgence
+
+À tester cette semaine ⬇️
+→ Créer la landing page du lead magnet
+→ Enregistrer les 5 emails</textarea>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 mt-3">
+            <p class="text-[10px] text-[#9CA3AF]">Sauvegardé automatiquement · Lié à cette vidéo</p>
+            <div class="flex items-center gap-1 text-[10px] text-emerald-600 font-bold">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Sauvegardé
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

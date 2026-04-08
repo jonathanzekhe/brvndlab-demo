@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Brvndlab · Mockup Clic sur une vidéo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-[#EEF0F4] text-[#1A1A2E] p-8">
+
+  <div class="max-w-7xl mx-auto space-y-20">
+
+    <header>
+      <h1 class="text-3xl font-extrabold text-[#1A1A2E]">Question 3 · Clic sur une vidéo</h1>
+      <p class="text-[#6B7280] mt-2">3 options pour afficher une vidéo avec son document associé. Exemple : "Construire ton tunnel".</p>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- OPTION A : NOUVELLE PAGE                                   -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">OPTION A</span>
+        <h2 class="text-xl font-bold">Nouvelle page dédiée</h2>
+      </div>
+      <p class="text-sm text-[#6B7280] mb-6">Tu es redirigé sur une page complète. Player en haut, document en dessous.</p>
+
+      <div class="bg-white/40 backdrop-blur-md rounded-[32px] p-8 shadow-sm border border-white/60">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 mb-6 text-[11px] font-bold text-[#6B7280]">
+          <a href="#" class="hover:text-[#f97316]">Modules</a>
+          <span>·</span>
+          <a href="#" class="hover:text-[#f97316]">Système d'acquisition</a>
+          <span>·</span>
+          <span class="text-[#1A1A2E]">Construire ton tunnel</span>
+        </div>
+
+        <!-- Player -->
+        <div class="bg-[#1A1A2E] rounded-2xl aspect-video mb-6 flex items-center justify-center relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-rose-500/20"></div>
+          <div class="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center">
+            <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+          </div>
+          <!-- Controls -->
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div class="w-full h-1 bg-white/20 rounded-full mb-2"><div class="h-full bg-[#f97316] rounded-full" style="width: 45%"></div></div>
+            <div class="flex items-center justify-between text-[11px] text-white font-medium">
+              <span>5:12 / 11:30</span>
+              <span>HD · 1080p</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titre vidéo -->
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-extrabold text-[#1A1A2E]">Construire ton tunnel pas à pas</h3>
+            <p class="text-sm text-[#6B7280] mt-1">Module 4 · Système d'acquisition · Vidéo 2 sur 8</p>
+          </div>
+          <button class="text-[11px] font-bold text-[#6B7280] bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2 rounded-xl">✓ Marquer comme vue</button>
+        </div>
+
+        <!-- Document intégré -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+          <h4 class="text-lg font-bold text-[#1A1A2E] mb-4">📄 Ressources complémentaires</h4>
+          <div class="space-y-4 text-sm text-[#1A1A2E] leading-relaxed">
+            <p><strong>Template Notion :</strong> copie ce template pour construire ton propre tunnel étape par étape.</p>
+            <div class="bg-slate-50 rounded-xl p-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center">📋</div>
+              <div class="flex-1"><p class="font-bold text-xs">Template · Tunnel d'acquisition</p><p class="text-[11px] text-[#9CA3AF]">Notion · 12 sections</p></div>
+              <button class="text-[11px] font-bold text-[#f97316]">Ouvrir →</button>
+            </div>
+            <p class="pt-2"><strong>Les 3 étapes clés :</strong></p>
+            <ol class="list-decimal list-inside space-y-2 text-[#6B7280]">
+              <li>Identifier le problème exact que tu résous</li>
+              <li>Créer un lead magnet ciblé sur ce problème</li>
+              <li>Construire une séquence email de nurturing en 5 jours</li>
+            </ol>
+            <div class="bg-orange-50 border-l-2 border-[#f97316] rounded-xl p-4 mt-4">
+              <p class="text-[11px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Exemple concret</p>
+              <p class="text-xs text-[#1A1A2E]">Pour un coach personal branding, le problème c'est "je sais pas quoi poster". Le lead magnet c'est "50 hooks testés". La séquence c'est 5 emails qui enseignent la méthode complète.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- OPTION B : MODALE SCROLL UNIQUE                            -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">OPTION B</span>
+        <h2 class="text-xl font-bold">Modale plein écran · scroll unique</h2>
+      </div>
+      <p class="text-sm text-[#6B7280] mb-6">Modale centrée, player en haut, document en dessous. Tu scrolles pour voir le document.</p>
+
+      <div class="relative bg-slate-900/40 rounded-[32px] p-8 min-h-[900px]">
+        <!-- Background flou simulé -->
+        <div class="absolute inset-0 backdrop-blur-md rounded-[32px]"></div>
+
+        <!-- Modale -->
+        <div class="relative z-10 max-w-4xl mx-auto bg-white rounded-[28px] shadow-2xl overflow-hidden">
+          <!-- Header modale -->
+          <div class="flex items-center justify-between p-5 border-b border-slate-100 sticky top-0 bg-white z-10">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center font-black text-xs">04</div>
+              <div>
+                <h3 class="text-sm font-bold text-[#1A1A2E]">Construire ton tunnel pas à pas</h3>
+                <p class="text-[10px] text-[#9CA3AF]">Système d'acquisition · Vidéo 2/8</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="text-[11px] font-bold text-[#6B7280] bg-slate-50 hover:bg-slate-100 px-3 py-1.5 rounded-lg">✓ Marquer vue</button>
+              <button class="w-8 h-8 rounded-lg hover:bg-slate-100 flex items-center justify-center text-[#6B7280]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Player -->
+          <div class="p-6 pb-4">
+            <div class="bg-[#1A1A2E] rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-rose-500/20"></div>
+              <div class="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center">
+                <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <div class="w-full h-1 bg-white/20 rounded-full mb-2"><div class="h-full bg-[#f97316] rounded-full" style="width: 45%"></div></div>
+                <div class="flex items-center justify-between text-[11px] text-white">
+                  <span>5:12 / 11:30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document scrollable en dessous -->
+          <div class="px-6 pb-6">
+            <h4 class="text-lg font-bold text-[#1A1A2E] mb-4">📄 Ressources complémentaires</h4>
+            <div class="space-y-4 text-sm text-[#1A1A2E] leading-relaxed">
+              <p><strong>Template Notion :</strong> copie ce template pour construire ton propre tunnel.</p>
+              <div class="bg-slate-50 rounded-xl p-4 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center">📋</div>
+                <div class="flex-1"><p class="font-bold text-xs">Template · Tunnel d'acquisition</p><p class="text-[11px] text-[#9CA3AF]">Notion · 12 sections</p></div>
+                <button class="text-[11px] font-bold text-[#f97316]">Ouvrir →</button>
+              </div>
+              <p class="pt-2"><strong>Les 3 étapes clés :</strong></p>
+              <ol class="list-decimal list-inside space-y-2 text-[#6B7280]">
+                <li>Identifier le problème exact que tu résous</li>
+                <li>Créer un lead magnet ciblé sur ce problème</li>
+                <li>Construire une séquence email de nurturing en 5 jours</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- OPTION C : MODALE SPLIT 2 COLONNES                         -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-[#f97316] px-3 py-1 rounded-full">OPTION C</span>
+        <h2 class="text-xl font-bold">Modale split 2 colonnes</h2>
+      </div>
+      <p class="text-sm text-[#6B7280] mb-6">Player à gauche (fixe), document à droite (scrollable). Tu regardes et tu lis en même temps.</p>
+
+      <div class="relative bg-slate-900/40 rounded-[32px] p-8 min-h-[700px]">
+        <div class="absolute inset-0 backdrop-blur-md rounded-[32px]"></div>
+
+        <!-- Modale -->
+        <div class="relative z-10 max-w-6xl mx-auto bg-white rounded-[28px] shadow-2xl overflow-hidden">
+          <!-- Header -->
+          <div class="flex items-center justify-between p-5 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center font-black text-xs">04</div>
+              <div>
+                <h3 class="text-sm font-bold text-[#1A1A2E]">Construire ton tunnel pas à pas</h3>
+                <p class="text-[10px] text-[#9CA3AF]">Système d'acquisition · Vidéo 2/8</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="text-[11px] font-bold text-[#6B7280] bg-slate-50 hover:bg-slate-100 px-3 py-1.5 rounded-lg">✓ Marquer vue</button>
+              <button class="w-8 h-8 rounded-lg hover:bg-slate-100 flex items-center justify-center text-[#6B7280]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Split 2 colonnes -->
+          <div class="grid grid-cols-[1.4fr_1fr] h-[560px]">
+            <!-- Colonne gauche : Player -->
+            <div class="bg-slate-50 p-6 flex items-center">
+              <div class="w-full">
+                <div class="bg-[#1A1A2E] rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-rose-500/20"></div>
+                  <div class="relative z-10 w-20 h-20 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                  </div>
+                  <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <div class="w-full h-1 bg-white/20 rounded-full mb-2"><div class="h-full bg-[#f97316] rounded-full" style="width: 45%"></div></div>
+                    <div class="flex items-center justify-between text-[11px] text-white">
+                      <span>5:12 / 11:30</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Navigation vidéos précédent/suivant sous le player -->
+                <div class="flex items-center justify-between mt-4">
+                  <button class="flex items-center gap-2 text-[11px] font-bold text-[#6B7280] hover:text-[#f97316]">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    Précédente
+                  </button>
+                  <span class="text-[10px] text-[#9CA3AF]">Vidéo 2 / 8</span>
+                  <button class="flex items-center gap-2 text-[11px] font-bold text-[#f97316]">
+                    Suivante
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colonne droite : Document scrollable -->
+            <div class="p-6 overflow-y-auto border-l border-slate-100">
+              <h4 class="text-sm font-bold text-[#1A1A2E] mb-1">📄 Ressources</h4>
+              <p class="text-[10px] text-[#9CA3AF] mb-4">Templates, exemples, étapes</p>
+
+              <div class="space-y-4 text-xs text-[#1A1A2E] leading-relaxed">
+                <div class="bg-slate-50 rounded-xl p-3 flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sm">📋</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="font-bold text-[11px] truncate">Template · Tunnel</p>
+                    <p class="text-[10px] text-[#9CA3AF]">Notion · 12 sections</p>
+                  </div>
+                  <button class="text-[10px] font-bold text-[#f97316] shrink-0">Ouvrir →</button>
+                </div>
+
+                <div>
+                  <p class="font-bold text-xs mb-2">Les 3 étapes clés :</p>
+                  <ol class="list-decimal list-inside space-y-1.5 text-[11px] text-[#6B7280]">
+                    <li>Identifier le problème exact que tu résous</li>
+                    <li>Créer un lead magnet ciblé sur ce problème</li>
+                    <li>Construire une séquence email de 5 jours</li>
+                  </ol>
+                </div>
+
+                <div class="bg-orange-50 border-l-2 border-[#f97316] rounded-xl p-3">
+                  <p class="text-[9px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Exemple concret</p>
+                  <p class="text-[11px] text-[#1A1A2E] leading-relaxed">Pour un coach personal branding : problème = "je sais pas quoi poster", lead magnet = "50 hooks testés", séquence = 5 emails qui enseignent la méthode.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold text-xs mb-2">📌 À retenir</p>
+                  <p class="text-[11px] text-[#6B7280] leading-relaxed">Un bon tunnel ne cherche pas à vendre tout de suite. Il éduque, il crée de la confiance, puis il propose une solution au bon moment.</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-3">
+                  <p class="font-bold text-[11px] mb-2">🔗 Liens utiles</p>
+                  <ul class="space-y-1.5 text-[11px]">
+                    <li><a href="#" class="text-[#f97316] hover:underline">ConvertKit · Email séquence</a></li>
+                    <li><a href="#" class="text-[#f97316] hover:underline">Typeform · Lead magnet</a></li>
+                    <li><a href="#" class="text-[#f97316] hover:underline">Carrd · Landing page</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

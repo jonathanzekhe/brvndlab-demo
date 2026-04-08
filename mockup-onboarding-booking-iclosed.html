@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserve ton appel de kick-off, Brvndlab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f7;
+            font-weight: 300;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            opacity: 0.04;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .warm-glow-bottom {
+            position: fixed;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(ellipse at center, rgba(249,115,22,0.10), transparent 70%);
+            pointer-events: none;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .warm-glow-top {
+            position: fixed;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(249,115,22,0.05), transparent 70%);
+            pointer-events: none;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .widget-frame {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <div class="warm-glow-bottom"></div>
+    <div class="warm-glow-top"></div>
+    <div class="grain"></div>
+
+    <header class="px-12 pt-10 pb-6 max-w-[1100px] mx-auto relative z-10">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-md bg-[#f97316] flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">B</span>
+                </div>
+                <span class="text-white font-light text-base tracking-wide">Brvndlab</span>
+            </div>
+            <span class="text-[10px] text-white/30 uppercase tracking-[0.2em] font-light">Étape finale</span>
+        </div>
+    </header>
+
+    <main class="max-w-[900px] mx-auto px-8 pb-32 relative z-10">
+
+        <div class="text-center mt-8 mb-12">
+            <h1 class="text-[48px] text-white font-light tracking-tight mb-4 leading-[1.05]">Réserve ton appel de kick-off.</h1>
+            <p class="text-[15px] text-white/50 font-light max-w-md mx-auto">Choisis un créneau qui t'arrange, on s'occupe du reste.</p>
+        </div>
+
+        <div class="widget-frame">
+            <div class="iclosed-widget" data-url="https://app.iclosed.io/e/brvndlab/kickoff" title="Appel de Kick off avec Jonathan" style="width: 100%; height: 700px;"></div>
+            <script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
+        </div>
+
+        <p class="text-center text-[11px] text-white/30 mt-8 uppercase tracking-[0.15em]">L'appel sera ajouté automatiquement à ton calendrier après confirmation</p>
+
+    </main>
+
+</body>
+</html>

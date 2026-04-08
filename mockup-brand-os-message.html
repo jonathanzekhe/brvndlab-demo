@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message central et primaire — Brvndlab Brand OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; color: #1A1A2E; scroll-behavior: smooth; }
+        .frosted-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 20px 25px -5px rgba(203, 213, 225, 0.5); }
+        .label { font-size: 11px; font-weight: 800; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; }
+        .problem-item:hover .delete-btn { opacity: 1; }
+        html { scroll-padding-top: 100px; }
+    </style>
+</head>
+<body class="min-h-screen pb-32">
+
+    <!-- STICKY SUB-NAV -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-white/60 px-6 py-4 mb-0">
+        <div class="max-w-3xl mx-auto flex items-center justify-between gap-4 flex-wrap">
+            <a href="mockup-brand-os.html" class="inline-flex items-center text-[12px] font-bold text-[#9CA3AF] hover:text-[#f97316]">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                BRAND OS
+            </a>
+            <div class="flex gap-2">
+                <a href="#partie-1" class="px-3 py-1.5 rounded-full text-[11px] font-bold bg-rose-50 text-rose-500 border border-rose-100 hover:bg-rose-100">1 · Marché</a>
+                <a href="#partie-2" class="px-3 py-1.5 rounded-full text-[11px] font-bold bg-orange-50 text-[#f97316] border border-orange-100 hover:bg-orange-100">2 · Positionnement</a>
+                <a href="#partie-3" class="px-3 py-1.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-100 hover:bg-emerald-100">3 · Offre</a>
+            </div>
+            <span class="text-[11px] font-bold text-[#9CA3AF]">0/8 répondues</span>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 pt-10">
+
+        <!-- HEADER (compact) -->
+        <header class="mb-6">
+            <h1 class="text-3xl font-extrabold text-[#1A1A2E] tracking-tight">Message central et primaire</h1>
+        </header>
+
+        <!-- RAPPEL AUDIENCE — une seule ligne -->
+        <div class="bg-blue-50/60 border border-blue-100 rounded-full px-5 py-2.5 mb-6 flex items-center gap-3 text-[12px]">
+            <svg class="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span class="font-bold text-blue-500 uppercase tracking-wider text-[10px]">Audience</span>
+            <span class="text-[#1A1A2E] truncate flex-1">Les entrepreneurs créatifs qui veulent transformer leur expertise en marque magnétique</span>
+            <a href="mockup-brand-os-audience.html" class="text-blue-500 hover:underline font-bold shrink-0">Modifier →</a>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- MODULES À REGARDER AVANT DE COMMENCER -->
+        <!-- ============================================ -->
+        <div class="bg-[#1A1A2E] text-white rounded-[24px] p-6 mb-4 shadow-2xl shadow-slate-300/50">
+            <div class="flex items-start justify-between mb-5 gap-4 flex-wrap">
+                <div>
+                    <span class="text-[10px] font-bold text-orange-400 uppercase tracking-wider">📺 À REGARDER AVANT DE COMMENCER</span>
+                    <h2 class="text-lg font-extrabold mt-1">3 modules pour comprendre l'exercice</h2>
+                    <p class="text-[12px] text-slate-400 mt-1">C'est la base des bases. Sans ces vidéos, l'exercice ne fonctionnera pas.</p>
+                </div>
+                <div class="text-right">
+                    <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Progression</span>
+                    <p class="text-base font-extrabold text-orange-400">1/3 vues</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Module 01 — vu -->
+                <div class="bg-white/5 border border-emerald-400/40 rounded-2xl overflow-hidden cursor-pointer hover:border-emerald-400 transition-all">
+                    <div class="relative aspect-video bg-gradient-to-br from-rose-500/40 to-orange-500/40 flex items-center justify-center">
+                        <div class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            VU
+                        </div>
+                        <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded">8:42</div>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-[10px] text-orange-400 font-bold tracking-wider">MODULE 01</span>
+                        <p class="text-[13px] font-bold text-white mt-0.5 leading-tight">Identifier ton vrai marché et ses niveaux de conscience</p>
+                    </div>
+                </div>
+
+                <!-- Module 02 — pas vu -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-orange-400 transition-all">
+                    <div class="relative aspect-video bg-gradient-to-br from-orange-500/30 to-amber-500/30 flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/50">
+                            <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded">12:15</div>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-[10px] text-orange-400 font-bold tracking-wider">MODULE 02</span>
+                        <p class="text-[13px] font-bold text-white mt-0.5 leading-tight">Construire un positionnement tranché face à la concurrence</p>
+                    </div>
+                </div>
+
+                <!-- Module 03 — pas vu -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden cursor-pointer hover:border-orange-400 transition-all">
+                    <div class="relative aspect-video bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/50">
+                            <svg class="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded">9:30</div>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-[10px] text-orange-400 font-bold tracking-wider">MODULE 03</span>
+                        <p class="text-[13px] font-bold text-white mt-0.5 leading-tight">Construire ton offre et formuler ta grande promesse</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-5 border-t border-white/10 flex items-start gap-3">
+                <svg class="w-4 h-4 text-orange-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+                <p class="text-[12px] text-slate-300 leading-relaxed">L'exercice ci-dessous est <span class="font-bold text-orange-400">verrouillé</span>. Termine les <span class="font-bold text-white">3 modules</span> pour le débloquer et commencer.</p>
+            </div>
+        </div>
+
+        <!-- BANDEAU LOCKED -->
+        <div class="bg-orange-50 border-2 border-dashed border-orange-300 rounded-2xl p-4 mb-6 flex items-center gap-3">
+            <span class="text-2xl">🔒</span>
+            <p class="text-[13px] text-[#1A1A2E] font-medium flex-1">L'exercice se débloquera automatiquement quand tu auras vu les <span class="font-bold">3 modules</span> ci-dessus.</p>
+            <span class="text-[11px] font-bold text-[#9CA3AF] italic shrink-0">Affiché ici pour test</span>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- PARTIE 1 — COMPRENDRE LE MARCHÉ -->
+        <!-- ============================================ -->
+        <section id="partie-1" class="mb-16">
+            <div class="bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-[24px] p-6 mb-6 shadow-xl shadow-rose-200">
+                <span class="text-[11px] font-bold opacity-80 uppercase tracking-wider">PARTIE 1 SUR 3</span>
+                <h2 class="text-2xl font-extrabold mt-1">Comprendre ton marché</h2>
+                <p class="text-rose-100 text-sm mt-2">Identifie le problème central et tous les niveaux de conscience de ton audience.</p>
+            </div>
+
+            <!-- Problème principal -->
+            <div class="frosted-card p-8 mb-6">
+                <div class="flex flex-col gap-1 mb-6">
+                    <span class="label">01 · PROBLÈME PRINCIPAL</span>
+                    <h2 class="text-[16px] font-bold text-[#1A1A2E]">Quel est le problème majeur de ton audience ?</h2>
+                </div>
+                <textarea rows="4" class="w-full bg-white border border-slate-200 rounded-xl p-4 text-[14px] focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500 outline-none transition-all placeholder:text-[#9CA3AF]" placeholder="Décris le blocage principal en une ou deux phrases..."></textarea>
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-4 mt-4">
+                    <span class="text-[11px] font-bold text-[#9CA3AF] uppercase">Exemple</span>
+                    <p class="text-[13px] text-[#6B7280] italic mt-1">"Ils ont une vraie expertise mais personne ne le voit encore. Leur message n'est pas assez clair pour que les bonnes personnes les trouvent."</p>
+                </div>
+            </div>
+
+            <!-- Sub-problèmes activité quotidienne -->
+            <div class="frosted-card overflow-hidden mb-6">
+                <div class="p-8 pb-4 flex items-start justify-between gap-4 flex-wrap">
+                    <div class="flex flex-col gap-1">
+                        <span class="label">02 · ANALYSE PROFONDE</span>
+                        <h2 class="text-[16px] font-bold text-[#1A1A2E]">Autres problèmes : Concernant leur activité quotidienne</h2>
+                    </div>
+                    <button class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg shadow-orange-200 flex items-center gap-2 whitespace-nowrap">
+                        <span>✨</span> Générer 15 problèmes par niveau avec l'IA
+                    </button>
+                </div>
+                <div class="px-8 pb-8 space-y-6">
+                    <div class="bg-blue-50/40 border border-blue-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-blue-500">Niveau de conscience : Froid 🥶</h3>
+                            <p class="text-[12px] text-blue-400 italic">(Pas conscient du problème ou dans le déni)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>Pense que c'est juste une question de chance</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">02</span><span>Croit qu'il suffit de poster plus pour percer</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">03</span><span>Ne mesure rien, fonctionne au feeling</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 12 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                    <div class="bg-amber-50/40 border border-amber-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-amber-500">Niveau de conscience : Tiède 😮</h3>
+                            <p class="text-[12px] text-amber-400 italic">(Commence à chercher une sortie)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>A essayé plusieurs niches sans en valider une</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">02</span><span>Hésite entre formation, coaching, agence</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 13 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                    <div class="bg-rose-50/40 border border-rose-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-rose-500">Niveau de conscience : Chaud 🥵</h3>
+                            <p class="text-[12px] text-rose-400 italic">(Prêt à agir, mais manque de méthode)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>A déjà acheté 3-4 formations sans appliquer</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">02</span><span>Sait quoi faire mais procrastine sur l'exécution</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 13 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-problèmes freins à l'investissement -->
+            <div class="frosted-card overflow-hidden">
+                <div class="p-8 pb-4 flex items-start justify-between gap-4 flex-wrap">
+                    <div class="flex flex-col gap-1">
+                        <span class="label">03 · FREINS À L'INVESTISSEMENT</span>
+                        <h2 class="text-[16px] font-bold text-[#1A1A2E]">Autres problèmes : Qui les empêche d'investir sur notre solution</h2>
+                    </div>
+                    <button class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg shadow-orange-200 flex items-center gap-2 whitespace-nowrap">
+                        <span>✨</span> Générer 15 problèmes par niveau avec l'IA
+                    </button>
+                </div>
+                <div class="px-8 pb-8 space-y-6">
+                    <div class="bg-blue-50/40 border border-blue-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-blue-500">Niveau de conscience : Froid 🥶</h3>
+                            <p class="text-[12px] text-blue-400 italic">(Veut se lancer mais n'a pas encore choisi l'opportunité)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>Hésite entre plusieurs business modèles</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                    <div class="bg-amber-50/40 border border-amber-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-amber-500">Niveau de conscience : Tiède 😮</h3>
+                            <p class="text-[12px] text-amber-400 italic">(Veut se lancer mais n'a pas encore choisi moi)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>Compare plusieurs coachs en parallèle</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                    <div class="bg-rose-50/40 border border-rose-100 rounded-2xl p-6">
+                        <div class="mb-4">
+                            <h3 class="text-[14px] font-bold text-rose-500">Niveau de conscience : Chaud 🥵</h3>
+                            <p class="text-[12px] text-rose-400 italic">(Veut se lancer mais n'a pas encore investi)</p>
+                        </div>
+                        <div class="grid gap-2 mb-4">
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0">01</span><span>A peur de regretter l'investissement</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500">✕</button></div>
+                            <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                        </div>
+                        <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100">+ 5 problèmes de plus</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- PARTIE 2 — TE POSITIONNER -->
+        <!-- ============================================ -->
+        <section id="partie-2" class="mb-16">
+            <div class="bg-gradient-to-br from-[#f97316] to-[#ea580c] text-white rounded-[24px] p-6 mb-6 shadow-xl shadow-orange-200">
+                <span class="text-[11px] font-bold opacity-80 uppercase tracking-wider">PARTIE 2 SUR 3</span>
+                <h2 class="text-2xl font-extrabold mt-1">Te positionner</h2>
+                <p class="text-orange-100 text-sm mt-2">Identifie tes vrais concurrents et clarifie ce qui te rend unique face à eux.</p>
+            </div>
+
+            <!-- Concurrence -->
+            <div class="frosted-card p-8 mb-6">
+                <div class="label mb-2">04 · Concurrence</div>
+                <h3 class="text-lg font-bold text-[#1A1A2E] mb-6">Quelles sont les 3 solutions les plus connues dans ton marché ?</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4"><span class="label">1</span><input id="concurrent-1" type="text" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" placeholder="Solution 1 (ex: Salles de sport classiques)"></div>
+                    <div class="flex items-center gap-4"><span class="label">2</span><input id="concurrent-2" type="text" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" placeholder="Solution 2 (ex: Applis fitness à la maison)"></div>
+                    <div class="flex items-center gap-4"><span class="label">3</span><input id="concurrent-3" type="text" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" placeholder="Solution 3 (ex: Programmes alimentaires en ligne)"></div>
+                </div>
+            </div>
+
+            <!-- Alternative compétitive -->
+            <div class="frosted-card p-8">
+                <div class="label mb-2">05 · Alternative compétitive</div>
+                <h3 class="text-lg font-bold text-[#1A1A2E] mb-2">Pour chaque concurrent, qu'est-ce qui te différencie ?</h3>
+                <p class="text-[12px] text-[#9CA3AF] italic mb-6">Les noms se synchronisent automatiquement depuis la section précédente.</p>
+                <div class="space-y-6">
+                    <div class="bg-white/50 border border-slate-100 rounded-3xl p-6">
+                        <div class="text-[12px] font-extrabold text-[#9CA3AF] mb-3 uppercase tracking-widest">VS <span id="vs-label-1">Concurrent 1</span></div>
+                        <textarea id="vs-textarea-1" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" rows="2" placeholder="Ce qui me distingue de Concurrent 1..."></textarea>
+                    </div>
+                    <div class="bg-white/50 border border-slate-100 rounded-3xl p-6">
+                        <div class="text-[12px] font-extrabold text-[#9CA3AF] mb-3 uppercase tracking-widest">VS <span id="vs-label-2">Concurrent 2</span></div>
+                        <textarea id="vs-textarea-2" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" rows="2" placeholder="Ce qui me distingue de Concurrent 2..."></textarea>
+                    </div>
+                    <div class="bg-white/50 border border-slate-100 rounded-3xl p-6">
+                        <div class="text-[12px] font-extrabold text-[#9CA3AF] mb-3 uppercase tracking-widest">VS <span id="vs-label-3">Concurrent 3</span></div>
+                        <textarea id="vs-textarea-3" class="w-full bg-white border border-slate-200 rounded-2xl p-4 text-[14px] outline-none focus:border-[#f97316]" rows="2" placeholder="Ce qui me distingue de Concurrent 3..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- PARTIE 3 — DÉFINIR TON OFFRE -->
+        <!-- ============================================ -->
+        <section id="partie-3" class="mb-16">
+            <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-[24px] p-6 mb-6 shadow-xl shadow-emerald-200">
+                <span class="text-[11px] font-bold opacity-80 uppercase tracking-wider">PARTIE 3 SUR 3</span>
+                <h2 class="text-2xl font-extrabold mt-1">Définir ton offre</h2>
+                <p class="text-emerald-100 text-sm mt-2">La transformation que tu rends possible et la promesse finale qui résume tout.</p>
+            </div>
+
+            <!-- Valeur ajoutée -->
+            <div class="frosted-card p-8 mb-6">
+                <div class="label mb-2">06 · Valeur ajoutée</div>
+                <h3 class="text-lg font-bold text-[#1A1A2E] mb-2">Qu'est-ce que tes clients gagnent en travaillant avec toi ?</h3>
+                <p class="text-[12px] text-[#9CA3AF] italic mb-6">Ajoute autant d'éléments que tu veux. Champs libres.</p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 p-4 bg-white border border-slate-100 rounded-2xl">
+                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 w-6 h-6 rounded-full flex items-center justify-center shrink-0">1</span>
+                        <input type="text" class="flex-1 bg-transparent border-none outline-none text-[14px] text-[#1A1A2E] placeholder:text-[#9CA3AF]" placeholder="Un élément de valeur...">
+                    </div>
+                </div>
+                <button class="mt-6 flex items-center gap-2 text-emerald-600 font-bold text-sm hover:text-emerald-700">+ Ajouter un élément</button>
+            </div>
+
+            <!-- Avant / Après -->
+            <div class="frosted-card p-8 mb-6">
+                <div class="label mb-2">07 · AVANT / APRÈS TON ACCOMPAGNEMENT</div>
+                <h3 class="text-lg font-bold text-[#1A1A2E]">La transformation sur 3 dimensions</h3>
+                <div class="mt-8">
+                    <div class="text-[11px] font-bold text-[#6B7280] mb-4 uppercase">I. Mindset</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-rose-500 uppercase mb-3">Avant ↓</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-rose-700 outline-none" rows="3" placeholder="Leur état d'esprit avant..."></textarea></div>
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-emerald-500 uppercase mb-3">Après ↑</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-emerald-700 outline-none" rows="3" placeholder="Leur état d'esprit après..."></textarea></div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="text-[11px] font-bold text-[#6B7280] mb-4 uppercase">II. Résultats</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-rose-500 uppercase mb-3">Avant ↓</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-rose-700 outline-none" rows="3" placeholder="Leurs résultats avant..."></textarea></div>
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-emerald-500 uppercase mb-3">Après ↑</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-emerald-700 outline-none" rows="3" placeholder="Leurs résultats après..."></textarea></div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="text-[11px] font-bold text-[#6B7280] mb-4 uppercase">III. Quotidien</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-rose-500 uppercase mb-3">Avant ↓</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-rose-700 outline-none" rows="3" placeholder="Leur quotidien avant..."></textarea></div>
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5"><div class="text-[10px] font-bold text-emerald-500 uppercase mb-3">Après ↑</div><textarea class="w-full bg-transparent border-none p-0 text-[14px] text-emerald-700 outline-none" rows="3" placeholder="Leur quotidien après..."></textarea></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grande promesse -->
+            <div class="frosted-card p-8 border-2 border-emerald-200 bg-emerald-50/30">
+                <div class="label mb-2 text-emerald-600">08 · Grande promesse</div>
+                <h3 class="text-lg font-bold text-[#1A1A2E] mb-2">Quelle est ta grande promesse ?</h3>
+                <p class="text-[13px] text-[#9CA3AF] mb-6">En une phrase puissante, le résultat ultime que tu offres.</p>
+                <textarea class="w-full bg-white border border-emerald-200 rounded-2xl p-4 text-[14px] outline-none focus:border-emerald-500" rows="3" placeholder="Ex: Construire une marque personnelle qui attire les bons clients sans avoir à courir après personne."></textarea>
+            </div>
+        </section>
+
+        <!-- Footer Save -->
+        <div class="flex justify-center mb-8">
+            <button class="bg-[#f97316] text-white px-12 py-4 rounded-2xl text-[14px] font-bold shadow-xl shadow-orange-200 hover:scale-[1.02] transition-all">Sauvegarder mon message central</button>
+        </div>
+    </div>
+
+<script>
+(function() {
+    [1,2,3].forEach(i => {
+        const input = document.getElementById('concurrent-' + i);
+        const labelSpan = document.getElementById('vs-label-' + i);
+        const textarea = document.getElementById('vs-textarea-' + i);
+        const labelDiv = labelSpan.parentElement;
+        input.addEventListener('input', () => {
+            const v = input.value.trim();
+            const display = v || ('Concurrent ' + i);
+            labelSpan.textContent = display;
+            textarea.placeholder = 'Ce qui me distingue de ' + display + '...';
+            if (v) {
+                labelDiv.classList.remove('text-[#9CA3AF]');
+                labelDiv.classList.add('text-[#f97316]');
+            } else {
+                labelDiv.classList.add('text-[#9CA3AF]');
+                labelDiv.classList.remove('text-[#f97316]');
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>

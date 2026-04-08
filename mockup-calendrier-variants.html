@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier de publication, variantes visuelles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; color: #1A1A2E; }
+        .frosted { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4); }
+        .day-cell { min-height: 130px; transition: background 0.2s; }
+        .day-cell:hover { background: rgba(255,255,255,0.5); }
+        .day-cell.today { background: rgba(249,115,22,0.04); }
+        .funnel-tag { font-size: 8px; font-weight: 800; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.05em; }
+        .funnel-tofu { background: #dbeafe; color: #1d4ed8; }
+        .funnel-mofu { background: #fed7aa; color: #c2410c; }
+        .funnel-bofu { background: #dcfce7; color: #15803d; }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+
+    <div class="max-w-7xl mx-auto space-y-6">
+
+        <header>
+            <p class="text-[11px] font-medium uppercase tracking-wide text-[#9CA3AF]">Brvndlab · <span class="text-[#f97316] font-semibold">Calendrier, 3 variantes</span></p>
+            <h1 class="text-3xl font-extrabold mt-1">3 propositions visuelles</h1>
+            <p class="text-[#6B7280] text-sm mt-2">Même contenu, 3 traitements visuels différents. Tu choisis celui qui te parle le plus, ou un mix.</p>
+        </header>
+
+        <div>
+            <div class="mb-4">
+                <p class="text-[10px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Variante A</p>
+                <h2 class="text-xl font-bold text-[#1A1A2E]">Logos colorés, cards fines avec tag funnel</h2>
+                <p class="text-[12px] text-[#6B7280] mt-1">Le plus dense en infos. Logo plateforme + titre court + tag TOFU/MOFU/BOFU. Lecture rapide.</p>
+            </div>
+
+            <div class="frosted rounded-[24px] overflow-hidden">
+                <div class="grid grid-cols-7 border-b border-slate-100 bg-slate-50/50">
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Lun</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mar</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mer</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Jeu</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Ven</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Sam</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Dim</div>
+                </div>
+                <div class="grid grid-cols-7">
+                    <div class="day-cell today p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-extrabold text-[#f97316] mb-1.5">8</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">Vidéo MOFU</span>
+                                <span class="funnel-tag funnel-mofu">MOFU</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><defs><linearGradient id="ig1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig1)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">2 clips</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">9</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">Clip TikTok</span>
+                                <span class="funnel-tag funnel-mofu">MOFU</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">10</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><defs><linearGradient id="ig2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig2)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">Reel standalone</span>
+                                <span class="funnel-tag funnel-tofu">TOFU</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">TikTok</span>
+                                <span class="funnel-tag funnel-tofu">TOFU</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">11</div></div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">12</div></div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">13</div></div>
+                    <div class="day-cell p-2 border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">14</div></div>
+
+                    <div class="day-cell p-2 border-r border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">15</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">Vidéo principale</span>
+                                <span class="funnel-tag funnel-tofu">TOFU</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><defs><linearGradient id="ig3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig3)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">3 clips</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">16</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 px-1.5 py-1 rounded hover:bg-slate-50 cursor-pointer">
+                                <svg width="14" height="14" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="text-[10px] font-semibold text-[#1A1A2E] truncate flex-1">Clip TikTok</span>
+                                <span class="funnel-tag funnel-bofu">BOFU</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">17</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">18</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">19</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">20</div></div>
+                    <div class="day-cell p-2"><div class="text-[11px] font-bold text-[#1A1A2E] mb-1.5">21</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="mb-4 mt-12">
+                <p class="text-[10px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Variante B</p>
+                <h2 class="text-xl font-bold text-[#1A1A2E]">Pastilles minimalistes, 1 logo par contenu</h2>
+                <p class="text-[12px] text-[#6B7280] mt-1">Le plus épuré. Juste les logos en pastilles, on voit immédiatement le rythme. Hover ou click pour les détails.</p>
+            </div>
+
+            <div class="frosted rounded-[24px] overflow-hidden">
+                <div class="grid grid-cols-7 border-b border-slate-100 bg-slate-50/50">
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Lun</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mar</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mer</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Jeu</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Ven</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Sam</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Dim</div>
+                </div>
+                <div class="grid grid-cols-7">
+                    <div class="day-cell today p-3 border-r border-b border-slate-100">
+                        <div class="text-[12px] font-extrabold text-[#f97316] mb-3">8</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24" class="cursor-pointer hover:scale-110 transition-transform"><rect width="24" height="24" rx="6" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-mofu">M</span>
+                            </div>
+                            <svg width="22" height="22" viewBox="0 0 24 24" class="cursor-pointer hover:scale-110 transition-transform"><defs><linearGradient id="ig-b1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b1)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 24 24" class="cursor-pointer hover:scale-110 transition-transform"><defs><linearGradient id="ig-b2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b2)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                    </div>
+                    <div class="day-cell p-3 border-r border-b border-slate-100">
+                        <div class="text-[12px] font-bold text-[#1A1A2E] mb-3">9</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-mofu">M</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-3 border-r border-b border-slate-100">
+                        <div class="text-[12px] font-bold text-[#1A1A2E] mb-3">10</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><defs><linearGradient id="ig-b3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b3)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-tofu">T</span>
+                            </div>
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-tofu">T</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-3 border-r border-b border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">11</div></div>
+                    <div class="day-cell p-3 border-r border-b border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">12</div></div>
+                    <div class="day-cell p-3 border-r border-b border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">13</div></div>
+                    <div class="day-cell p-3 border-b border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">14</div></div>
+
+                    <div class="day-cell p-3 border-r border-slate-100">
+                        <div class="text-[12px] font-bold text-[#1A1A2E] mb-3">15</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-tofu">T</span>
+                            </div>
+                            <svg width="22" height="22" viewBox="0 0 24 24"><defs><linearGradient id="ig-b4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b4)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 24 24"><defs><linearGradient id="ig-b5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b5)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 24 24"><defs><linearGradient id="ig-b6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-b6)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                    </div>
+                    <div class="day-cell p-3 border-r border-slate-100">
+                        <div class="text-[12px] font-bold text-[#1A1A2E] mb-3">16</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <div class="relative">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <span class="absolute -top-1 -right-1 funnel-tag funnel-bofu">B</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-3 border-r border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">17</div></div>
+                    <div class="day-cell p-3 border-r border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">18</div></div>
+                    <div class="day-cell p-3 border-r border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">19</div></div>
+                    <div class="day-cell p-3 border-r border-slate-100"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">20</div></div>
+                    <div class="day-cell p-3"><div class="text-[12px] font-bold text-[#1A1A2E] mb-3">21</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="mb-4 mt-12">
+                <p class="text-[10px] font-bold text-[#f97316] uppercase tracking-wider mb-1">Variante C</p>
+                <h2 class="text-xl font-bold text-[#1A1A2E]">3 lignes par jour, une par plateforme</h2>
+                <p class="text-[12px] text-[#6B7280] mt-1">Le plus structuré. Chaque jour a 3 mini-rangées (YT, IG, TT). Tu vois immédiatement où sont les trous et où c'est dense par plateforme.</p>
+            </div>
+
+            <div class="frosted rounded-[24px] overflow-hidden">
+                <div class="grid grid-cols-7 border-b border-slate-100 bg-slate-50/50">
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Lun</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mar</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Mer</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Jeu</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Ven</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider border-r border-slate-100">Sam</div>
+                    <div class="p-2.5 text-center text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Dim</div>
+                </div>
+                <div class="grid grid-cols-7">
+                    <div class="day-cell today p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-extrabold text-[#f97316] mb-2">8</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-red-500/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-mofu">MOFU</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><defs><linearGradient id="ig-c1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-c1)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <div class="h-1.5 w-full bg-pink-500/30 rounded-sm flex items-center justify-center">
+                                    <span class="text-[8px] font-bold text-pink-700">×2</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-2">9</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><defs><linearGradient id="ig-c2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-c2)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-700/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-mofu">MOFU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-2">10</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><defs><linearGradient id="ig-c3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-c3)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <div class="h-1.5 w-full bg-pink-500/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-tofu">TOFU</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-700/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-tofu">TOFU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">11</div></div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">12</div></div>
+                    <div class="day-cell p-2 border-r border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">13</div></div>
+                    <div class="day-cell p-2 border-b border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">14</div></div>
+
+                    <div class="day-cell p-2 border-r border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-2">15</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-red-500/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-tofu">TOFU</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><defs><linearGradient id="ig-c4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-c4)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <div class="h-1.5 w-full bg-pink-500/30 rounded-sm flex items-center justify-center">
+                                    <span class="text-[8px] font-bold text-pink-700">×3</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-slate-100">
+                        <div class="text-[11px] font-bold text-[#1A1A2E] mb-2">16</div>
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><rect width="24" height="24" rx="5" fill="#FF0000"/><path d="M10 8l6 4-6 4z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0 opacity-30"><defs><linearGradient id="ig-c5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#962fbf"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="url(#ig-c5)"/><rect x="6" y="6" width="12" height="12" rx="3" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" stroke="white" stroke-width="1.5" fill="none"/></svg>
+                                <div class="h-1.5 w-full bg-slate-100 rounded-sm"></div>
+                            </div>
+                            <div class="flex items-center gap-1.5 h-5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" class="shrink-0"><rect width="24" height="24" rx="5" fill="#000"/><path d="M14 7h2c.3 1.5 1.4 2.5 3 2.7v2c-1.3 0-2.4-.4-3-1v4.5c0 2.5-1.6 3.8-3.5 3.8s-3.5-1.5-3.5-3.5 1.7-3.5 3.5-3.5v2c-.7 0-1.5.6-1.5 1.5s.7 1.5 1.5 1.5 1.5-.5 1.5-1.5V7z" fill="white"/></svg>
+                                <div class="h-1.5 w-full bg-slate-700/30 rounded-sm flex items-center pl-1">
+                                    <span class="funnel-tag funnel-bofu">BOFU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">17</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">18</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">19</div></div>
+                    <div class="day-cell p-2 border-r border-slate-100"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">20</div></div>
+                    <div class="day-cell p-2"><div class="text-[11px] font-bold text-[#1A1A2E] mb-2">21</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frosted rounded-[20px] p-5 mt-12">
+            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider mb-3">Légende des tags funnel</p>
+            <div class="flex flex-wrap gap-3 text-[12px] text-[#6B7280]">
+                <div class="flex items-center gap-2"><span class="funnel-tag funnel-tofu">TOFU</span> Top of funnel, contenu d'audience large</div>
+                <div class="flex items-center gap-2"><span class="funnel-tag funnel-mofu">MOFU</span> Middle of funnel, contenu d'engagement</div>
+                <div class="flex items-center gap-2"><span class="funnel-tag funnel-bofu">BOFU</span> Bottom of funnel, contenu de conversion</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

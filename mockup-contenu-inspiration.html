@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Brvndlab · Flow Vidéo d'inspiration</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-[#EEF0F4] text-[#1A1A2E] p-8">
+
+  <div class="max-w-4xl mx-auto space-y-16 pb-24">
+
+    <header>
+      <h1 class="text-3xl font-extrabold">Flow "J'ai une vidéo d'inspiration"</h1>
+      <p class="text-[#6B7280] mt-2">3 étapes : Import du lien → Analyse IA → Résultats + brainstorm contextuel</p>
+    </header>
+
+    <!-- ═══ ÉTAPE 1 : IMPORT DU LIEN ═══ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-violet-500 px-3 py-1 rounded-full">ÉTAPE 1</span>
+        <h2 class="text-xl font-bold">Import du lien</h2>
+      </div>
+
+      <div class="bg-white/40 backdrop-blur-md rounded-[32px] p-8 border border-white/60">
+        <a href="#" class="inline-flex items-center gap-1 text-[11px] font-bold text-[#9CA3AF] hover:text-[#f97316] mb-6">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          Retour
+        </a>
+
+        <div class="mb-8">
+          <p class="text-[11px] font-medium uppercase tracking-wide text-[#9CA3AF]">Brvndlab · Contenu · Nouveau · <span class="text-violet-600 font-semibold">Inspiration</span></p>
+          <h3 class="text-3xl font-extrabold mt-1">Colle le lien de la vidéo qui t'inspire</h3>
+          <p class="text-[#6B7280] text-sm mt-2">L'IA va l'analyser et brainstormer avec toi pour créer TA version.</p>
+        </div>
+
+        <!-- Champ lien -->
+        <div class="bg-white/80 backdrop-blur-lg rounded-[28px] p-6 shadow-xl shadow-slate-200/50 border border-white/60 mb-6">
+          <label class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider mb-3 block">Lien de la vidéo</label>
+          <div class="relative">
+            <input
+              type="text"
+              value="https://www.youtube.com/watch?v=7UtY5iLWEPc"
+              class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 px-5 text-sm text-[#1A1A2E] outline-none focus:ring-2 focus:ring-violet-200 focus:border-violet-300 placeholder:text-[#9CA3AF]"
+            />
+          </div>
+
+          <!-- Plateformes supportées -->
+          <div class="flex items-center gap-3 mt-4">
+            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Supportées :</p>
+            <div class="flex items-center gap-1.5">
+              <div class="w-6 h-6 rounded-lg bg-red-50 flex items-center justify-center text-red-500" title="YouTube">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </div>
+              <div class="w-6 h-6 rounded-lg bg-pink-50 flex items-center justify-center text-pink-500" title="Instagram">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="w-6 h-6 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-500" title="TikTok">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </div>
+              <div class="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600" title="LinkedIn">
+                <span class="text-[9px] font-black">in</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex justify-end">
+          <button class="bg-violet-500 hover:bg-violet-600 text-white px-8 py-3.5 rounded-2xl text-sm font-bold shadow-lg shadow-violet-200 transition-all flex items-center gap-2">
+            Analyser cette vidéo
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ÉTAPE 2 : ANALYSE EN COURS ═══ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-violet-500 px-3 py-1 rounded-full">ÉTAPE 2</span>
+        <h2 class="text-xl font-bold">Analyse en cours</h2>
+      </div>
+
+      <div class="bg-white/40 backdrop-blur-md rounded-[32px] p-12 border border-white/60 flex flex-col items-center text-center">
+        <!-- Spinner simulé -->
+        <div class="w-20 h-20 rounded-3xl bg-violet-500 flex items-center justify-center mb-6 shadow-xl shadow-violet-200">
+          <svg class="w-10 h-10 text-white animate-pulse" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+          </svg>
+        </div>
+
+        <h3 class="text-xl font-extrabold text-[#1A1A2E] mb-2">L'IA analyse la vidéo</h3>
+        <p class="text-sm text-[#6B7280] mb-8 max-w-md">On récupère le transcript, on détecte le format, le ton, les patterns et on prépare les angles pour toi.</p>
+
+        <!-- Progress steps -->
+        <div class="flex items-center gap-3 max-w-md w-full">
+          <div class="flex-1 flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            <p class="text-[10px] font-bold text-emerald-600 text-left">Téléchargement</p>
+          </div>
+          <div class="flex-1 flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-violet-500 flex items-center justify-center animate-pulse">
+              <div class="w-2 h-2 rounded-full bg-white"></div>
+            </div>
+            <p class="text-[10px] font-bold text-violet-600 text-left">Transcription</p>
+          </div>
+          <div class="flex-1 flex items-center gap-2 opacity-40">
+            <div class="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center">
+              <div class="w-2 h-2 rounded-full bg-white"></div>
+            </div>
+            <p class="text-[10px] font-bold text-slate-400 text-left">Analyse IA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ÉTAPE 3 : RÉSULTATS + BRAINSTORM ═══ -->
+    <section>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-[10px] font-bold text-white bg-violet-500 px-3 py-1 rounded-full">ÉTAPE 3</span>
+        <h2 class="text-xl font-bold">Résultats de l'analyse + Brainstorm</h2>
+      </div>
+
+      <div class="bg-white/40 backdrop-blur-md rounded-[32px] p-8 border border-white/60 space-y-6">
+
+        <!-- Vidéo analysée -->
+        <div class="bg-white/80 backdrop-blur-lg rounded-[28px] p-6 shadow-xl shadow-slate-200/50 border border-white/60">
+          <div class="flex items-start gap-5">
+            <!-- Thumbnail -->
+            <div class="w-40 h-24 rounded-xl bg-gradient-to-br from-red-500 to-rose-500 flex items-center justify-center shrink-0">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[9px] font-bold text-red-600 bg-red-50 px-1.5 py-0.5 rounded uppercase">YouTube</span>
+                <span class="text-[10px] text-[#9CA3AF]">@hormozi · 8:42</span>
+              </div>
+              <h4 class="text-base font-bold text-[#1A1A2E] mb-2">How to Build a System That Actually Works</h4>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-[9px] font-bold text-[#6B7280] bg-slate-100 px-1.5 py-0.5 rounded">Face caméra</span>
+                <span class="text-[9px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">MOFU</span>
+                <span class="text-[9px] font-bold text-[#6B7280] bg-slate-100 px-1.5 py-0.5 rounded">Listicle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analyse IA -->
+        <div class="bg-violet-50/60 border border-violet-100 rounded-2xl p-5">
+          <p class="text-[10px] font-bold text-violet-700 uppercase tracking-wider mb-3">Ce que l'IA a trouvé d'intéressant</p>
+          <div class="space-y-3 text-xs text-[#1A1A2E] leading-relaxed">
+            <div>
+              <p class="font-bold mb-1">🎯 Points forts détectés</p>
+              <ul class="space-y-1 text-[#6B7280]">
+                <li>· Hook ultra-court en 3 secondes avec une affirmation choc</li>
+                <li>· Structure listicle simple et répétable (3 piliers)</li>
+                <li>· Exemples chiffrés concrets à chaque point</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-bold mb-1">📝 Résumé</p>
+              <p class="text-[#6B7280]">La vidéo présente 3 piliers pour construire un système scalable : 1) Automatiser ce qui est répétitif, 2) Déléguer ce qui n'est pas au cœur du métier, 3) Mesurer ce qui compte. Chaque pilier illustré par un cas client concret.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Brainstormer -->
+        <div class="bg-[#1A1A2E] rounded-2xl p-6 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-violet-500/20 blur-[100px] rounded-full pointer-events-none"></div>
+          <div class="relative z-10 flex items-center justify-between gap-5">
+            <div>
+              <p class="text-[10px] font-bold text-violet-400 uppercase tracking-wider mb-1">Prêt à créer ta version</p>
+              <h4 class="text-lg font-bold text-white">Brainstorme avec cette vidéo comme contexte</h4>
+              <p class="text-xs text-slate-400 mt-1">L'IA utilisera ce qu'elle a analysé pour t'aider à trouver ton propre angle.</p>
+            </div>
+            <button class="bg-violet-500 hover:bg-violet-600 text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg shadow-violet-500/30 flex items-center gap-2 shrink-0">
+              Brainstormer
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

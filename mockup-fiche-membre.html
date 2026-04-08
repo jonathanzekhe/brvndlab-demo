@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Membre · Sarah Moreau — Brvndlab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 24px 24px; color: #1A1A2E; }
+        .frosted { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen">
+
+<div class="flex">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="w-60 bg-white/60 backdrop-blur-xl border-r border-white/40 min-h-screen p-5 flex flex-col sticky top-0">
+        <div class="flex items-center gap-2 pb-5 border-b border-slate-100">
+            <div class="w-9 h-9 bg-[#f97316] rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-orange-200">B</div>
+            <span class="font-bold text-lg tracking-tight">Brvndlab</span>
+        </div>
+        <div class="mt-4 p-1 bg-slate-100 rounded-xl flex">
+            <button class="flex-1 px-3 py-1.5 rounded-lg text-[11px] font-bold text-[#6B7280]">Créateur</button>
+            <button class="flex-1 px-3 py-1.5 rounded-lg text-[11px] font-bold bg-[#1A1A2E] text-white shadow-sm">Coach</button>
+        </div>
+        <nav class="space-y-1 mt-5 flex-1">
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <span class="text-[13px] font-medium">Dashboard</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-white shadow-sm text-[#f97316]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <span class="text-[13px] font-semibold">Membres</span>
+                <div class="ml-auto w-1.5 h-1.5 rounded-full bg-[#f97316]"></div>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span class="text-[13px] font-medium">Submissions</span>
+                <span class="ml-auto bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                <span class="text-[13px] font-medium">Notes privées</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6B7280] hover:bg-white/40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                <span class="text-[13px] font-medium">Messagerie</span>
+            </a>
+        </nav>
+        <div class="pt-4 border-t border-slate-100">
+            <div class="flex items-center gap-2">
+                <img src="/jonathan.jpg" alt="Jonathan" class="w-9 h-9 rounded-full object-cover">
+                <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-semibold truncate">Jonathan Zekhe</p>
+                    <p class="text-[10px] text-[#f97316] truncate font-semibold">Mode Coach</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="flex-1 p-10 max-w-[1400px]">
+
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 mb-6 text-[11px] text-[#9CA3AF]">
+            <a href="#" class="hover:text-[#f97316]">Membres</a>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            <span class="text-[#1A1A2E] font-semibold">Sarah Moreau</span>
+        </div>
+
+
+        <!-- ═══ PROFIL CARD (hero) ═══ -->
+        <div class="frosted rounded-[28px] p-8 mb-6 relative overflow-hidden bg-gradient-to-br from-white/90 to-pink-50/40">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-pink-400/10 rounded-full blur-3xl"></div>
+
+            <div class="relative flex items-start gap-6">
+                <!-- Photo + status -->
+                <div class="relative shrink-0">
+                    <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-4xl font-bold shadow-xl shadow-pink-200 ring-4 ring-white">S</div>
+                    <div class="absolute -bottom-1 -right-1 w-7 h-7 bg-emerald-500 border-4 border-white rounded-full flex items-center justify-center">
+                        <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-1">
+                        <h1 class="text-3xl font-bold tracking-tight">Sarah Moreau</h1>
+                        <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full uppercase tracking-wider">Momentum fort</span>
+                    </div>
+                    <p class="text-[13px] text-[#6B7280]">Personal Brand Coach · Plan Premium · Cliente depuis 4 mois</p>
+
+                    <div class="flex items-center gap-6 mt-5">
+                        <div>
+                            <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Étape actuelle</p>
+                            <p class="text-[13px] font-bold mt-1">Module 5 · Exercice 2</p>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div>
+                            <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Dernière activité</p>
+                            <p class="text-[13px] font-bold mt-1 text-emerald-600">Il y a 2h</p>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div>
+                            <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Publications ce mois</p>
+                            <p class="text-[13px] font-bold mt-1">12 contenus</p>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div>
+                            <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Application conseils</p>
+                            <p class="text-[13px] font-bold mt-1 text-emerald-600">92%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2 shrink-0">
+                    <button class="bg-[#f97316] text-white px-5 py-2.5 rounded-xl text-[12px] font-bold shadow-lg shadow-orange-200 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Note du jour
+                    </button>
+                    <button class="bg-white border border-slate-200 text-[#1A1A2E] px-5 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 hover:bg-slate-50">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        Message
+                    </button>
+                    <button class="bg-white border border-slate-200 text-[#1A1A2E] px-5 py-2.5 rounded-xl text-[12px] font-bold flex items-center gap-2 hover:bg-slate-50">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        Planifier un appel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 1 : État actuel + IA insight -->
+        <div class="grid grid-cols-4 gap-5 mb-6">
+            <!-- État actuel -->
+            <div class="col-span-2 frosted rounded-[28px] p-6 bg-gradient-to-br from-emerald-50/60 to-white/80 border border-emerald-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-200">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">État actuel</h2>
+                </div>
+
+                <h3 class="text-xl font-bold leading-tight mb-3">Sarah cartonne, elle est sur une lancée.</h3>
+                <p class="text-[13px] text-[#6B7280] leading-relaxed mb-5">
+                    3 publications cette semaine, +28% d'engagement par rapport à sa moyenne, elle applique systématiquement tes conseils dans les 48h. Son hook est enfin net depuis ta note du jour du 2 avril.
+                </p>
+
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-[#6B7280]">Momentum</span>
+                        <div class="flex items-center gap-1">
+                            <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17l5-5 5 5"/></svg>
+                            <span class="text-[11px] font-bold text-emerald-600">En accélération</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-[#6B7280]">Blocage actuel</span>
+                        <span class="text-[11px] font-bold text-emerald-600">Aucun détecté</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-[#6B7280]">Risque de churn</span>
+                        <span class="text-[11px] font-bold text-emerald-600">Très faible</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-semibold text-[#6B7280]">Moment idéal pour un upsell</span>
+                        <span class="text-[11px] font-bold text-[#f97316]">Dans 2 semaines</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- IA insight personnel -->
+            <div class="col-span-2 frosted rounded-[28px] p-6 bg-gradient-to-br from-violet-50/60 to-white/80 border border-violet-200">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-violet-500 rounded-xl flex items-center justify-center shadow-lg shadow-violet-200">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-violet-700">Ce que l'IA sait sur Sarah</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="bg-white border border-violet-100 rounded-xl p-3">
+                        <p class="text-[10px] font-bold text-violet-700 uppercase tracking-wider mb-1">Profil comportemental</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">Publie mieux les mardis entre 18h et 20h. Préfère les vocaux aux messages. Applique les conseils dans les 24h.</p>
+                    </div>
+                    <div class="bg-white border border-violet-100 rounded-xl p-3">
+                        <p class="text-[10px] font-bold text-violet-700 uppercase tracking-wider mb-1">Ce qui la motive</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">La reconnaissance de ses pairs. Les messages qui la félicitent quand elle réussit déclenchent +60% d'action dans les 48h.</p>
+                    </div>
+                    <div class="bg-white border border-violet-100 rounded-xl p-3">
+                        <p class="text-[10px] font-bold text-violet-700 uppercase tracking-wider mb-1">Ce qui la bloque</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">La perfection. Elle reporte les publications quand elle n'est pas sûre. Préférer "fait vaut mieux que parfait" dans les conseils.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ═══ SLIDE COMPARAISON AVANT / PENDANT / APRÈS ═══ -->
+        <div class="frosted rounded-[28px] p-8 mb-6 relative overflow-hidden bg-gradient-to-br from-white/90 via-white/80 to-slate-50/60">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-400/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-[#f97316]/5 rounded-full blur-3xl"></div>
+
+            <div class="relative">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center gap-2">
+                        <div class="w-9 h-9 bg-gradient-to-br from-slate-400 via-[#f97316] to-emerald-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-100">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[11px] font-bold uppercase tracking-widest text-[#f97316]">Progression</p>
+                            <h2 class="text-lg font-bold text-[#1A1A2E]">Avant · Pendant · Après le coaching</h2>
+                        </div>
+                    </div>
+                    <button class="text-[11px] font-bold text-white bg-[#f97316] px-4 py-2 rounded-xl shadow-lg shadow-orange-200 flex items-center gap-1.5">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        Télécharger la slide
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mb-8">
+
+                    <!-- AVANT -->
+                    <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Avant</span>
+                            <span class="text-[9px] text-[#9CA3AF]">Décembre 2025</span>
+                        </div>
+                        <h3 class="text-[15px] font-bold text-slate-500 mb-1">Débutante perdue</h3>
+                        <p class="text-[11px] text-[#9CA3AF] leading-relaxed mb-5">Syndrome de l'imposteur, pas de positionnement clair, publie par à-coups sans stratégie.</p>
+
+                        <div class="space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#9CA3AF] uppercase font-semibold">Followers</span>
+                                <span class="text-[13px] font-bold text-slate-500">850</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#9CA3AF] uppercase font-semibold">Engagement</span>
+                                <span class="text-[13px] font-bold text-slate-500">2.1%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#9CA3AF] uppercase font-semibold">CA mensuel</span>
+                                <span class="text-[13px] font-bold text-slate-500">1 200€</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#9CA3AF] uppercase font-semibold">Publications</span>
+                                <span class="text-[13px] font-bold text-slate-500">0.4 / sem</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#9CA3AF] uppercase font-semibold flex items-center gap-1">
+                                    Alignement
+                                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </span>
+                                <div class="flex gap-0.5">
+                                    <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                                    <div class="w-2 h-2 rounded-full bg-slate-200"></div>
+                                    <div class="w-2 h-2 rounded-full bg-slate-200"></div>
+                                    <div class="w-2 h-2 rounded-full bg-slate-200"></div>
+                                    <div class="w-2 h-2 rounded-full bg-slate-200"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- PENDANT (actuel) -->
+                    <div class="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-[#f97316] rounded-2xl p-5 relative shadow-lg shadow-orange-100">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#f97316] text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Aujourd'hui</div>
+                        <div class="flex items-center justify-between mb-4 mt-1">
+                            <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest">Pendant</span>
+                            <span class="text-[9px] text-[#f97316] font-semibold">Avril 2026 · Mois 4</span>
+                        </div>
+                        <h3 class="text-[15px] font-bold text-[#1A1A2E] mb-1">Entrepreneure alignée</h3>
+                        <p class="text-[11px] text-[#6B7280] leading-relaxed mb-5">Positionnement net, rythme de publication tenu, ses clientes la trouvent avant qu'elle les cherche.</p>
+
+                        <div class="space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Followers</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-[13px] font-bold text-[#1A1A2E]">4 280</span>
+                                    <span class="text-[9px] font-bold text-emerald-600">+403%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Engagement</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-[13px] font-bold text-[#1A1A2E]">6.2%</span>
+                                    <span class="text-[9px] font-bold text-emerald-600">+195%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">CA mensuel</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-[13px] font-bold text-[#1A1A2E]">9 600€</span>
+                                    <span class="text-[9px] font-bold text-emerald-600">+700%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Publications</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-[13px] font-bold text-[#1A1A2E]">3 / sem</span>
+                                    <span class="text-[9px] font-bold text-emerald-600">+650%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold flex items-center gap-1">
+                                    Alignement
+                                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </span>
+                                <div class="flex gap-0.5">
+                                    <div class="w-2 h-2 rounded-full bg-[#f97316]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#f97316]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#f97316]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-[#f97316]"></div>
+                                    <div class="w-2 h-2 rounded-full bg-orange-200"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- APRÈS (objectif) -->
+                    <div class="bg-emerald-50/40 border-2 border-dashed border-emerald-300 rounded-2xl p-5">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Après</span>
+                            <span class="text-[9px] text-emerald-600 font-semibold">Juin 2026 · Mois 6</span>
+                        </div>
+                        <h3 class="text-[15px] font-bold text-emerald-700 mb-1">Référence dans sa niche</h3>
+                        <p class="text-[11px] text-[#6B7280] leading-relaxed mb-5">Brand Authority, collaborations entrantes, première offre groupe lancée, liste d'attente pour ses clientes 1:1.</p>
+
+                        <div class="space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Followers</span>
+                                <span class="text-[13px] font-bold text-emerald-700">8 000</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Engagement</span>
+                                <span class="text-[13px] font-bold text-emerald-700">7%+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">CA mensuel</span>
+                                <span class="text-[13px] font-bold text-emerald-700">15 000€</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold">Publications</span>
+                                <span class="text-[13px] font-bold text-emerald-700">3 / sem</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] text-[#6B7280] uppercase font-semibold flex items-center gap-1">
+                                    Alignement
+                                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </span>
+                                <div class="flex gap-0.5">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Row 2 : Brand OS + Historique notes du jour -->
+        <div class="grid grid-cols-4 gap-5 mb-6">
+
+            <!-- Brand OS snapshot -->
+            <div class="col-span-2 frosted rounded-[28px] p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-orange-50 rounded-xl flex items-center justify-center">
+                            <svg class="w-4 h-4 text-[#f97316]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Brand OS de Sarah · Lecture seule</h2>
+                    </div>
+                    <a href="#" class="text-[11px] text-[#f97316] font-semibold hover:underline">Ouvrir le Brand OS complet</a>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-100">
+                        <div class="w-7 h-7 bg-blue-50 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                            <span class="text-[9px] font-bold text-blue-600">MI</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Mission</p>
+                            <p class="text-[12px] text-[#1A1A2E] leading-relaxed mt-0.5">Aider les femmes entrepreneures à construire un personal brand authentique sans se renier.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-100">
+                        <div class="w-7 h-7 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                            <span class="text-[9px] font-bold text-emerald-600">TV</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Ton de voix</p>
+                            <p class="text-[12px] text-[#1A1A2E] leading-relaxed mt-0.5">Direct mais chaleureux, pédagogue sans être professoral, vulnérable mais pas larmoyant.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-100">
+                        <div class="w-7 h-7 bg-violet-50 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                            <span class="text-[9px] font-bold text-violet-600">IC</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">ICP</p>
+                            <p class="text-[12px] text-[#1A1A2E] leading-relaxed mt-0.5">Femmes 28-42 ans, en reconversion ou entrepreneures, CA entre 3k et 10k/mois, freinées par le syndrome de l'imposteur.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-100">
+                        <div class="w-7 h-7 bg-pink-50 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                            <span class="text-[9px] font-bold text-pink-600">OF</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-wider">Offre principale</p>
+                            <p class="text-[12px] text-[#1A1A2E] leading-relaxed mt-0.5">Accompagnement 3 mois "Brand Authentique" · 2 400€ · 8 appels + accès Circle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Historique notes du jour -->
+            <div class="col-span-2 frosted rounded-[28px] p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-amber-50 rounded-xl flex items-center justify-center">
+                            <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Historique des notes du jour</h2>
+                    </div>
+                    <span class="text-[10px] text-[#9CA3AF]">14 notes envoyées</span>
+                </div>
+
+                <div class="space-y-3 max-h-[380px] overflow-y-auto pr-2">
+                    <div class="bg-white border border-orange-100 rounded-xl p-3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest">2 avril · 08:14</span>
+                            <span class="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full">Vocal 47s</span>
+                        </div>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed italic">"Bravo pour ta vidéo d'hier, le hook était beaucoup plus net qu'avant..."</p>
+                        <p class="text-[9px] text-emerald-600 font-semibold mt-2">Effet : +28% engagement la semaine suivante</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest">26 mars · 09:02</span>
+                            <span class="text-[9px] font-bold text-[#6B7280] bg-slate-100 px-1.5 py-0.5 rounded-full">Texte</span>
+                        </div>
+                        <p class="text-[12px] text-[#6B7280] leading-relaxed italic">"Travaille ton hook sur les 3 premières secondes cette semaine, c'est là que tu perds ton audience..."</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest">19 mars · 07:48</span>
+                            <span class="text-[9px] font-bold text-[#6B7280] bg-slate-100 px-1.5 py-0.5 rounded-full">Vocal 1m12</span>
+                        </div>
+                        <p class="text-[12px] text-[#6B7280] leading-relaxed italic">"Sarah, je vois que tu hésites à publier depuis 4 jours. Rappel : fait vaut mieux que parfait..."</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest">12 mars · 08:30</span>
+                            <span class="text-[9px] font-bold text-[#6B7280] bg-slate-100 px-1.5 py-0.5 rounded-full">Texte</span>
+                        </div>
+                        <p class="text-[12px] text-[#6B7280] leading-relaxed italic">"Ta persona est bien définie maintenant. Prochaine étape : construire ton premier funnel..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 3 : Notes privées + Activité récente -->
+        <div class="grid grid-cols-4 gap-5 mb-6">
+
+            <!-- Notes privées coach -->
+            <div class="col-span-2 frosted rounded-[28px] p-6 bg-slate-50/40">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-slate-200 rounded-xl flex items-center justify-center">
+                            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                        </div>
+                        <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Tes notes privées sur Sarah</h2>
+                    </div>
+                    <button class="text-[11px] text-[#f97316] font-semibold hover:underline">+ Ajouter</button>
+                </div>
+                <p class="text-[10px] text-[#9CA3AF] italic mb-4">Invisibles pour Sarah. Ton carnet de coach.</p>
+
+                <div class="space-y-3">
+                    <div class="bg-white border border-slate-200 rounded-xl p-4">
+                        <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider mb-2">Ajoutée le 2 avril</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">Sarah est perfectionniste, tendance à procrastiner quand elle n'est pas sûre à 100%. Lui donner des deadlines fermes et normaliser l'imperfection. Elle répond bien aux vocaux chaleureux.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-4">
+                        <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider mb-2">Ajoutée le 15 mars</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">Gros potentiel. Candidate idéale pour l'offre Premium d'ici 2 à 3 mois si elle maintient son rythme. Patience avant de lui proposer.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-4">
+                        <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider mb-2">Ajoutée le 18 février</p>
+                        <p class="text-[12px] text-[#1A1A2E] leading-relaxed">Son mari la soutient complètement mais elle a une copine coach qui la freine sans le savoir. Attention aux influences externes.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Activité récente (timeline) -->
+            <div class="col-span-2 frosted rounded-[28px] p-6">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-blue-50 rounded-xl flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Activité récente</h2>
+                </div>
+
+                <div class="relative space-y-4 pl-6">
+                    <div class="absolute left-[9px] top-2 bottom-2 w-px bg-slate-200"></div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[24px] w-4 h-4 rounded-full bg-emerald-500 border-4 border-[#EEF0F4]"></div>
+                        <p class="text-[10px] text-[#9CA3AF] font-semibold">Il y a 2h</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold mt-0.5">A publié "Pourquoi je refuse 80% de mes prospects"</p>
+                        <p class="text-[11px] text-[#6B7280]">Instagram · Reel · TOFU</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[24px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#EEF0F4]"></div>
+                        <p class="text-[10px] text-[#9CA3AF] font-semibold">Hier, 18:42</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold mt-0.5">A complété l'exercice "Définir son offre signature"</p>
+                        <p class="text-[11px] text-[#6B7280]">Module 5 · Exercice 2</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[24px] w-4 h-4 rounded-full bg-emerald-500 border-4 border-[#EEF0F4]"></div>
+                        <p class="text-[10px] text-[#9CA3AF] font-semibold">Hier, 14:23</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold mt-0.5">A envoyé un message dans le chat</p>
+                        <p class="text-[11px] text-[#6B7280] italic">"Merci pour ta note ce matin, j'ai bien compris..."</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[24px] w-4 h-4 rounded-full bg-emerald-500 border-4 border-[#EEF0F4]"></div>
+                        <p class="text-[10px] text-[#9CA3AF] font-semibold">2 jours, 11:15</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold mt-0.5">A publié "Le piège du coaching gratuit"</p>
+                        <p class="text-[11px] text-[#6B7280]">Instagram · Reel · MOFU · +38% engagement</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[24px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#EEF0F4]"></div>
+                        <p class="text-[10px] text-[#9CA3AF] font-semibold">3 jours</p>
+                        <p class="text-[12px] text-[#1A1A2E] font-semibold mt-0.5">A soumis le script "Mes 3 erreurs de pricing"</p>
+                        <p class="text-[11px] text-[#6B7280]">Script reviewé et validé par toi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row 4 : Métriques perso -->
+        <div class="frosted rounded-[28px] p-6 mb-6">
+            <div class="flex items-center gap-2 mb-5">
+                <div class="w-8 h-8 bg-emerald-50 rounded-xl flex items-center justify-center">
+                    <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h2 class="text-[11px] font-bold uppercase tracking-wider text-[#6B7280]">Ses performances ce mois</h2>
+            </div>
+
+            <div class="grid grid-cols-5 gap-4">
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 text-center">
+                    <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Followers</p>
+                    <p class="text-2xl font-bold mt-1">4 280</p>
+                    <p class="text-[10px] text-emerald-600 font-bold mt-1">+342</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 text-center">
+                    <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Vues</p>
+                    <p class="text-2xl font-bold mt-1">48k</p>
+                    <p class="text-[10px] text-emerald-600 font-bold mt-1">+28%</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 text-center">
+                    <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Engagement</p>
+                    <p class="text-2xl font-bold mt-1">6.2%</p>
+                    <p class="text-[10px] text-emerald-600 font-bold mt-1">+1.4pt</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 text-center">
+                    <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">CA</p>
+                    <p class="text-2xl font-bold mt-1">9 600€</p>
+                    <p class="text-[10px] text-emerald-600 font-bold mt-1">+4 clients</p>
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-slate-100 text-center">
+                    <p class="text-[10px] text-[#9CA3AF] uppercase font-bold tracking-wider">Publications</p>
+                    <p class="text-2xl font-bold mt-1">12</p>
+                    <p class="text-[10px] text-[#6B7280] mt-1">3.0 / sem</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
