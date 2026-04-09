@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brvndlab — Prérequis vidéos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #EEF0F4;
+            color: #1A1A2E;
+            -webkit-font-smoothing: antialiased;
+        }
+        .frosted-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4);
+        }
+        .video-thumb {
+            background: linear-gradient(135deg, #1A1A2E 0%, #334155 100%);
+        }
+        .progress-glow { box-shadow: 0 0 15px rgba(249, 115, 22, 0.3); }
+        .play-btn-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+
+        <header class="mb-12">
+            <nav class="flex items-center space-x-2 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-6">
+                <span>Brvndlab</span>
+                <span class="text-slate-300">/</span>
+                <span>Brand OS</span>
+                <span class="text-slate-300">/</span>
+                <span class="text-[#f97316]">Prérequis vidéos</span>
+            </nav>
+
+            <a href="mockup-brand-os.html" class="inline-flex items-center text-sm font-semibold text-[#6B7280] hover:text-[#1A1A2E] transition-colors mb-4">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                Retour au hub Brand OS
+            </a>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] leading-tight mb-4">3 vidéos avant de continuer</h1>
+            <p class="text-lg text-[#6B7280] max-w-2xl leading-relaxed">
+                Ces 3 vidéos te donnent le cadre théorique complet pour remplir la suite du Brand OS. Une fois vues, les phases 2 et 3 se débloquent automatiquement.
+            </p>
+        </header>
+
+        <section class="frosted-card p-8 mb-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-[#1A1A2E] mb-1">Progression des prérequis</h3>
+                    <p class="text-2xl font-extrabold text-[#1A1A2E]">0 sur 3 vidéos visionnées</p>
+                </div>
+                <div class="inline-flex items-center px-4 py-2 bg-amber-50 text-amber-600 rounded-full text-xs font-bold border border-amber-100 italic">
+                    <svg class="w-3.5 h-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                    Verrouillé
+                </div>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                <div class="bg-[#f97316] h-full progress-glow" style="width: 0%"></div>
+            </div>
+        </section>
+
+        <div class="space-y-8">
+
+            <article class="frosted-card overflow-hidden">
+                <div class="grid md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 relative">
+                        <div class="video-thumb h-full min-h-[240px] flex items-center justify-center relative">
+                            <div class="bg-white/10 p-5 rounded-full backdrop-blur-md play-btn-pulse">
+                                <svg class="w-10 h-10 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-[#1A1A2E] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">01</span>
+                            <span class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-lg">8 min</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 p-8">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-[#f97316]"></span>
+                            <span class="text-[10px] font-bold text-[#f97316] uppercase tracking-widest">À regarder</span>
+                        </div>
+                        <h2 class="text-xl font-extrabold text-[#1A1A2E] mb-3 leading-tight">Qu'est-ce que le message primaire et secondaire</h2>
+                        <p class="text-sm text-[#6B7280] mb-6 leading-relaxed">
+                            On décortique ensemble la différence entre ces deux niveaux de message et pourquoi c'est le socle de tout ton positionnement.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-sm text-[#1A1A2E] font-medium">La différence concrète entre message primaire et secondaire</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-sm text-[#1A1A2E] font-medium">Pourquoi le message primaire définit toute ta marque</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                <span class="text-sm text-[#1A1A2E] font-medium">Comment les deux s'articulent dans ton discours</span>
+                            </div>
+                        </div>
+                        <button class="w-full md:w-auto bg-[#f97316] text-white px-8 py-3.5 rounded-2xl text-sm font-bold shadow-lg shadow-orange-200">Regarder maintenant</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="frosted-card overflow-hidden opacity-60">
+                <div class="grid md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 relative">
+                        <div class="video-thumb h-full min-h-[240px] flex items-center justify-center relative grayscale">
+                            <div class="text-white/50">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-slate-800 text-white/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">02</span>
+                            <span class="absolute bottom-4 right-4 bg-black/40 text-white/50 text-[10px] font-bold px-3 py-1 rounded-lg">11 min</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 p-8">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Verrouillé</span>
+                        </div>
+                        <h2 class="text-xl font-extrabold text-[#1A1A2E] mb-3 leading-tight">Comprendre les problèmes de ton audience</h2>
+                        <p class="text-sm text-[#6B7280] mb-6 leading-relaxed">
+                            On passe en revue comment identifier les vrais problèmes de ton audience et les hiérarchiser par niveau de conscience.
+                        </p>
+                        <button class="w-full md:w-auto bg-slate-100 text-slate-400 px-8 py-3.5 rounded-2xl text-sm font-bold border border-slate-200 cursor-not-allowed">Terminer la vidéo 1 d'abord</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="frosted-card overflow-hidden opacity-60">
+                <div class="grid md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 relative">
+                        <div class="video-thumb h-full min-h-[240px] flex items-center justify-center relative grayscale">
+                            <div class="text-white/50">
+                                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-slate-800 text-white/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">03</span>
+                            <span class="absolute bottom-4 right-4 bg-black/40 text-white/50 text-[10px] font-bold px-3 py-1 rounded-lg">14 min</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 p-8">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Verrouillé</span>
+                        </div>
+                        <h2 class="text-xl font-extrabold text-[#1A1A2E] mb-3 leading-tight">Positionnement et offre, le cadre stratégique</h2>
+                        <p class="text-sm text-[#6B7280] mb-6 leading-relaxed">
+                            On construit le cadre qui relie ton positionnement unique à l'offre que tu proposes.
+                        </p>
+                        <button class="w-full md:w-auto bg-slate-100 text-slate-400 px-8 py-3.5 rounded-2xl text-sm font-bold border border-slate-200 cursor-not-allowed">Terminer la vidéo 2 d'abord</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <footer class="mt-16 text-center space-y-4">
+            <button class="bg-slate-100 text-slate-400 px-10 py-4 rounded-[20px] text-sm font-bold border border-slate-200 cursor-not-allowed inline-flex items-center">
+                <svg class="w-4 h-4 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                Débloquer la suite du Brand OS
+            </button>
+            <p class="text-xs text-[#6B7280] italic">La suite est verrouillée tant que les 3 vidéos ne sont pas vues</p>
+        </footer>
+
+    </div>
+</body>
+</html>

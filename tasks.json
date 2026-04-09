@@ -43,6 +43,12 @@
     {"id": 39, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Message central et primaire VALIDÉ par Jonathan", "status": "done"},
     {"id": 40, "ts": "2026-04-09T10:05", "category": "fix", "module": "Brand OS", "title": "Hub réordonné: Story → Débloquage → Message → Audience → Mission → reste", "status": "done"},
     {"id": 41, "ts": "2026-04-09T10:05", "category": "design", "module": "Brand OS", "title": "Ajout placeholder 02 Débloquage (en attente du nom Notion)", "status": "done"},
-    {"id": 42, "ts": "2026-04-09T10:05", "category": "fix", "module": "Brand OS", "title": "Index démo mis à jour avec nouvel ordre numéroté 01-10", "status": "done"}
+    {"id": 42, "ts": "2026-04-09T10:05", "category": "fix", "module": "Brand OS", "title": "Index démo mis à jour avec nouvel ordre numéroté 01-10", "status": "done"},
+    {"id": 43, "ts": "2026-04-09T11:00", "category": "design", "module": "Brand OS", "title": "Refonte hub Brand OS: 12 modules + gate 3 vidéos prérequises", "status": "done"},
+    {"id": 44, "ts": "2026-04-09T11:00", "category": "design", "module": "Brand OS", "title": "Création page Prérequis vidéos (3 vidéos pédagogiques)", "status": "done"},
+    {"id": 45, "ts": "2026-04-09T11:05", "category": "design", "module": "Brand OS", "title": "Création pages placeholder Marché et Positionnement", "status": "done"},
+    {"id": 46, "ts": "2026-04-09T11:05", "category": "fix", "module": "Brand OS", "title": "De-fusion Message central: Problèmes/Marché/Positionnement/Offre séparés", "status": "done"},
+    {"id": 47, "ts": "2026-04-09T11:10", "category": "milestone", "module": "All Modules", "title": "VALIDATION EN LOT par Jonathan: Onboarding, Dashboard, Calendrier, Contenu, Recherche, Veille, Analytics, Radar, Coach, Fiche membre, Mémoire dorée, Messagerie, Partage, Modules", "status": "done"},
+    {"id": 48, "ts": "2026-04-09T11:10", "category": "memory", "module": "Features", "title": "Feature script references scellée: insertion liens/PDFs/dossiers timestampés dans scripts", "status": "done"}
   ]
 }

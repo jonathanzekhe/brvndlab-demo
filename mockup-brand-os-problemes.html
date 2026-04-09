@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problématiques — Brvndlab Brand OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; color: #1A1A2E; }
+        .frosted-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 20px 25px -5px rgba(203, 213, 225, 0.5); }
+        .problem-item:hover .delete-btn { opacity: 1; }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+    <div class="max-w-3xl mx-auto px-6 pt-8">
+        <a href="mockup-brand-os.html" class="inline-flex items-center text-[13px] font-bold text-[#9CA3AF] hover:text-[#f97316] transition-colors mb-8">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            RETOUR AU BRAND OS
+        </a>
+        <div class="flex items-start gap-5 mb-10">
+            <div class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
+                <svg class="w-7 h-7 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+                <h1 class="text-3xl font-extrabold text-[#1A1A2E] tracking-tight mb-2">Problématiques</h1>
+                <p class="text-[14px] text-[#6B7280] leading-relaxed">La fondation de tout ton contenu. Identifie les douleurs de ton audience à chaque niveau de conscience.</p>
+            </div>
+        </div>
+        <div class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 mb-6 flex gap-4">
+            <span class="text-xl">💡</span>
+            <p class="text-[13px] text-amber-800 leading-snug"><span class="font-bold">C'est la base des bases.</span> Tes contenus naissent ici. Plus tu identifies finement les problèmes de ton audience, plus tes vidéos et posts résonnent.</p>
+        </div>
+
+        <!-- RAPPEL AUDIENCE -->
+        <div class="bg-blue-50/60 border border-blue-100 rounded-2xl p-5 mb-10 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-500 shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-2 gap-2">
+                    <span class="text-[10px] font-bold text-blue-500 uppercase tracking-wider">RAPPEL · TON AUDIENCE CIBLE</span>
+                    <a href="mockup-brand-os-audience.html" class="text-[11px] font-bold text-blue-500 hover:underline shrink-0">Modifier →</a>
+                </div>
+                <p class="text-[14px] text-[#1A1A2E] font-medium leading-relaxed mb-3">"Les entrepreneurs créatifs qui veulent transformer leur expertise en une marque qui attire naturellement les bonnes personnes."</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[11px] font-medium text-blue-700 bg-white border border-blue-100 px-2.5 py-1 rounded-full">25-35 ans</span>
+                    <span class="text-[11px] font-medium text-blue-700 bg-white border border-blue-100 px-2.5 py-1 rounded-full">35-45 ans</span>
+                    <span class="text-[11px] font-medium text-blue-700 bg-white border border-blue-100 px-2.5 py-1 rounded-full">YouTube</span>
+                    <span class="text-[11px] font-medium text-blue-700 bg-white border border-blue-100 px-2.5 py-1 rounded-full">LinkedIn</span>
+                    <span class="text-[11px] font-medium text-blue-700 bg-white border border-blue-100 px-2.5 py-1 rounded-full">Podcast</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="frosted-card p-8 mb-8">
+            <div class="flex flex-col gap-1 mb-6">
+                <span class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-wider">01 · PROBLÈME PRINCIPAL</span>
+                <h2 class="text-[16px] font-bold text-[#1A1A2E]">Quel est le problème majeur de ton audience ?</h2>
+            </div>
+            <div class="space-y-4">
+                <textarea rows="4" class="w-full bg-white/50 border border-slate-200 rounded-xl p-4 text-[14px] focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500 outline-none transition-all placeholder:text-[#9CA3AF]" placeholder="Décris le blocage principal en une ou deux phrases..."></textarea>
+                <div class="bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <span class="text-[11px] font-bold text-[#9CA3AF] uppercase">Exemple</span>
+                    <p class="text-[13px] text-[#6B7280] italic mt-1">"Ils ont une vraie expertise mais personne ne le voit encore. Leur message n'est pas assez clair pour que les bonnes personnes les trouvent."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="frosted-card overflow-hidden mb-8">
+            <div class="p-8 pb-4 flex items-start justify-between gap-4 flex-wrap">
+                <div class="flex flex-col gap-1">
+                    <span class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-wider">02 · ANALYSE PROFONDE</span>
+                    <h2 class="text-[16px] font-bold text-[#1A1A2E]">Autres problèmes : Concernant leur activité quotidienne</h2>
+                </div>
+                <button class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg shadow-orange-200 flex items-center gap-2 hover:opacity-90 transition-opacity whitespace-nowrap">
+                    <span>✨</span> Générer 15 problèmes par niveau avec l'IA
+                </button>
+            </div>
+            <div class="px-8 pb-8 space-y-6">
+                <div class="bg-blue-50/40 border border-blue-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-blue-500">Niveau de conscience : Froid 🥶</h3>
+                        <p class="text-[12px] text-blue-400 italic">(Pas conscient du problème ou dans le déni)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>Pense que c'est juste une question de chance</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">02</span><span>Croit qu'il suffit de poster plus pour percer</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">03</span><span>Ne mesure rien, fonctionne au feeling</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 12 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+                <div class="bg-amber-50/40 border border-amber-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-amber-500">Niveau de conscience : Tiède 😮</h3>
+                        <p class="text-[12px] text-amber-400 italic">(Commence à chercher une sortie)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>A essayé plusieurs niches sans en valider une</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">02</span><span>Hésite entre formation, coaching, agence</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 13 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+                <div class="bg-rose-50/40 border border-rose-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-rose-500">Niveau de conscience : Chaud 🥵</h3>
+                        <p class="text-[12px] text-rose-400 italic">(Prêt à agir, mais manque de méthode)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>A déjà acheté 3-4 formations sans appliquer</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">02</span><span>Sait quoi faire mais procrastine sur l'exécution</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 13 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="frosted-card overflow-hidden mb-12">
+            <div class="p-8 pb-4 flex items-start justify-between gap-4 flex-wrap">
+                <div class="flex flex-col gap-1">
+                    <span class="text-[11px] font-bold text-[#9CA3AF] uppercase tracking-wider">03 · FREINS À L'INVESTISSEMENT</span>
+                    <h2 class="text-[16px] font-bold text-[#1A1A2E]">Autres problèmes : Qui les empêche d'investir sur notre solution</h2>
+                </div>
+                <button class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-4 py-2.5 rounded-xl text-[12px] font-bold shadow-lg shadow-orange-200 flex items-center gap-2 hover:opacity-90 transition-opacity whitespace-nowrap">
+                    <span>✨</span> Générer 15 problèmes par niveau avec l'IA
+                </button>
+            </div>
+            <div class="px-8 pb-8 space-y-6">
+                <div class="bg-blue-50/40 border border-blue-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-blue-500">Niveau de conscience : Froid 🥶</h3>
+                        <p class="text-[12px] text-blue-400 italic">(Veut se lancer mais n'a pas encore choisi l'opportunité)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>Hésite entre plusieurs business modèles</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+                <div class="bg-amber-50/40 border border-amber-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-amber-500">Niveau de conscience : Tiède 😮</h3>
+                        <p class="text-[12px] text-amber-400 italic">(Veut se lancer mais n'a pas encore choisi moi)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>Compare plusieurs coachs en parallèle</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+                <div class="bg-rose-50/40 border border-rose-100 rounded-2xl p-6">
+                    <div class="mb-4">
+                        <h3 class="text-[14px] font-bold text-rose-500">Niveau de conscience : Chaud 🥵</h3>
+                        <p class="text-[12px] text-rose-400 italic">(Veut se lancer mais n'a pas encore investi)</p>
+                    </div>
+                    <div class="grid gap-2 mb-4">
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] problem-item relative"><span class="text-[11px] font-bold text-[#9CA3AF] w-7 shrink-0 tracking-tighter">01</span><span>A peur de regretter l'investissement</span><button class="delete-btn opacity-0 absolute right-3 text-slate-300 hover:text-red-500 transition-all">✕</button></div>
+                        <div class="bg-white border border-slate-100 rounded-xl px-4 py-3 flex items-center gap-3 text-[13px] text-[#1A1A2E] opacity-50 italic">... 14 autres problèmes générés</div>
+                    </div>
+                    <button class="border border-[#f97316]/30 bg-orange-50 text-[#f97316] px-4 py-2 rounded-xl text-[12px] font-bold hover:bg-orange-100 transition-colors">+ 5 problèmes de plus</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <button class="bg-rose-500 text-white px-10 py-4 rounded-2xl text-[14px] font-bold shadow-xl shadow-rose-200 hover:bg-rose-600 transition-all">Sauvegarder mes problématiques</button>
+        </div>
+    </div>
+</body>
+</html>

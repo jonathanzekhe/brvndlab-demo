@@ -3,230 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand OS Hub — Brvndlab</title>
+    <title>Brvndlab — Brand OS Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .pulse-orange {
-            box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
-            animation: pulse 2s infinite;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #EEF0F4;
+            color: #1A1A2E;
         }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(249, 115, 22, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        .frosted-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .frosted-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+        .video-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+        .video-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .progress-glow {
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
         }
     </style>
 </head>
-<body class="bg-[#EEF0F4] text-[#1A1A2E] p-4 md:p-8 selection:bg-orange-100 selection:text-orange-600">
+<body class="antialiased pb-20">
 
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto px-6 py-12">
 
         <header class="mb-10">
-            <nav class="flex items-center gap-2 text-[13px] font-bold text-[#6B7280] uppercase tracking-wider mb-4">
+            <nav class="flex items-center space-x-2 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-4">
                 <span>Brvndlab</span>
                 <span class="text-slate-300">/</span>
-                <span class="text-[#f97316]">Brand OS</span>
+                <span class="text-orange-500">Brand OS</span>
             </nav>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-2">Ton Brand OS</h1>
-            <p class="text-[#6B7280] text-sm md:text-base max-w-2xl">
-                La fondation de ton personal brand. Remplis chaque section dans l'ordre, chaque étape débloque la suivante.
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">Ton Brand OS</h1>
+            <p class="text-slate-500 text-lg max-w-2xl leading-relaxed">
+                La fondation de ton personal brand. Une suite logique, de toi vers le client, puis vers ton expression.
             </p>
         </header>
 
-        <div class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div class="space-y-1">
-                <span class="text-[13px] font-bold text-[#6B7280] uppercase tracking-wider">Progression globale</span>
-                <p class="text-base font-extrabold text-[#1A1A2E]">6 sections sur 10 complétées</p>
+        <section class="mb-12">
+            <div class="frosted-card p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-sm">
+                <div class="flex-1">
+                    <span class="text-[10px] font-bold text-orange-500 uppercase tracking-[0.2em] mb-2 block">Progression globale</span>
+                    <h2 class="text-xl font-extrabold mb-4">8 sections sur 12 complétées</h2>
+                    <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                        <div class="bg-orange-500 h-full progress-glow" style="width: 67%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center md:border-l border-slate-200 md:pl-10">
+                    <span class="text-5xl font-black text-orange-500">67%</span>
+                </div>
             </div>
-            <div class="flex-1 max-w-md w-full">
-                <div class="flex justify-between items-end mb-2">
-                    <span class="text-3xl font-extrabold text-[#f97316]">60%</span>
-                    <span class="text-[10px] font-bold text-slate-400">OBJECTIF, 100%</span>
-                </div>
-                <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden border border-white/50 shadow-inner">
-                    <div class="h-full bg-[#f97316] rounded-full transition-all duration-1000 ease-out" style="width: 60%"></div>
-                </div>
+        </section>
+
+        <section class="mb-12">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 block">Phase 1, le fondamental</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <a href="mockup-brand-os-story.html" class="frosted-card p-6 block">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <span class="px-3 py-1 bg-red-50 text-red-600 text-[10px] font-black rounded-full uppercase tracking-wider">À REFAIRE AVEC NOTION</span>
+                    </div>
+                    <h3 class="text-lg font-black mb-2">01 · Story</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Ton histoire, ton parcours, ce qui t'a amené là où tu en es.</p>
+                </a>
+
+                <a href="mockup-brand-os-audience.html" class="frosted-card p-6 block">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-full uppercase tracking-wider">COMPLÉTÉ</span>
+                    </div>
+                    <h3 class="text-lg font-black mb-2">02 · Audience</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Qui tu sers. Le profil type de tes clients idéaux et ton segment.</p>
+                </a>
             </div>
-        </div>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <section class="mb-16">
+            <a href="mockup-brand-os-prerequis-videos.html" class="block">
+                <div class="bg-[#1A1A2E] rounded-[32px] p-8 md:p-12 shadow-2xl relative overflow-hidden transition-all duration-500 hover:scale-[1.01]">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
 
-            <a href="mockup-brand-os-story.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-50 text-[#f97316] flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                        </svg>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-red-600 bg-red-50 px-2 py-1 rounded-full border border-red-100">
-                        <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                        À REFAIRE AVEC NOTION
+                    <div class="relative z-10 text-center max-w-3xl mx-auto">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-8 border border-white/10">
+                            <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        </div>
+                        <h2 class="text-white text-3xl font-black mb-4">3 vidéos à regarder avant de continuer</h2>
+                        <p class="text-slate-400 text-base leading-relaxed mb-12">
+                            Ces 3 vidéos te donnent le cadre théorique complet pour remplir la suite. Une fois vues, tout le reste du Brand OS se débloque automatiquement.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 text-left">
+                            <div class="video-card p-4">
+                                <div class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl mb-4 flex items-center justify-center border border-white/5">
+                                    <svg class="w-8 h-8 text-white/20" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"/></svg>
+                                </div>
+                                <h4 class="text-xs font-bold text-white mb-2 leading-tight">Qu'est-ce que le message primaire et secondaire</h4>
+                                <div class="flex items-center justify-between text-[10px] text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        8 min
+                                    </span>
+                                    <span class="text-orange-500">À regarder</span>
+                                </div>
+                            </div>
+                            <div class="video-card p-4">
+                                <div class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl mb-4 flex items-center justify-center border border-white/5">
+                                    <svg class="w-8 h-8 text-white/20" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"/></svg>
+                                </div>
+                                <h4 class="text-xs font-bold text-white mb-2 leading-tight">Comprendre les problèmes de ton audience</h4>
+                                <div class="flex items-center justify-between text-[10px] text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        11 min
+                                    </span>
+                                    <span class="text-orange-500">À regarder</span>
+                                </div>
+                            </div>
+                            <div class="video-card p-4">
+                                <div class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl mb-4 flex items-center justify-center border border-white/5">
+                                    <svg class="w-8 h-8 text-white/20" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z"/></svg>
+                                </div>
+                                <h4 class="text-xs font-bold text-white mb-2 leading-tight">Positionnement et offre, le cadre stratégique</h4>
+                                <div class="flex items-center justify-between text-[10px] text-slate-500">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        14 min
+                                    </span>
+                                    <span class="text-orange-500">À regarder</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <span class="text-xs font-bold text-slate-500">0 sur 3 vidéos visionnées</span>
+                            <div class="w-full h-14 bg-slate-800/50 rounded-2xl flex items-center justify-center border border-white/5 text-slate-500 font-bold space-x-3">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                <span>Débloquer la suite du Brand OS</span>
+                            </div>
+                            <p class="text-[10px] italic text-slate-500">La suite est verrouillée tant que les 3 vidéos ne sont pas vues</p>
+                        </div>
                     </div>
                 </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">01 · Story</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Ton histoire, ton parcours, ce qui t'a amené là où tu en es.</p>
             </a>
+        </section>
 
-            <div class="bg-white/40 backdrop-blur-md rounded-[24px] p-6 border-2 border-dashed border-amber-300 hover:border-amber-400 transition-all relative">
-                <div class="flex justify-between items-start mb-4 opacity-80">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
-                        </svg>
+        <section class="mb-12 opacity-70">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 block">Phase 2, le marché et le message (verrouillé)</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <a href="mockup-brand-os-problemes.html" class="frosted-card p-6 relative block border-slate-200 bg-white/50">
+                    <svg class="absolute top-4 right-4 w-4 h-4 text-slate-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <div class="w-12 h-12 bg-rose-50 text-rose-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-1 rounded-full border border-dashed border-amber-300">
-                        EN ATTENTE DU NOM NOTION
+                    <h3 class="text-sm font-black text-slate-900 mb-2 leading-tight">03 · Problèmes</h3>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-medium">Les problèmes concrets de ton audience cible, organisés par niveau de conscience.</p>
+                </a>
+
+                <a href="mockup-brand-os-marche.html" class="frosted-card p-6 relative block border-slate-200 bg-white/50">
+                    <svg class="absolute top-4 right-4 w-4 h-4 text-slate-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
                     </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E]/60 mb-2 uppercase tracking-tight">02 · Débloquage</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed italic">Module en attente, à définir avec Jonathan. Ce module viendra après Story pour débloquer des éléments clés du processus Brand OS.</p>
+                    <h3 class="text-sm font-black text-slate-900 mb-2 leading-tight">04 · Marché</h3>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-medium">Le contexte et l'écosystème dans lequel ton audience vit ses problèmes.</p>
+                </a>
+
+                <a href="mockup-brand-os-positionnement.html" class="frosted-card p-6 relative block border-slate-200 bg-white/50">
+                    <svg class="absolute top-4 right-4 w-4 h-4 text-slate-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <div class="w-12 h-12 bg-violet-50 text-violet-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                    </div>
+                    <h3 class="text-sm font-black text-slate-900 mb-2 leading-tight">05 · Positionnement</h3>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-medium">Comment tu te places face aux concurrents et aux alternatives du marché.</p>
+                </a>
+
+                <a href="mockup-brand-os-offre.html" class="frosted-card p-6 relative block border-slate-200 bg-white/50">
+                    <svg class="absolute top-4 right-4 w-4 h-4 text-slate-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-sm font-black text-slate-900 mb-2 leading-tight">06 · Offre</h3>
+                    <p class="text-[11px] text-slate-400 leading-relaxed font-medium">Ta proposition de valeur concrète et la transformation que tu promets.</p>
+                </a>
+
             </div>
+        </section>
 
-            <a href="mockup-brand-os-message.html" class="bg-gradient-to-br from-rose-50 via-orange-50 to-emerald-50 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border-2 border-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all relative overflow-hidden">
-                <div class="absolute top-3 right-3 flex items-center gap-1 bg-gradient-to-r from-rose-500 to-orange-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-sm">
-                    CŒUR
-                </div>
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-white/60 text-rose-500 flex items-center justify-center shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-                        </svg>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full border border-emerald-100">
-                        VALIDÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">03 · Message central et primaire</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Marché, Positionnement, Offre. La chaîne stratégique complète en 3 parties, incluant problèmes, micro-problèmes et concurrents.</p>
-            </a>
+        <section class="mb-12 opacity-70">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 block">Phase 3, l'expression de ta marque (verrouillé)</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-            <a href="mockup-brand-os-audience.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                        </svg>
+                <a href="mockup-brand-os-mission.html" class="frosted-card p-5 block border-slate-200 bg-white/50">
+                    <div class="w-10 h-10 bg-violet-50 text-violet-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
-                        COMPLÉTÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">04 · Audience</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Qui tu sers. Le profil type de tes clients idéaux et ton segment de marché.</p>
-            </a>
+                    <h3 class="text-xs font-black text-slate-900 mb-1">07 · Mission</h3>
+                    <p class="text-[10px] text-slate-400">Pourquoi tu fais ce que tu fais.</p>
+                </a>
 
-            <a href="mockup-brand-os-mission.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-violet-50 text-violet-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6.223c-.235 1.167-.348 2.373-.348 3.607 0 5.4 3.03 10.099 7.467 12.433a11.952 11.952 0 0 0 7.467-12.433c0-1.234-.113-2.44-.348-3.607A11.96 11.96 0 0 1 12 2.712Z" />
-                        </svg>
+                <a href="mockup-brand-os-valeurs.html" class="frosted-card p-5 block border-slate-200 bg-white/50">
+                    <div class="w-10 h-10 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
-                        COMPLÉTÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">05 · Mission</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Pourquoi tu fais ce que tu fais. Ton "why" profond et ta vision à long terme.</p>
-            </a>
+                    <h3 class="text-xs font-black text-slate-900 mb-1">08 · Valeurs</h3>
+                    <p class="text-[10px] text-slate-400">Ce qui guide tes décisions.</p>
+                </a>
 
-            <a href="mockup-brand-os-valeurs.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                        </svg>
+                <a href="mockup-brand-os-voix.html" class="frosted-card p-5 block border-slate-200 bg-white/50">
+                    <div class="w-10 h-10 bg-cyan-50 text-cyan-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
-                        COMPLÉTÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">06 · Valeurs</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Ce qui guide tes décisions. Ton code interne et tes piliers éthiques.</p>
-            </a>
+                    <h3 class="text-xs font-black text-slate-900 mb-1">09 · Voix</h3>
+                    <p class="text-[10px] text-slate-400">Ton ton de communication.</p>
+                </a>
 
-            <a href="mockup-brand-os-voix.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
-                        </svg>
+                <a href="mockup-brand-os-personnalite.html" class="frosted-card p-5 block border-slate-200 bg-white/50">
+                    <div class="w-10 h-10 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM4.5 18s1-4 7.5-4 7.5 4 7.5 4V18H4.5v-2z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
-                        COMPLÉTÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">07 · Voix</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Ton ton de communication. Comment tu parles et t'adresses à ton audience.</p>
-            </a>
+                    <h3 class="text-xs font-black text-slate-900 mb-1">10 · Personnalité</h3>
+                    <p class="text-[10px] text-slate-400">Tes traits de caractère.</p>
+                </a>
 
-            <a href="mockup-brand-os-personnalite.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border border-white/60 hover:shadow-xl hover:-translate-y-1 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                        </svg>
+                <a href="mockup-brand-os-style.html" class="frosted-card p-5 block border-slate-200 bg-white/50">
+                    <div class="w-10 h-10 bg-pink-50 text-pink-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
                     </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
-                        COMPLÉTÉ
-                    </div>
-                </div>
-                <h3 class="text-base font-extrabold text-[#1A1A2E] mb-2 uppercase tracking-tight">08 · Personnalité</h3>
-                <p class="text-[#6B7280] text-xs leading-relaxed">Qui tu es vraiment. Tes traits de caractère majeurs et ta façon d'être unique.</p>
-            </a>
+                    <h3 class="text-xs font-black text-slate-900 mb-1">11 · Style</h3>
+                    <p class="text-[10px] text-slate-400">Mots signature, débit, longueur.</p>
+                </a>
 
-            <a href="mockup-brand-os-style.html" class="bg-white/80 backdrop-blur-lg rounded-[24px] p-6 shadow-md shadow-slate-200/40 border-2 border-orange-200 hover:shadow-xl hover:-translate-y-1 transition-all relative">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-500 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025 4.486 4.486 0 0 0-.619-2.313C4.387 15.301 4.125 13.694 4.125 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                        </svg>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-[10px] font-bold text-[#f97316] bg-orange-50 px-2 py-1 rounded-full">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#f97316] pulse-orange"></span>
-                        EN COURS
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mb-2 gap-2">
-                    <h3 class="text-base font-extrabold text-[#1A1A2E] uppercase tracking-tight">09 · Style de communication</h3>
-                </div>
-                <span class="inline-block text-[9px] font-bold bg-[#1A1A2E] text-white px-1.5 py-0.5 rounded mb-3">ÉTAPE ACTUELLE</span>
-                <p class="text-[#6B7280] text-xs leading-relaxed mb-4">Mots interdits, mots signature, débit de parole et longueur idéale.</p>
-                <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                    <div class="h-full bg-[#f97316] rounded-full" style="width: 40%"></div>
-                </div>
-            </a>
-
-            <div class="bg-white/30 backdrop-blur-md rounded-[24px] p-6 border border-slate-200 relative opacity-70 transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                        </svg>
-                    </div>
-                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                            <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3A5.25 5.25 0 0 0 12 1.5Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="flex items-center gap-2 mb-2">
-                    <h3 class="text-base font-extrabold text-[#1A1A2E]/60 uppercase tracking-tight">10 · Personas</h3>
-                    <span class="text-[9px] font-bold text-violet-500 bg-violet-50 px-1.5 py-0.5 rounded">IA</span>
-                </div>
-                <p class="text-[#6B7280] text-xs leading-relaxed mb-2">Avatars clients générés automatiquement à partir de tes autres sections.</p>
-                <p class="text-[10px] text-slate-400 italic font-medium">Auto-généré quand tout est complété</p>
             </div>
+        </section>
 
-        </div>
+        <section class="mb-12">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 block">Phase 4, synthèse automatique</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <footer class="mt-12 text-center">
-            <p class="text-[11px] text-[#9CA3AF] italic max-w-xl mx-auto border-t border-slate-200 pt-6">
-                Note, dans le mockup, toutes les cards sont cliquables pour que tu puisses naviguer le flow. En production, les sections verrouillées seront désactivées tant que les précédentes ne sont pas complétées.
+                <a href="mockup-brand-os-personas.html" class="frosted-card p-6 block">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-violet-50 text-violet-500 rounded-2xl flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            </div>
+                            <span class="px-2 py-0.5 bg-violet-100 text-violet-600 font-black text-[9px] rounded uppercase">IA</span>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-full uppercase tracking-wider">VALIDÉ</span>
+                    </div>
+                    <h3 class="text-lg font-black mb-2">12 · Personas</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Avatars clients générés automatiquement à partir de toutes tes sections précédentes.</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="mt-20 border-t border-slate-200 pt-8">
+            <p class="text-[11px] uppercase tracking-widest text-slate-400 font-bold mb-2">Note pédagogique</p>
+            <p class="text-xs text-slate-500 italic max-w-2xl leading-relaxed">
+                Note, dans le mockup, toutes les cards sont cliquables pour que tu puisses naviguer le flow. En production, le verrouillage est réel, tu ne peux pas accéder aux phases 2 et 3 avant d'avoir vu les 3 vidéos prérequises.
             </p>
         </footer>
 
