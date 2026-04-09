@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brvndlab Questionnaire, les 23 questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f5f5f7;
+            font-weight: 300;
+            margin: 0;
+        }
+        .screen {
+            background-color: #0a0a0a;
+            min-height: 680px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .screen::before {
+            content: '';
+            position: absolute;
+            bottom: -180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 350px;
+            background: radial-gradient(ellipse at center, rgba(249,115,22,0.10), transparent 70%);
+            pointer-events: none;
+            filter: blur(80px);
+            z-index: 0;
+        }
+        .btn-orange {
+            background: #f97316;
+            color: #ffffff;
+            border: 1px solid #f97316;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+        }
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #f5f5f7;
+            background: transparent;
+            letter-spacing: 0.02em;
+        }
+        .field {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #f5f5f7;
+        }
+        .field::placeholder { color: rgba(255,255,255,0.3); }
+        .pill {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+        .pill.active {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.4);
+            color: #f5f5f7;
+        }
+        .progress-bar { background: rgba(255,255,255,0.05); height: 1px; }
+        .progress-fill { background: #f97316; height: 100%; }
+        .label-tiny { letter-spacing: 0.15em; }
+        .phase-label { letter-spacing: 0.3em; }
+        input, textarea { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen pb-32">
+
+    <header class="px-12 pt-16 pb-10 max-w-[1100px] mx-auto">
+        <div class="flex items-center gap-3 mb-16">
+            <div class="w-8 h-8 rounded-md bg-[#f97316] flex items-center justify-center">
+                <span class="text-white font-medium text-sm">B</span>
+            </div>
+            <span class="text-[#f5f5f7] font-medium text-lg">Brvndlab</span>
+            <span class="ml-auto text-[10px] text-[#52525b] font-medium uppercase phase-label">Questionnaire complet</span>
+        </div>
+        <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label mb-5">Les 23 questions, écran par écran</p>
+        <h1 class="text-[44px] font-light tracking-tight leading-[1.1] mb-4">Ce que ton client voit quand il remplit son onboarding.</h1>
+        <p class="text-[14px] text-[#a1a1aa] font-light max-w-xl">Chaque écran ci-dessous est une question réelle du questionnaire, dans l'ordre exact. Voix "on/nous", esthétique noir luxe, focus minimal, une question par écran.</p>
+    </header>
+
+    <main class="max-w-[1100px] mx-auto px-12 space-y-10">
+
+        <!-- PHASE 1 — COORDONNÉES -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase 1 · Coordonnées</p>
+        </div>
+
+        <!-- Q1 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 1 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Coordonnées</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-12 leading-[1.05]">Ton prénom et ton nom.</h2>
+                    <div class="grid grid-cols-2 gap-5">
+                        <input type="text" placeholder="Prénom" class="field rounded-xl px-5 py-4 text-base" value="Marc">
+                        <input type="text" placeholder="Nom" class="field rounded-xl px-5 py-4 text-base" value="Dupont">
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 4%"></div></div>
+        </section>
+
+        <!-- Q2 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 2 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Coordonnées</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-12 leading-[1.05]">Ton téléphone et le nom de ton entreprise.</h2>
+                    <div class="space-y-5">
+                        <input type="tel" placeholder="Téléphone" class="field rounded-xl px-5 py-4 text-base w-full">
+                        <input type="text" placeholder="Entreprise" class="field rounded-xl px-5 py-4 text-base w-full">
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 8%"></div></div>
+        </section>
+
+        <!-- PHASE 2 — BUSINESS ACTUEL -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase 2 · Ton business actuel</p>
+        </div>
+
+        <!-- Q3 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 3 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Business</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Décris ton offre actuelle.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Ce que tu vends, à qui, et à quel prix.</p>
+                    <textarea rows="6" placeholder="Je propose un accompagnement sur 12 semaines pour aider les consultants francophones à..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 13%"></div></div>
+        </section>
+
+        <!-- Q4 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 4 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Business</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-12 leading-[1.05]">Tu travailles seul ou en équipe ?</h2>
+                    <div class="grid grid-cols-4 gap-4">
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light active">Solo</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">1 à 2</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">3 à 5</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">6 et plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 17%"></div></div>
+        </section>
+
+        <!-- Q4b conditionnelle -->
+        <section class="screen flex flex-col p-16 relative" style="border-left: 2px solid rgba(249,115,22,0.3);">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-[#f97316] uppercase label-tiny">Question 4b · Conditionnelle si pas solo</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Business</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[36px] text-white font-light tracking-tight mb-4 leading-[1.1]">De quoi est composée ton équipe ?</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">On veut comprendre qui fait quoi autour de toi.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Setter</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Closer</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Monteur vidéo</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Assistant</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Community manager</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Copywriter</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Ops manager</button>
+                        <button class="pill rounded-full px-5 py-2.5 text-xs font-light">Autre</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 21%"></div></div>
+        </section>
+
+        <!-- Q5 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 5 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Business</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Tes 3 à 5 concurrents principaux.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Les noms, URLs ou handles suffisent.</p>
+                    <div class="space-y-3">
+                        <input type="text" placeholder="Concurrent 1" class="field rounded-xl px-5 py-3.5 text-base w-full">
+                        <input type="text" placeholder="Concurrent 2" class="field rounded-xl px-5 py-3.5 text-base w-full">
+                        <input type="text" placeholder="Concurrent 3" class="field rounded-xl px-5 py-3.5 text-base w-full">
+                        <input type="text" placeholder="Concurrent 4, optionnel" class="field rounded-xl px-5 py-3.5 text-base w-full">
+                        <input type="text" placeholder="Concurrent 5, optionnel" class="field rounded-xl px-5 py-3.5 text-base w-full">
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 25%"></div></div>
+        </section>
+
+        <!-- Q6 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 6 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Business</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Décris ton client idéal.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Son profil, ce qu'il vit, ce qu'il veut.</p>
+                    <textarea rows="6" placeholder="Mon client idéal est un consultant francophone entre 28 et 42 ans, qui a déjà fait ses premiers 5k par mois mais..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 29%"></div></div>
+        </section>
+
+        <!-- PHASE 3 — SITUATION CHIFFRÉE -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase 3 · Ta situation chiffrée et marché</p>
+        </div>
+
+        <!-- Q7 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 7 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Chiffres</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-12 leading-[1.05]">Cash collecté sur les 3 derniers mois.</h2>
+                    <div class="grid grid-cols-3 gap-4">
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">0 à 5k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">5k à 15k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light active">15k à 30k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">30k à 50k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">50k à 100k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">100k et plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 33%"></div></div>
+        </section>
+
+        <!-- Q8 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 8 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Chiffres</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-12 leading-[1.05]">Ton objectif de revenu sur les 90 prochains jours.</h2>
+                    <div class="grid grid-cols-3 gap-4">
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">0 à 5k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">5k à 15k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">15k à 30k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light active">30k à 50k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">50k à 100k</button>
+                        <button class="pill rounded-xl px-6 py-5 text-sm font-light">100k et plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 38%"></div></div>
+        </section>
+
+        <!-- Q9 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 9 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Marché</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Les obstacles principaux de ton marché.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Ce qui empêche tes clients d'avancer.</p>
+                    <textarea rows="6" placeholder="Mes clients ont du mal à..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 42%"></div></div>
+        </section>
+
+        <!-- Q10 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 10 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Marché</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Les désirs principaux de ton marché.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Ce que tes clients veulent vraiment atteindre.</p>
+                    <textarea rows="6" placeholder="Ils veulent..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 46%"></div></div>
+        </section>
+
+        <!-- PHASE 4 — BLOCAGES ET ENGAGEMENT -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase 4 · Blocages et engagement</p>
+        </div>
+
+        <!-- Q11 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 11 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Priorités</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Ta priorité business en ce moment.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Le chantier le plus important pour toi.</p>
+                    <textarea rows="6" placeholder="En ce moment, ma priorité c'est..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 50%"></div></div>
+        </section>
+
+        <!-- Q12 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 12 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Blocages</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Ton blocage principal en ce moment.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Ce qui t'empêche concrètement d'avancer.</p>
+                    <textarea rows="6" placeholder="Ce qui me bloque, c'est..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 54%"></div></div>
+        </section>
+
+        <!-- Q13 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 13 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Engagement</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-xl text-center">
+                    <h2 class="text-[40px] text-white font-light tracking-tight mb-2 leading-[1.1]">À quel point es-tu prêt à appliquer ce qu'on va te montrer ?</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-12">Sur une échelle de 0 à 10.</p>
+                    <div class="text-[120px] text-white font-light leading-none mb-6">9</div>
+                    <div class="h-0.5 bg-white/10 relative mb-2">
+                        <div class="absolute inset-y-0 left-0 w-[90%] bg-[#f97316]"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 left-[90%] -translate-x-1/2 w-3 h-3 rounded-full bg-white"></div>
+                    </div>
+                    <div class="flex justify-between text-[10px] text-white/30 font-medium">
+                        <span>0</span><span>5</span><span>10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 58%"></div></div>
+        </section>
+
+        <!-- PHASE 5 — TOI ET NOUS -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase 5 · Toi et nous</p>
+        </div>
+
+        <!-- Q14 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 14 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl text-center">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Comment tu nous as découvert ?</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-12">Tu peux choisir plusieurs réponses.</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light active">Instagram</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">YouTube</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">Publicité</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light active">Recommandation</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">TikTok</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">LinkedIn</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">Podcast</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">Email</button>
+                        <button class="pill rounded-full px-6 py-3 text-sm font-light">Twitter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 63%"></div></div>
+        </section>
+
+        <!-- Q15 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 15 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Pourquoi nous, et pas un autre programme ?</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">On veut comprendre ce qui a fait la différence.</p>
+                    <textarea rows="6" placeholder="J'ai choisi Brvndlab parce que..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 67%"></div></div>
+        </section>
+
+        <!-- Q16 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 16 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[40px] text-white font-light tracking-tight mb-12 leading-[1.1]">Combien de temps tu as réfléchi avant de signer ?</h2>
+                    <div class="space-y-3">
+                        <button class="pill rounded-xl px-6 py-4 text-sm font-light w-full text-left">Aujourd'hui</button>
+                        <button class="pill rounded-xl px-6 py-4 text-sm font-light w-full text-left">Cette semaine</button>
+                        <button class="pill rounded-xl px-6 py-4 text-sm font-light w-full text-left active">Ce mois-ci</button>
+                        <button class="pill rounded-xl px-6 py-4 text-sm font-light w-full text-left">Ce trimestre</button>
+                        <button class="pill rounded-xl px-6 py-4 text-sm font-light w-full text-left">Plus de 3 mois</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 71%"></div></div>
+        </section>
+
+        <!-- Q17 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 17 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-xl text-center">
+                    <h2 class="text-[40px] text-white font-light tracking-tight mb-2 leading-[1.1]">Ton niveau de conviction avant notre premier appel.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-12">Sur une échelle de 0 à 10.</p>
+                    <div class="text-[120px] text-white font-light leading-none mb-6">8</div>
+                    <div class="h-0.5 bg-white/10 relative mb-2">
+                        <div class="absolute inset-y-0 left-0 w-[80%] bg-[#f97316]"></div>
+                        <div class="absolute top-1/2 -translate-y-1/2 left-[80%] -translate-x-1/2 w-3 h-3 rounded-full bg-white"></div>
+                    </div>
+                    <div class="flex justify-between text-[10px] text-white/30 font-medium">
+                        <span>0</span><span>5</span><span>10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+        </section>
+
+        <!-- Q18 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 18 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Tes hésitations avant de nous rejoindre.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Honnêtement, ça nous aide beaucoup.</p>
+                    <textarea rows="6" placeholder="J'hésitais parce que..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 79%"></div></div>
+        </section>
+
+        <!-- Q19 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 19 sur 23 · Optionnelle</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Un contenu spécifique qui t'a marqué ?</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Une vidéo, un post, un podcast. Optionnel.</p>
+                    <textarea rows="5" placeholder="Ta vidéo sur..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Passer</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 83%"></div></div>
+        </section>
+
+        <!-- Q20 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 20 sur 23 · Optionnelle</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Ce qui t'a attiré chez nous sans que tu l'attendes.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Une surprise positive. Optionnel.</p>
+                    <textarea rows="5" placeholder="Ce que je n'attendais pas, c'est..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Passer</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 87%"></div></div>
+        </section>
+
+        <!-- Q21 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 21 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Le contenu qui a eu le plus d'impact sur toi.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Celui qui a vraiment changé ta perspective.</p>
+                    <textarea rows="6" placeholder="Le contenu qui m'a le plus marqué, c'est..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Continuer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 91%"></div></div>
+        </section>
+
+        <!-- Q22 -->
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex items-center justify-between relative z-10 mb-12">
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Question 22 sur 23</span>
+                <span class="text-[10px] text-white/30 uppercase label-tiny">Toi et nous</span>
+            </div>
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-2xl">
+                    <h2 class="text-[44px] text-white font-light tracking-tight mb-4 leading-[1.05]">Ce qui t'a poussé à passer à l'action.</h2>
+                    <p class="text-[14px] text-white/40 font-light mb-10">Le déclic final.</p>
+                    <textarea rows="6" placeholder="Ce qui m'a fait dire oui aujourd'hui, c'est..." class="field rounded-xl px-5 py-4 text-base w-full resize-none"></textarea>
+                </div>
+            </div>
+            <div class="relative z-10 flex items-center justify-between pt-10">
+                <button class="btn-outline rounded-xl px-6 py-3 text-xs font-medium uppercase">Retour</button>
+                <button class="btn-orange rounded-xl px-8 py-3 text-xs font-medium uppercase">Terminer</button>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+        </section>
+
+        <!-- Q23 — MERCI ET BOOKING -->
+        <div class="pt-8 pb-2">
+            <p class="text-[10px] font-medium text-[#f97316] uppercase phase-label">Phase finale · Merci et booking</p>
+        </div>
+
+        <section class="screen flex flex-col p-16 relative">
+            <div class="flex-1 flex items-center justify-center relative z-10">
+                <div class="w-full max-w-xl text-center">
+                    <p class="text-[10px] text-white/30 uppercase label-tiny mb-8">Question 23 sur 23</p>
+                    <h2 class="text-[56px] text-white font-light tracking-tight mb-6 leading-[1.02]">Bien joué, Marc.</h2>
+                    <p class="text-[15px] text-white/50 font-light mb-14 max-w-md mx-auto leading-relaxed">On examine tes réponses en détail. À toi de réserver ton appel de clarté maintenant.</p>
+                    <button class="btn-orange rounded-xl px-10 py-4 text-xs font-medium uppercase">Réserver mon appel de clarté</button>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 text-center">
+        <p class="text-[10px] text-[#52525b] font-light">23 questions, 7 minutes en moyenne, 5 phases</p>
+        <a href="/" class="text-[10px] text-[#71717a] hover:text-[#f97316] font-light mt-2 inline-block">Retour à la démo</a>
+    </footer>
+
+</body>
+</html>
