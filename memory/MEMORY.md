@@ -1,0 +1,38 @@
+# Memory Index
+
+- [User Profile](user_jonathan.md) — Jonathan Zekhe, consultant/coach personal branding, builds Brvndlab
+- [Brvndlab SaaS Project](project_brvndlab_saas.md) — Micro-SaaS personal brand OS with analytics, content research, client tracking
+- [Brand OS = source de vérité centrale](project_brvndlab_brand_os_central.md) — Principe architectural : tous les modules Brvndlab consomment le Brand OS, jamais isolé
+- [Brvndlab MVP Scope](project_brvndlab_mvp.md) — 4 modules MVP: Brand OS, Analytics (YT+IG+TT), Content Research/Simulator, Client KPI Tracking
+- [Brvndlab Inspirations](reference_brvndlab_inspirations.md) — Scale20 (Tom Young), Jens Heitmann (Apify), heyDominik AI Hub
+- [Content Creation Section](project_brvndlab_content_creation.md) — Future section: Brainstorm vs Script, vocal, TOFU/MOFU/BOFU balance
+- [ICP Feedback - Content Strategy](project_brvndlab_icp_feedback.md) — Retour ICP: focus YouTube long format, recyclage clips, workflow autonome
+- [Onboarding Flow](project_brvndlab_onboarding.md) — Formulaire première connexion, basé sur concurrent, email hey@brvndlab.com
+- [Booking via iClosed](project_brvndlab_iclosed_booking.md) — Les appels de clarté sont actuellement bookés via iClosed. Question ouverte sur intégration directe.
+- [Collaborators Access](project_brvndlab_collaborators.md) — Monteurs/mini makers: accès calendrier + création contenu, pas Brand OS
+- [Auth & Security](project_brvndlab_auth.md) — Clerk pour l'auth, privacy policy requise pour review Meta
+- [CRITICAL: Never modify existing code](feedback_never_modify_existing.md) — Ne JAMAIS réécrire des fichiers existants sans demande explicite
+- [Validated mockups = done](feedback_validated_is_done.md) — Ne pas lister les mockups validés en TODO, gérer l'implémentation en silence
+- [JAMAIS d'em-dash](feedback_no_em_dash.md) — Règle absolue : aucun em-dash dans le chat, les mockups ou le copy de l'app
+- [Less is more sur écrans premium](feedback_less_is_more_premium.md) — Sur les écrans clés B2B, max 1 phrase entre titre et bouton. La valeur vient du silence.
+- [Esthétique old money premium](feedback_design_old_money_premium.md) — Onboarding : noir profond, typo light jamais bold, accents champagne discrets, pas de gros glow orange.
+- [JAMAIS de suppositions temporelles](feedback_no_temporal_assumptions.md) — Pas de "ce soir", "demain", "à mon réveil" dans le copy. On ne sait pas quand le client utilise l'app.
+- [Voix Brvndlab : on jamais je](feedback_voice_on_not_je.md) — Tout le copy parle en "on" ou "nous". Brvndlab est une entreprise de consulting, pas un solo.
+- [Workflow Jonathan : brainstorm puis mockup direct](feedback_workflow_brainstorm_then_mockup.md) — Toujours livrer un mockup HTML visuel, jamais juste du texte. Jonathan a besoin de voir.
+- [Scale20 Alignment](project_brvndlab_scale20_alignment.md) — Brvndlab doit matcher Scale20: layout, analytics, research agent, member intel, implementation
+- [Content tracking & notifications](project_brvndlab_content_tracking.md) — Matching auto via transcript (pas de tag). Notifs = DERNIÈRE étape du SaaS, à faire après tout le reste.
+- [Exigence zéro bug chat](feedback_zero_bug_chat.md) — Chat et temps réel : queue locale, idempotency, isolation stricte, tests de chaos obligatoires avant livraison.
+- [Communication coach-client 2 canaux](project_brvndlab_coach_client_communication.md) — Chat classique pour le quotidien + Note du jour qui apparaît dans le Dashboard du client. Le coach choisit au moment d'écrire.
+- [Performance OS integration](project_brvndlab_performance_os_integration.md) — CRM financier existant (~/Downloads/performance_os.html) à intégrer POST-MVP. Version LIGHT dans Brvndlab maintenant : CA, Cash collecté, MRR, Clients.
+- [Mémoire dorée](project_brvndlab_memoire_doree.md) — Feature stratégique MAJEURE. Capture silencieuse de toutes les actions utilisateurs pour constituer un vault unique de market intelligence sur l'infoprenariat francophone. Accessible UNIQUEMENT à Jonathan. Tracking backend dès le day 1 du MVP, UI post-MVP.
+- [Photo de profil client](feedback_client_profile_photo.md) — Chaque client doit pouvoir uploader sa vraie photo de profil. Fallback sur avatar initiales gradient si pas de photo.
+- [Recherche, radar FR + EN](project_brvndlab_research_fr_en_radar.md) — Le module Recherche croise en permanence marché francophone et anglophone. Priorité anglophone comme radar avancé.
+- [Transcripts toujours reformatés](feedback_transcript_always_formatted.md) — Jamais de transcript brut. Toujours reformaté par l'IA, titres highlight, keypoints à la ligne, paragraphes aérés.
+- [Live status messages](feedback_live_status_messages.md) — Toute action longue doit streamer des messages d'étape successifs en "on" ("on scanne", "on croise", "on repère"), finir par "Presque prêt". Jamais de spinner muet.
+- [Séparation stricte des modules](project_brvndlab_module_separation.md) — Chaque module a une intention unique. Pas d'action transverse. Passage entre modules par navigation discrète uniquement, jamais par boutons d'action déguisés.
+- [Création cross-module via modal](project_brvndlab_cross_module_modals.md) — Ajouter une entité depuis un module non-propriétaire ouvre un pop-up modal du module propriétaire. Jamais de duplication de formulaire. Veille/Radar = cas canonique.
+- [CRITIQUE, Notion = source de vérité](feedback_preserve_notion_source_of_truth.md) — Jamais réinventer les questions du Brand OS, toujours partir du Notion existant de Jonathan. Brvndlab digitalise, ne réinvente pas.
+- [CRITIQUE, tout enregistrer](feedback_save_all_conversations.md) — Toutes les décisions, corrections et validations doivent être scellées immédiatement dans des fichiers mémoire dédiés. Jamais laisser une info dans la conversation seule.
+- [Toujours fournir le lien](feedback_always_provide_link.md) — Quand on demande à Jonathan de valider quelque chose, toujours lui donner le lien direct avant la question, jamais après.
+- [Script references feature](project_brvndlab_script_references.md) — Feature à implémenter dans Contenu/Script, permettre d'insérer des références (liens, PDFs, dossiers) timestampées dans le script.
+- [Toggle dark/light mode](project_brvndlab_theme_toggle.md) — Mode clair par défaut dans tous les écrans, toggle dark disponible dans Settings + topbar. Persistance par user dans Convex.

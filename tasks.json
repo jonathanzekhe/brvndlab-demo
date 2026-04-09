@@ -61,6 +61,9 @@
     {"id": 57, "ts": "2026-04-09T12:25", "category": "fix", "module": "Brand OS", "title": "Story converti en mode clair par défaut", "status": "done"},
     {"id": 58, "ts": "2026-04-09T12:25", "category": "fix", "module": "Journal", "title": "Journal converti en mode clair par défaut", "status": "done"},
     {"id": 59, "ts": "2026-04-09T12:25", "category": "memory", "module": "Features", "title": "Feature toggle dark/light mode scellée, défaut clair, disponible dans Settings", "status": "done"},
-    {"id": 60, "ts": "2026-04-09T12:40", "category": "milestone", "module": "Chantier A", "title": "CHANTIER A TERMINÉ, tous les mockups validés par Jonathan, démo en ligne", "status": "done"}
+    {"id": 60, "ts": "2026-04-09T12:40", "category": "milestone", "module": "Chantier A", "title": "CHANTIER A TERMINÉ, tous les mockups validés par Jonathan, démo en ligne", "status": "done"},
+    {"id": 61, "ts": "2026-04-09T12:50", "category": "memory", "module": "Auth", "title": "Décision Clerk validée par Jonathan: auth + social logins + invitations", "status": "done"},
+    {"id": 62, "ts": "2026-04-09T12:50", "category": "memory", "module": "Architecture", "title": "Architecture décidée: mono-tenant ready multi-tenants (coachId sur tables clés)", "status": "done"},
+    {"id": 63, "ts": "2026-04-09T12:55", "category": "deploy", "module": "Memory", "title": "Toutes les règles mémoire backupées sur GitHub (dossier memory/)", "status": "done"}
   ]
 }
