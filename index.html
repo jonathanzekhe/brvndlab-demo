@@ -14,458 +14,206 @@
             font-weight: 300;
             margin: 0;
         }
-        .surface {
-            background-color: #0a0a0a;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
         .card {
             background-color: #0a0a0a;
             border: 1px solid rgba(255,255,255,0.04);
             transition: border-color 0.25s ease, background-color 0.25s ease;
         }
         .card:hover {
-            border-color: rgba(249,115,22,0.18);
+            border-color: rgba(249,115,22,0.25);
             background-color: #0d0d0d;
-        }
-        .card-featured {
-            border-color: rgba(249,115,22,0.12);
         }
         .ambient::before {
             content: '';
-            position: absolute;
+            position: fixed;
             top: -200px;
             right: -200px;
             width: 700px;
             height: 700px;
             background: radial-gradient(circle, rgba(249,115,22,0.05), transparent 70%);
-            pointer-events: none;
             filter: blur(90px);
-            z-index: 0;
-        }
-        .ambient::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(249,115,22,0.03), transparent 70%);
             pointer-events: none;
-            filter: blur(80px);
-            z-index: 0;
+            z-index: -1;
         }
     </style>
 </head>
-<body class="min-h-screen relative overflow-x-hidden">
+<body class="min-h-screen ambient pb-20">
 
-    <div class="ambient fixed inset-0 pointer-events-none -z-10"></div>
+    <div class="max-w-4xl mx-auto px-6 pt-16">
 
-    <header class="max-w-5xl mx-auto px-8 pt-20 pb-14 relative">
-        <div class="flex items-center gap-3 mb-20">
-            <div class="w-8 h-8 rounded-md bg-[#f97316] flex items-center justify-center">
-                <span class="text-white font-medium text-sm">B</span>
-            </div>
-            <span class="text-[#f5f5f7] font-medium tracking-tight text-lg">Brvndlab</span>
-            <span class="ml-auto text-[10px] font-medium text-[#52525b] uppercase tracking-[0.25em]">Démo produit</span>
-        </div>
-
-        <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-6">Personal brand intelligence</p>
-        <h1 class="text-[48px] md:text-[56px] font-light text-[#f5f5f7] tracking-tight leading-[1.1] mb-7 max-w-3xl">La plateforme qui transforme ta marque personnelle en système.</h1>
-        <p class="text-[16px] text-[#a1a1aa] leading-relaxed max-w-2xl font-light mb-14">On a organisé tous les écrans du produit par module. Chaque lien ouvre un mockup haute fidélité de l'expérience finale.</p>
-
-        <div class="flex flex-wrap gap-3">
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06]">
-                <div class="w-1.5 h-1.5 rounded-full bg-[#f97316]"></div>
-                <span class="text-[11px] text-[#a1a1aa] font-light">66 écrans</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06]">
-                <span class="text-[11px] text-[#a1a1aa] font-light">11 modules</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06]">
-                <span class="text-[11px] text-[#a1a1aa] font-light">Production-ready design</span>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-8 space-y-20 relative">
-
-        <!-- ONBOARDING -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">01</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Onboarding</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Flow complet, de l'invitation jusqu'au booking du premier appel de clarté.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-3">
-                <a href="mockup-onboarding-full-v2.html" target="_blank" class="card card-featured rounded-2xl p-6 block md:col-span-2">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em]">Principal</span>
-                        <span class="text-[10px] text-[#52525b] font-light">10 écrans</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-[#f5f5f7] mb-1">Flow onboarding complet</h3>
-                    <p class="text-[12px] text-[#71717a] font-light leading-relaxed">Email d'invitation, vidéo d'intro, questionnaire 23 questions, framing, roadmap personnalisée, booking iClosed, remerciement.</p>
-                </a>
-                <a href="mockup-onboarding-questionnaire-experience.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Expérience questionnaire</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">6 écrans types du questionnaire</p>
-                </a>
-                <a href="mockup-onboarding-step5-roadmap.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Roadmap personnalisée</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Plan d'action post-questionnaire</p>
-                </a>
-                <a href="mockup-onboarding-booking-iclosed.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Booking iClosed</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Prise de rendez-vous intégrée</p>
-                </a>
-                <a href="mockup-onboarding-step3-framing-v3.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Framing honnête</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Seuil d'honnêteté attendu</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- BRAND OS -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">02</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Brand OS</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Le système d'exploitation de ta marque. 11 modules d'identité stratégique.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-3">
-                <a href="mockup-brand-os.html" target="_blank" class="card card-featured rounded-2xl p-5 block md:col-span-3">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Hub principal</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Tableau de bord Brand OS</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Vue globale des 11 modules avec progression et navigation.</p>
-                </a>
-                <a href="mockup-brand-os-story.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Story</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ton histoire de marque</p>
-                </a>
-                <a href="mockup-brand-os-mission.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Mission</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ta raison d'être</p>
-                </a>
-                <a href="mockup-brand-os-valeurs.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Valeurs</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Tes principes directeurs</p>
-                </a>
-                <a href="mockup-brand-os-audience.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Audience</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ton public cible</p>
-                </a>
-                <a href="mockup-brand-os-personas.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Personas</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Tes clients idéaux</p>
-                </a>
-                <a href="mockup-brand-os-problematiques.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Problématiques</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Les douleurs du marché</p>
-                </a>
-                <a href="mockup-brand-os-voix.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Voix</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ton ton éditorial</p>
-                </a>
-                <a href="mockup-brand-os-personnalite.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Personnalité</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ton caractère de marque</p>
-                </a>
-                <a href="mockup-brand-os-style.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Style</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ton identité visuelle</p>
-                </a>
-                <a href="mockup-brand-os-offre.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Offre</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ta proposition de valeur</p>
-                </a>
-                <a href="mockup-brand-os-message.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Message</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Ta narrative centrale</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- DASHBOARD CLIENT -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">03</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Dashboard client</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">L'écran d'accueil quotidien du créateur, bento grid avec tâches contextuelles.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-3">
-                <a href="mockup-dashboard-matin.html" target="_blank" class="card card-featured rounded-2xl p-6 block">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Validé</span>
-                    <h3 class="text-lg font-medium text-[#f5f5f7] mb-1">Dashboard matin</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Bento grid, tâches contextuelles, Coach Note avec voice note.</p>
-                </a>
-                <a href="mockup-dashboard-appel-card.html" target="_blank" class="card rounded-2xl p-6 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Carte d'appel</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Composant de rappel d'appel à venir</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- CALENDRIER -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">04</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Calendrier de publication</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Vue mensuelle, hebdo et jour. Multi-plateformes, multi-posts, segmentation funnel.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-3">
-                <a href="mockup-calendrier-final.html" target="_blank" class="card card-featured rounded-2xl p-5 block md:col-span-3">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Version finale</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Calendrier final</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Version définitive avec embed platform preview, hover detail, funnel distribution.</p>
-                </a>
-                <a href="mockup-calendrier-v2-large.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">V2 cards larges</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Titres lisibles, hover preview</p>
-                </a>
-                <a href="mockup-calendrier-v3-multipost.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">V3 multi-post</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Plusieurs posts par jour</p>
-                </a>
-                <a href="mockup-calendrier-v6.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">V6</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Itération récente</p>
-                </a>
-                <a href="mockup-calendrier-vues-semaine-jour.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Vues semaine et jour</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Zooms granulaires</p>
-                </a>
-                <a href="mockup-calendrier-light-details.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Light avec détails</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Variante thème clair</p>
-                </a>
-                <a href="mockup-calendrier-dark.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Dark mode</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Variante thème sombre</p>
-                </a>
-                <a href="mockup-calendrier-minimal.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Minimal</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Version épurée</p>
-                </a>
-                <a href="mockup-calendrier-publication.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Publication</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Version initiale</p>
-                </a>
-                <a href="mockup-calendrier-A-vs-C.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">A vs C</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Comparaison de variantes</p>
-                </a>
-                <a href="mockup-calendrier-variants.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Variantes initiales</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">A, B, C initiales</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- CONTENU -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">05</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Contenu</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Brainstorm, script, kanban production, inspiration et filming workflow.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-3">
-                <a href="mockup-contenu-kanban-v2-chat.html" target="_blank" class="card card-featured rounded-2xl p-5 block md:col-span-2">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Validé</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Kanban vidéo avec chat collaboratif</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">5 colonnes, chat intégré par vidéo, workflow coach monteur.</p>
-                </a>
-                <a href="mockup-contenu-entree.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Entrée Contenu</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Hub du module</p>
-                </a>
-                <a href="mockup-brainstorm-entree.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Brainstorm, entrée</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Saisie de l'idée initiale</p>
-                </a>
-                <a href="mockup-brainstorm-variants.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Brainstorm, variants</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Génération de variantes</p>
-                </a>
-                <a href="mockup-brainstorm-resultats.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Brainstorm, résultats</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Présentation des idées</p>
-                </a>
-                <a href="mockup-brainstorm-idea.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Brainstorm, idée détail</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Zoom sur une idée</p>
-                </a>
-                <a href="mockup-contenu-script.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Script</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Rédaction de script</p>
-                </a>
-                <a href="mockup-contenu-inspiration.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Inspiration</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Sources d'inspiration</p>
-                </a>
-                <a href="mockup-contenu-from-context.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Contenu depuis contexte</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Génération contextuelle</p>
-                </a>
-                <a href="mockup-contenu-filmee.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Vidéo filmée</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Workflow post-tournage</p>
-                </a>
-                <a href="mockup-contenu-kanban.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Kanban V1</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Première itération</p>
-                </a>
-                <a href="mockup-contenu-badges.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Badges de statut</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Système de tags</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- INTELLIGENCE DE MARCHÉ -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">06</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Intelligence de marché</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Recherche, Veille, Analytics, Radar. Le cœur différenciateur de Brvndlab.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-3">
-                <a href="mockup-recherche.html" target="_blank" class="card card-featured rounded-2xl p-6 block">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em]">Nouveau</span>
-                        <span class="text-[10px] text-[#52525b] font-light">7 écrans</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-[#f5f5f7] mb-1">Recherche</h3>
-                    <p class="text-[12px] text-[#71717a] font-light leading-relaxed">Radar double marché francophone et anglophone, transcripts reformatés, galerie thumbnails qui convertissent, Content Research Agent proactif.</p>
-                </a>
-                <a href="mockup-veille.html" target="_blank" class="card card-featured rounded-2xl p-6 block">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em]">Nouveau</span>
-                        <span class="text-[10px] text-[#52525b] font-light">8 écrans</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-[#f5f5f7] mb-1">Veille</h3>
-                    <p class="text-[12px] text-[#71717a] font-light leading-relaxed">Feed concurrents et références, alertes thématiques, cartographie stratégique 2 axes, fiche créateur, mur visuel des thumbnails.</p>
-                </a>
-                <a href="mockup-analytics.html" target="_blank" class="card card-featured rounded-2xl p-6 block md:col-span-2">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em]">Nouveau</span>
-                        <span class="text-[10px] text-[#52525b] font-light">10 écrans</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-[#f5f5f7] mb-1">Analytics</h3>
-                    <p class="text-[12px] text-[#71717a] font-light leading-relaxed">KPIs bento cross-plateformes, segmentation TOFU/MOFU/BOFU avec reco IA, drill-down publication avec signaux de valeur, insights IA transversaux, comparaison inter-périodes, benchmark marché.</p>
-                </a>
-                <a href="mockup-radar.html" target="_blank" class="card rounded-2xl p-6 block md:col-span-2">
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Radar du marché</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Cartographie qualitative des concurrents avec points forts, points faibles et pourquoi on les a choisis.</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- COACH -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">07</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Coach</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Cockpit du coach, portfolio clients, fiche membre, mémoire dorée.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-3">
-                <a href="mockup-dashboard-coach.html" target="_blank" class="card card-featured rounded-2xl p-6 block">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Validé</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Dashboard coach</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Portfolio clients, revenue widget, recommandations IA.</p>
-                </a>
-                <a href="mockup-fiche-membre.html" target="_blank" class="card card-featured rounded-2xl p-6 block">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Validé</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Fiche membre</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Profil complet, slide Avant/Pendant/Après, métrique Alignement.</p>
-                </a>
-                <a href="mockup-memoire-doree.html" target="_blank" class="card card-featured rounded-2xl p-6 block md:col-span-2">
-                    <span class="text-[9px] font-medium text-[#f97316] uppercase tracking-[0.25em] mb-2 block">Moat stratégique</span>
-                    <h3 class="text-base font-medium text-[#f5f5f7] mb-1">Mémoire dorée</h3>
-                    <p class="text-[12px] text-[#71717a] font-light">Vault de market intelligence, 10 catégories de capture silencieuse.</p>
-                </a>
-                <a href="mockup-chat-coach-client.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Messagerie coach client</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Toggle Chat et Note</p>
-                </a>
-                <a href="mockup-partage-collaborateur.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7] mb-1">Partage collaborateur</h4>
-                    <p class="text-[11px] text-[#71717a] font-light">Accès granulaire par section</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- MODULES -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">08</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Modules de formation</h2>
-                <p class="text-[13px] text-[#71717a] mt-2 font-light">Les cours vidéo et parcours d'apprentissage du programme.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-3">
-                <a href="mockup-modules.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Hub modules</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Vue d'ensemble des cours</p>
-                </a>
-                <a href="mockup-modules-structure.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Structure</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Organisation des modules</p>
-                </a>
-                <a href="mockup-modules-vue.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Vue module</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Détail d'un module</p>
-                </a>
-                <a href="mockup-modules-video-final.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Lecteur vidéo final</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Player de cours</p>
-                </a>
-                <a href="mockup-modules-video.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Lecteur vidéo</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Itération précédente</p>
-                </a>
-                <a href="mockup-modules-theme.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Thème</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Exploration thématique</p>
-                </a>
-                <a href="mockup-modules-reprise.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Reprise de lecture</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Continuer le cours</p>
-                </a>
-                <a href="mockup-modules-search.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Recherche dans modules</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Recherche de contenus</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- SYSTÈME -->
-        <section>
-            <div class="mb-8">
-                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-3">09</p>
-                <h2 class="text-2xl font-light text-[#f5f5f7] tracking-tight">Système et notifications</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-3">
-                <a href="mockup-notifications.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Notifications</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Centre de notifications</p>
-                </a>
-                <a href="mockup-onboarding-flow.html" target="_blank" class="card rounded-2xl p-5 block">
-                    <h4 class="text-sm font-medium text-[#f5f5f7]">Flow onboarding technique</h4>
-                    <p class="text-[11px] text-[#71717a] font-light mt-1">Vue technique des transitions</p>
-                </a>
-            </div>
-        </section>
-
-        <footer class="pt-24 pb-12 text-center">
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <div class="w-6 h-6 rounded-md bg-[#f97316] flex items-center justify-center">
-                    <span class="text-white font-medium text-[10px]">B</span>
+        <header class="mb-14">
+            <div class="flex items-center gap-3 mb-12">
+                <div class="w-8 h-8 rounded-md bg-[#f97316] flex items-center justify-center">
+                    <span class="text-white font-medium text-sm">B</span>
                 </div>
-                <span class="text-[#f5f5f7] font-medium text-sm">Brvndlab</span>
+                <span class="text-[#f5f5f7] font-medium text-lg">Brvndlab</span>
+                <span class="ml-auto text-[10px] text-[#52525b] font-medium uppercase tracking-[0.25em]">Démo produit</span>
             </div>
-            <p class="text-[10px] text-[#52525b] font-light tracking-wide">Démo produit, 66 écrans, 11 modules</p>
-            <p class="text-[10px] text-[#3f3f46] font-light mt-2">hey@brvndlab.com</p>
+
+            <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-5">Versions finales uniquement</p>
+            <h1 class="text-[44px] font-light tracking-tight leading-[1.1] mb-5">29 écrans validés, un par un.</h1>
+            <p class="text-[14px] text-[#a1a1aa] font-light max-w-xl">Chaque lien ouvre la version finale d'un écran. Zéro variante, zéro ancienne version.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- ONBOARDING -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">01 · Onboarding</p>
+                <div class="space-y-2">
+                    <a href="mockup-onboarding-full-v2.html" target="_blank" class="card rounded-xl p-4 block">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Flow onboarding complet</span>
+                            <span class="text-[10px] text-[#52525b] font-light">10 écrans</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- BRAND OS -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">02 · Brand OS</p>
+                <div class="space-y-2">
+                    <a href="mockup-brand-os.html" target="_blank" class="card rounded-xl p-4 block">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Hub Brand OS</span>
+                            <span class="text-[10px] text-[#52525b] font-light">Tableau de bord</span>
+                        </div>
+                    </a>
+                    <a href="mockup-brand-os-story.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Story</span>
+                    </a>
+                    <a href="mockup-brand-os-mission.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Mission</span>
+                    </a>
+                    <a href="mockup-brand-os-valeurs.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Valeurs</span>
+                    </a>
+                    <a href="mockup-brand-os-audience.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Audience</span>
+                    </a>
+                    <a href="mockup-brand-os-personas.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Personas</span>
+                    </a>
+                    <a href="mockup-brand-os-problematiques.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Problématiques</span>
+                    </a>
+                    <a href="mockup-brand-os-voix.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Voix</span>
+                    </a>
+                    <a href="mockup-brand-os-personnalite.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Personnalité</span>
+                    </a>
+                    <a href="mockup-brand-os-style.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Style</span>
+                    </a>
+                    <a href="mockup-brand-os-offre.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Offre</span>
+                    </a>
+                    <a href="mockup-brand-os-message.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Message</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- DASHBOARD CLIENT -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">03 · Dashboard client</p>
+                <div class="space-y-2">
+                    <a href="mockup-dashboard-matin.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Dashboard matin</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CALENDRIER -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">04 · Calendrier de publication</p>
+                <div class="space-y-2">
+                    <a href="mockup-calendrier-final.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Calendrier</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- CONTENU -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">05 · Contenu</p>
+                <div class="space-y-2">
+                    <a href="mockup-contenu-entree.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Page d'entrée Contenu</span>
+                    </a>
+                    <a href="mockup-contenu-kanban-v2-chat.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Kanban vidéo avec chat</span>
+                    </a>
+                    <a href="mockup-contenu-script.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Script généré</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- INTELLIGENCE DE MARCHÉ -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">06 · Intelligence de marché</p>
+                <div class="space-y-2">
+                    <a href="mockup-recherche.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Recherche</span>
+                    </a>
+                    <a href="mockup-veille.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Veille</span>
+                    </a>
+                    <a href="mockup-analytics.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Analytics</span>
+                    </a>
+                    <a href="mockup-radar.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Radar du marché</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- COACH -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">07 · Coach</p>
+                <div class="space-y-2">
+                    <a href="mockup-dashboard-coach.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Dashboard coach</span>
+                    </a>
+                    <a href="mockup-fiche-membre.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Fiche membre</span>
+                    </a>
+                    <a href="mockup-memoire-doree.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Mémoire dorée</span>
+                    </a>
+                    <a href="mockup-chat-coach-client.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Messagerie coach client</span>
+                    </a>
+                    <a href="mockup-partage-collaborateur.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Partage collaborateur</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- MODULES -->
+            <section>
+                <p class="text-[10px] font-medium text-[#f97316] uppercase tracking-[0.3em] mb-4">08 · Modules de formation</p>
+                <div class="space-y-2">
+                    <a href="mockup-modules.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Hub modules</span>
+                    </a>
+                    <a href="mockup-modules-video-final.html" target="_blank" class="card rounded-xl p-4 block">
+                        <span class="text-sm font-medium">Lecteur vidéo</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="pt-20 pb-10 text-center">
+            <p class="text-[10px] text-[#52525b] font-light tracking-wide">29 écrans, 8 sections</p>
+            <a href="/tracker" class="text-[10px] text-[#71717a] hover:text-[#f97316] font-light mt-3 inline-block">Tracker live</a>
         </footer>
 
-    </main>
+    </div>
 
 </body>
 </html>
