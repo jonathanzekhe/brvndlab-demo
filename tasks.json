@@ -40,6 +40,9 @@
     {"id": 36, "ts": "2026-04-09T09:10", "category": "fix", "module": "Brand OS", "title": "Suppression doublons Problématiques et Offre (déjà dans Message)", "status": "done"},
     {"id": 37, "ts": "2026-04-09T09:10", "category": "fix", "module": "Brand OS", "title": "Index mis à jour, 9 modules dans Brand OS au lieu de 11", "status": "done"},
     {"id": 38, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Hub Brand OS VALIDÉ par Jonathan", "status": "done"},
-    {"id": 39, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Message central et primaire VALIDÉ par Jonathan", "status": "done"}
+    {"id": 39, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Message central et primaire VALIDÉ par Jonathan", "status": "done"},
+    {"id": 40, "ts": "2026-04-09T10:05", "category": "fix", "module": "Brand OS", "title": "Hub réordonné: Story → Débloquage → Message → Audience → Mission → reste", "status": "done"},
+    {"id": 41, "ts": "2026-04-09T10:05", "category": "design", "module": "Brand OS", "title": "Ajout placeholder 02 Débloquage (en attente du nom Notion)", "status": "done"},
+    {"id": 42, "ts": "2026-04-09T10:05", "category": "fix", "module": "Brand OS", "title": "Index démo mis à jour avec nouvel ordre numéroté 01-10", "status": "done"}
   ]
 }
