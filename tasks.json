@@ -34,6 +34,7 @@
     {"id": 30, "ts": "2026-04-09T08:30", "category": "fix", "module": "Demo", "title": "Suppression 37 anciens mockups variants du repo demo", "status": "done"},
     {"id": 31, "ts": "2026-04-09T08:30", "category": "fix", "module": "Demo", "title": "Refonte index, 29 écrans finaux uniquement, liste simple", "status": "done"},
     {"id": 32, "ts": "2026-04-09T08:30", "category": "memory", "module": "Rules", "title": "Création VALIDATED.md, source de vérité unique des mockups", "status": "done"},
-    {"id": 33, "ts": "2026-04-09T08:45", "category": "design", "module": "Onboarding", "title": "Questionnaire complet 23 questions créé", "status": "done"}
+    {"id": 33, "ts": "2026-04-09T08:45", "category": "design", "module": "Onboarding", "title": "Questionnaire complet 23 questions créé", "status": "done"},
+    {"id": 34, "ts": "2026-04-09T08:50", "category": "milestone", "module": "Onboarding", "title": "Questionnaire 23 questions VALIDÉ par Jonathan", "status": "done"}
   ]
 }
