@@ -7,39 +7,40 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #d1d5db; -webkit-font-smoothing: antialiased; }
-    .glass-card { background-color: #1a1a22; border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.2s ease; }
-    .glass-card:hover { border-color: rgba(255, 255, 255, 0.12); }
+    body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; background-image: radial-gradient(#CBD5E1 1px, transparent 1px); background-size: 24px 24px; color: #1A1A2E; }
+        .frosted { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4); }
+    .glass-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 10px 25px -5px rgba(203, 213, 225, 0.4); transition: all 0.2s ease; }
+    .glass-card:hover { border-color: rgba(249, 115, 22, 0.3); box-shadow: 0 20px 30px -10px rgba(203, 213, 225, 0.5); }
     .input-transparent { background: transparent; border: none; outline: none; width: 100%; padding: 0; }
-    .input-transparent::placeholder { color: #525866; }
-    .question-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.04); }
+    .input-transparent::placeholder { color: #9CA3AF; }
+    .question-box { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 4px 12px -4px rgba(203, 213, 225, 0.3); }
 </style>
 </head>
-<body class="selection:bg-orange-500/30">
+<body class="selection:bg-orange-100">
 
 <div class="max-w-4xl mx-auto px-6 py-12 pb-32">
 
     <header class="mb-16">
-        <nav class="flex items-center gap-2 text-[13px] font-medium text-[#8a8f98] mb-8">
+        <nav class="flex items-center gap-2 text-[13px] font-medium text-[#9CA3AF] mb-8">
             <span>Brvndlab</span>
             <span>/</span>
             <span>Brand OS</span>
             <span>/</span>
-            <span class="text-white">Positionnement</span>
+            <span class="text-[#1A1A2E]">Positionnement</span>
         </nav>
 
-        <a href="mockup-brand-os.html" class="inline-flex items-center gap-2 text-[13px] text-[#8a8f98] hover:text-white transition-colors mb-6">
+        <a href="mockup-brand-os.html" class="inline-flex items-center gap-2 text-[13px] text-[#9CA3AF] hover:text-[#1A1A2E] transition-colors mb-6">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
             Retour au hub Brand OS
         </a>
 
-        <h1 class="text-4xl font-bold text-white mb-4 tracking-tight">05 · Ton positionnement</h1>
+        <h1 class="text-4xl font-bold text-[#1A1A2E] mb-4 tracking-tight">05 · Ton positionnement</h1>
 
-        <p class="text-[15px] text-[#d1d5db] leading-relaxed max-w-2xl mb-4">
-            Ton positionnement, c'est <strong class="text-white">la phrase</strong> qui répond à la question "pourquoi toi et pas un autre". Si tu ne sais pas répondre en une phrase, ton client non plus.
+        <p class="text-[15px] text-[#6B7280] leading-relaxed max-w-2xl mb-4">
+            Ton positionnement, c'est <strong class="text-[#1A1A2E] font-bold">la phrase</strong> qui répond à la question "pourquoi toi et pas un autre". Si tu ne sais pas répondre en une phrase, ton client non plus.
         </p>
 
-        <p class="text-[13px] italic text-[#8a8f98]">
+        <p class="text-[13px] italic text-[#9CA3AF]">
             Un bon positionnement te rend inévitable pour un segment précis, et complètement invisible pour les autres. C'est exactement ce qu'on veut.
         </p>
     </header>
@@ -50,17 +51,17 @@
             <div class="text-[#f97316]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ta phrase de positionnement</h2>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#9CA3AF]">Ta phrase de positionnement</h2>
         </div>
 
         <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <p class="text-[14px] leading-relaxed text-[#d1d5db]">En UNE phrase, pour qui tu es la meilleure option, et sur quoi précisément ?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#9CA3AF] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#6B7280]">En UNE phrase, pour qui tu es la meilleure option, et sur quoi précisément ?</p>
         </div>
 
         <div class="glass-card rounded-[16px] p-8 mb-6">
             <label class="text-[10px] font-bold uppercase tracking-widest text-[#f97316] mb-4 block">Ta phrase</label>
-            <textarea rows="3" class="input-transparent text-[22px] font-bold leading-snug text-white resize-none">On aide les consultants francophones à 5k-15k€/mois à passer à 30k+ grâce à un système de personal branding qui ne dépend plus de leur temps.</textarea>
+            <textarea rows="3" class="input-transparent text-[22px] font-bold leading-snug text-[#1A1A2E] resize-none">On aide les consultants francophones à 5k-15k€/mois à passer à 30k+ grâce à un système de personal branding qui ne dépend plus de leur temps.</textarea>
         </div>
     </section>
 
@@ -70,39 +71,39 @@
             <div class="text-[#f97316]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
             </div>
-            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ce qui te rend unique</h2>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#9CA3AF]">Ce qui te rend unique</h2>
         </div>
 
         <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Quels sont les 3 éléments précis qui te différencient de tout le monde sur ton marché ?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#9CA3AF] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#6B7280]">Quels sont les 3 éléments précis qui te différencient de tout le monde sur ton marché ?</p>
         </div>
 
         <div class="space-y-4 mb-6">
             <div class="group relative glass-card rounded-[16px] p-6">
                 <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">01</div>
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-50 border border-slate-200 flex items-center justify-center text-[14px] font-bold text-[#f97316]">01</div>
                     <div class="flex-grow space-y-3">
-                        <input type="text" value="Méthode basée sur des données réelles, pas sur des frameworks génériques" class="input-transparent text-[16px] font-bold text-white">
-                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">Chaque décision stratégique se prend à partir de ton Brand OS réel et de tes analytics, jamais à partir de conseils génériques type "sois authentique" qu'on lit partout.</textarea>
+                        <input type="text" value="Méthode basée sur des données réelles, pas sur des frameworks génériques" class="input-transparent text-[16px] font-bold text-[#1A1A2E]">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#6B7280] resize-none">Chaque décision stratégique se prend à partir de ton Brand OS réel et de tes analytics, jamais à partir de conseils génériques type "sois authentique" qu'on lit partout.</textarea>
                     </div>
                 </div>
             </div>
             <div class="group relative glass-card rounded-[16px] p-6">
                 <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">02</div>
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-50 border border-slate-200 flex items-center justify-center text-[14px] font-bold text-[#f97316]">02</div>
                     <div class="flex-grow space-y-3">
-                        <input type="text" value="Radar marché croisé francophone et anglophone" class="input-transparent text-[16px] font-bold text-white">
-                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">On te donne 6 à 12 mois d'avance sur le marché francophone en surveillant ce qui explose en anglophone, avant que tes concurrents ne le captent.</textarea>
+                        <input type="text" value="Radar marché croisé francophone et anglophone" class="input-transparent text-[16px] font-bold text-[#1A1A2E]">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#6B7280] resize-none">On te donne 6 à 12 mois d'avance sur le marché francophone en surveillant ce qui explose en anglophone, avant que tes concurrents ne le captent.</textarea>
                     </div>
                 </div>
             </div>
             <div class="group relative glass-card rounded-[16px] p-6">
                 <div class="flex gap-4 items-start">
-                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">03</div>
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-50 border border-slate-200 flex items-center justify-center text-[14px] font-bold text-[#f97316]">03</div>
                     <div class="flex-grow space-y-3">
-                        <input type="text" value="Accompagnement coaching + outil logiciel intégrés" class="input-transparent text-[16px] font-bold text-white">
-                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">La plupart des concurrents vendent soit du coaching pur sans outil, soit un SaaS sans accompagnement. Ici tu as les deux dans un système unique qui se renforcent mutuellement.</textarea>
+                        <input type="text" value="Accompagnement coaching + outil logiciel intégrés" class="input-transparent text-[16px] font-bold text-[#1A1A2E]">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#6B7280] resize-none">La plupart des concurrents vendent soit du coaching pur sans outil, soit un SaaS sans accompagnement. Ici tu as les deux dans un système unique qui se renforcent mutuellement.</textarea>
                     </div>
                 </div>
             </div>
@@ -120,16 +121,16 @@
             <div class="text-[#f97316]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
             </div>
-            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Pour qui tu n'es pas fait</h2>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#9CA3AF]">Pour qui tu n'es pas fait</h2>
         </div>
 
         <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Un bon positionnement exclut autant qu'il inclut. Pour qui tu refuses explicitement de travailler ?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#9CA3AF] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#6B7280]">Un bon positionnement exclut autant qu'il inclut. Pour qui tu refuses explicitement de travailler ?</p>
         </div>
 
         <div class="glass-card rounded-[16px] p-6">
-            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">On ne travaille pas avec les coaches débutants qui n'ont pas encore généré 5k€/mois. On ne travaille pas non plus avec ceux qui cherchent une solution miracle sans vouloir construire un système dans le temps. Et on refuse les clients qui pensent que le contenu se résume à "poster plus".</textarea>
+            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#6B7280] resize-none">On ne travaille pas avec les coaches débutants qui n'ont pas encore généré 5k€/mois. On ne travaille pas non plus avec ceux qui cherchent une solution miracle sans vouloir construire un système dans le temps. Et on refuse les clients qui pensent que le contenu se résume à "poster plus".</textarea>
         </div>
     </section>
 
@@ -139,20 +140,20 @@
             <div class="text-[#f97316]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </div>
-            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ton point de rupture</h2>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#9CA3AF]">Ton point de rupture</h2>
         </div>
 
         <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Quelle est l'idée contre-intuitive ou la prise de position forte que tu défends et que personne d'autre ne dit ?</p>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#9CA3AF] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#6B7280]">Quelle est l'idée contre-intuitive ou la prise de position forte que tu défends et que personne d'autre ne dit ?</p>
         </div>
 
         <div class="glass-card rounded-[16px] p-6">
-            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">Le personal branding n'est pas un problème de contenu, c'est un problème de système. 90% des coaches essaient de poster plus, alors que le vrai levier est de construire une marque qui leur survit au-delà de leur dernière publication. On est les seuls à dire que le volume est un piège, pas une solution.</textarea>
+            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#6B7280] resize-none">Le personal branding n'est pas un problème de contenu, c'est un problème de système. 90% des coaches essaient de poster plus, alors que le vrai levier est de construire une marque qui leur survit au-delà de leur dernière publication. On est les seuls à dire que le volume est un piège, pas une solution.</textarea>
         </div>
     </section>
 
-    <footer class="flex items-center justify-end pt-10 border-t border-white/5">
+    <footer class="flex items-center justify-end pt-10 border-t border-slate-200">
         <button class="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-3.5 rounded-xl text-sm font-bold transition-all">Enregistrer mon Positionnement</button>
     </footer>
 
