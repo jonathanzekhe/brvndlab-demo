@@ -1,49 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<title>Brvndlab · Positionnement</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand OS — Positionnement | Brvndlab</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>body { font-family: 'Inter', sans-serif; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #d1d5db; -webkit-font-smoothing: antialiased; }
+    .glass-card { background-color: #1a1a22; border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.2s ease; }
+    .glass-card:hover { border-color: rgba(255, 255, 255, 0.12); }
+    .input-transparent { background: transparent; border: none; outline: none; width: 100%; padding: 0; }
+    .input-transparent::placeholder { color: #525866; }
+    .question-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.04); }
+</style>
 </head>
-<body class="bg-[#EEF0F4] text-[#1A1A2E] p-8 min-h-screen">
-    <div class="max-w-4xl mx-auto">
-        <nav class="flex items-center gap-2 text-[11px] font-bold text-[#9CA3AF] uppercase tracking-wider mb-4">
+<body class="selection:bg-orange-500/30">
+
+<div class="max-w-4xl mx-auto px-6 py-12 pb-32">
+
+    <header class="mb-16">
+        <nav class="flex items-center gap-2 text-[13px] font-medium text-[#8a8f98] mb-8">
             <span>Brvndlab</span>
-            <span class="text-slate-300">/</span>
+            <span>/</span>
             <span>Brand OS</span>
-            <span class="text-slate-300">/</span>
-            <span class="text-[#f97316]">Positionnement</span>
+            <span>/</span>
+            <span class="text-white">Positionnement</span>
         </nav>
-        <a href="mockup-brand-os.html" class="inline-flex items-center text-sm font-semibold text-[#6B7280] hover:text-[#1A1A2E] transition-colors mb-6">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+
+        <a href="mockup-brand-os.html" class="inline-flex items-center gap-2 text-[13px] text-[#8a8f98] hover:text-white transition-colors mb-6">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
             Retour au hub Brand OS
         </a>
-        <header class="mb-10">
-            <h1 class="text-4xl font-extrabold mb-3">05 · Positionnement</h1>
-            <p class="text-[#6B7280] text-base max-w-2xl">Comment tu te places face aux concurrents et aux alternatives du marché.</p>
-        </header>
 
-        <div class="bg-white/80 backdrop-blur-lg rounded-[24px] p-10 shadow-md border border-white/60">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                </div>
-                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest">Module à construire avec ton Notion</span>
+        <h1 class="text-4xl font-bold text-white mb-4 tracking-tight">05 · Ton positionnement</h1>
+
+        <p class="text-[15px] text-[#d1d5db] leading-relaxed max-w-2xl mb-4">
+            Ton positionnement, c'est <strong class="text-white">la phrase</strong> qui répond à la question "pourquoi toi et pas un autre". Si tu ne sais pas répondre en une phrase, ton client non plus.
+        </p>
+
+        <p class="text-[13px] italic text-[#8a8f98]">
+            Un bon positionnement te rend inévitable pour un segment précis, et complètement invisible pour les autres. C'est exactement ce qu'on veut.
+        </p>
+    </header>
+
+    <!-- SECTION 1: LA PHRASE -->
+    <section class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="text-[#f97316]">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <h2 class="text-2xl font-bold mb-4">Ce module reprend tes questions Notion exactes</h2>
-            <p class="text-sm text-[#6B7280] leading-relaxed mb-6">
-                Pour respecter la règle "Notion = source de vérité", les questions et la structure de ce module seront reprises à l'identique de ton Brand OS Notion existant.
-                Envoie-moi le contenu de ta section Positionnement depuis Notion et je construis le module en quelques minutes.
-            </p>
-            <div class="flex items-center gap-4 p-5 bg-orange-50 border border-orange-100 rounded-2xl">
-                <svg class="w-5 h-5 text-[#f97316] flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <p class="text-xs text-[#1A1A2E] leading-relaxed">
-                    <span class="font-bold">Prérequis</span> : ce module ne peut être rempli qu'après avoir regardé les 3 vidéos pédagogiques et après Problèmes + Marché.
-                </p>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ta phrase de positionnement</h2>
+        </div>
+
+        <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#d1d5db]">En UNE phrase, pour qui tu es la meilleure option, et sur quoi précisément ?</p>
+        </div>
+
+        <div class="glass-card rounded-[16px] p-8 mb-6">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-[#f97316] mb-4 block">Ta phrase</label>
+            <textarea rows="3" class="input-transparent text-[22px] font-bold leading-snug text-white resize-none">On aide les consultants francophones à 5k-15k€/mois à passer à 30k+ grâce à un système de personal branding qui ne dépend plus de leur temps.</textarea>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CE QUI TE REND UNIQUE -->
+    <section class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="text-[#f97316]">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+            </div>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ce qui te rend unique</h2>
+        </div>
+
+        <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Quels sont les 3 éléments précis qui te différencient de tout le monde sur ton marché ?</p>
+        </div>
+
+        <div class="space-y-4 mb-6">
+            <div class="group relative glass-card rounded-[16px] p-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">01</div>
+                    <div class="flex-grow space-y-3">
+                        <input type="text" value="Méthode basée sur des données réelles, pas sur des frameworks génériques" class="input-transparent text-[16px] font-bold text-white">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">Chaque décision stratégique se prend à partir de ton Brand OS réel et de tes analytics, jamais à partir de conseils génériques type "sois authentique" qu'on lit partout.</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative glass-card rounded-[16px] p-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">02</div>
+                    <div class="flex-grow space-y-3">
+                        <input type="text" value="Radar marché croisé francophone et anglophone" class="input-transparent text-[16px] font-bold text-white">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">On te donne 6 à 12 mois d'avance sur le marché francophone en surveillant ce qui explose en anglophone, avant que tes concurrents ne le captent.</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="group relative glass-card rounded-[16px] p-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-[14px] font-bold text-[#f97316]">03</div>
+                    <div class="flex-grow space-y-3">
+                        <input type="text" value="Accompagnement coaching + outil logiciel intégrés" class="input-transparent text-[16px] font-bold text-white">
+                        <textarea rows="2" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">La plupart des concurrents vendent soit du coaching pur sans outil, soit un SaaS sans accompagnement. Ici tu as les deux dans un système unique qui se renforcent mutuellement.</textarea>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#f97316]/10 text-[#f97316] text-[13px] font-semibold hover:bg-[#f97316]/20 transition-all border border-[#f97316]/10">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+            Ajouter un différenciateur
+        </button>
+    </section>
+
+    <!-- SECTION 3: POUR QUI TU N'ES PAS FAIT -->
+    <section class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="text-[#f97316]">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            </div>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Pour qui tu n'es pas fait</h2>
+        </div>
+
+        <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Un bon positionnement exclut autant qu'il inclut. Pour qui tu refuses explicitement de travailler ?</p>
+        </div>
+
+        <div class="glass-card rounded-[16px] p-6">
+            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">On ne travaille pas avec les coaches débutants qui n'ont pas encore généré 5k€/mois. On ne travaille pas non plus avec ceux qui cherchent une solution miracle sans vouloir construire un système dans le temps. Et on refuse les clients qui pensent que le contenu se résume à "poster plus".</textarea>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TON POINT DE RUPTURE -->
+    <section class="mb-20">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="text-[#f97316]">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8a8f98]">Ton point de rupture</h2>
+        </div>
+
+        <div class="question-box rounded-[16px] p-6 mb-6 flex gap-4 items-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[#8a8f98] mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            <p class="text-[14px] leading-relaxed text-[#d1d5db]">Quelle est l'idée contre-intuitive ou la prise de position forte que tu défends et que personne d'autre ne dit ?</p>
+        </div>
+
+        <div class="glass-card rounded-[16px] p-6">
+            <textarea rows="5" class="input-transparent text-[14px] leading-relaxed text-[#d1d5db] resize-none">Le personal branding n'est pas un problème de contenu, c'est un problème de système. 90% des coaches essaient de poster plus, alors que le vrai levier est de construire une marque qui leur survit au-delà de leur dernière publication. On est les seuls à dire que le volume est un piège, pas une solution.</textarea>
+        </div>
+    </section>
+
+    <footer class="flex items-center justify-end pt-10 border-t border-white/5">
+        <button class="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-3.5 rounded-xl text-sm font-bold transition-all">Enregistrer mon Positionnement</button>
+    </footer>
+
+</div>
+
 </body>
 </html>

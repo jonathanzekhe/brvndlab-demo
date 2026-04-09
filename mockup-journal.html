@@ -7,12 +7,12 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #d1d5db; -webkit-font-smoothing: antialiased; }
-    .glass-card { background-color: #1a1a22; border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.2s ease; }
-    .glass-card:hover { border-color: rgba(255, 255, 255, 0.12); }
-    .input-dark { background: #15151c; border: 1px solid rgba(255,255,255,0.08); color: #f5f5f7; }
+    body { font-family: 'Inter', sans-serif; background-color: #EEF0F4; color: #1A1A2E; -webkit-font-smoothing: antialiased; }
+    .glass-card { background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.6); transition: all 0.2s ease; }
+    .glass-card:hover { border-color: rgba(249, 115, 22, 0.3); }
+    .input-dark { background: #ffffff; border: 1px solid #e5e7eb; color: #1A1A2E; }
     .input-dark:focus { outline: none; border-color: rgba(249, 115, 22, 0.5); }
-    .input-dark::placeholder { color: #525866; }
+    .input-dark::placeholder { color: #9CA3AF; }
 </style>
 </head>
 <body class="py-12 px-6 pb-32">
@@ -25,8 +25,8 @@
             <span>/</span>
             <span class="text-[#f97316]">Journal</span>
         </nav>
-        <h1 class="text-4xl font-bold text-white mb-3 tracking-tight">Journal</h1>
-        <p class="text-[14px] text-[#8a8f98] max-w-xl leading-relaxed">Un espace libre pour capturer tes wins, tes leçons, tes inspirations et tes idées. Tout ce qui nourrit ton Brand OS au fil du temps.</p>
+        <h1 class="text-4xl font-bold text-[#1A1A2E] mb-3 tracking-tight">Journal</h1>
+        <p class="text-[14px] text-[#9CA3AF] max-w-xl leading-relaxed">Un espace libre pour capturer tes wins, tes leçons, tes inspirations et tes idées. Tout ce qui nourrit ton Brand OS au fil du temps.</p>
     </header>
 
     <!-- ZONE DE CAPTURE -->
@@ -36,13 +36,13 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
             <div class="flex-1">
-                <textarea rows="3" placeholder="Qu'est-ce qui t'a marqué aujourd'hui ? Un win, une leçon, une idée, une inspiration..." class="w-full bg-transparent border-none outline-none resize-none text-[14px] leading-relaxed text-[#d1d5db] placeholder:text-[#525866]"></textarea>
-                <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
+                <textarea rows="3" placeholder="Qu'est-ce qui t'a marqué aujourd'hui ? Un win, une leçon, une idée, une inspiration..." class="w-full bg-transparent border-none outline-none resize-none text-[14px] leading-relaxed text-[#6B7280] placeholder:text-[#9CA3AF]"></textarea>
+                <div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-200">
                     <div class="flex items-center gap-2">
-                        <button class="w-9 h-9 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] text-[#8a8f98] hover:text-white transition-all flex items-center justify-center" title="Enregistrer vocalement">
+                        <button class="w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 text-[#9CA3AF] hover:text-[#1A1A2E] transition-all flex items-center justify-center" title="Enregistrer vocalement">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
                         </button>
-                        <span class="text-[10px] text-[#525866]">Cmd + Enter pour enregistrer</span>
+                        <span class="text-[10px] text-[#9CA3AF]">Cmd + Enter pour enregistrer</span>
                     </div>
                     <button class="bg-[#f97316] hover:bg-[#ea580c] text-white px-5 py-2 rounded-lg text-xs font-bold transition-all">Ajouter une note</button>
                 </div>
@@ -52,22 +52,22 @@
 
     <!-- FILTRES -->
     <div class="flex items-center gap-2 mb-8 overflow-x-auto">
-        <span class="text-[10px] font-bold uppercase tracking-widest text-[#525866] mr-2">Filtrer</span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#9CA3AF] mr-2">Filtrer</span>
         <button class="px-3 py-1.5 rounded-full bg-[#f97316] text-white text-xs font-bold">Tout</button>
-        <button class="px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] text-[#8a8f98] text-xs font-medium transition-all flex items-center gap-1.5 border border-white/[0.06]">
-            <svg class="w-3 h-3 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6m12 0h1.5a2.5 2.5 0 010 5H18m-12 0v3a6 6 0 0012 0V9m-12 0h12M9 21h6M12 17v4"/></svg>
+        <button class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#9CA3AF] text-xs font-medium transition-all flex items-center gap-1.5 border border-slate-200">
+            <svg class="w-3 h-3 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6m12 0h1.5a2.5 2.5 0 010 5H18m-12 0v3a6 6 0 0012 0V9m-12 0h12M9 21h6M12 17v4"/></svg>
             Wins
         </button>
-        <button class="px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] text-[#8a8f98] text-xs font-medium transition-all flex items-center gap-1.5 border border-white/[0.06]">
-            <svg class="w-3 h-3 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <button class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#9CA3AF] text-xs font-medium transition-all flex items-center gap-1.5 border border-slate-200">
+            <svg class="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
             Leçons
         </button>
-        <button class="px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] text-[#8a8f98] text-xs font-medium transition-all flex items-center gap-1.5 border border-white/[0.06]">
-            <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <button class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#9CA3AF] text-xs font-medium transition-all flex items-center gap-1.5 border border-slate-200">
+            <svg class="w-3 h-3 text-amber-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
             Inspirations
         </button>
-        <button class="px-3 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] text-[#8a8f98] text-xs font-medium transition-all flex items-center gap-1.5 border border-white/[0.06]">
-            <svg class="w-3 h-3 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/></svg>
+        <button class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#9CA3AF] text-xs font-medium transition-all flex items-center gap-1.5 border border-slate-200">
+            <svg class="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/></svg>
             Idées
         </button>
     </div>
@@ -79,31 +79,31 @@
         <article class="glass-card rounded-[20px] p-6">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center gap-2">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-wider border border-emerald-200">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6m12 0h1.5a2.5 2.5 0 010 5H18m-12 0v3a6 6 0 0012 0V9m-12 0h12M9 21h6M12 17v4"/></svg>
                         Win
                     </div>
-                    <span class="text-[11px] text-[#525866]">Aujourd'hui, 09:42</span>
+                    <span class="text-[11px] text-[#9CA3AF]">Aujourd'hui, 09:42</span>
                 </div>
-                <button class="text-[#525866] hover:text-red-400 transition-colors opacity-60 hover:opacity-100">
+                <button class="text-[#9CA3AF] hover:text-red-400 transition-colors opacity-60 hover:opacity-100">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/></svg>
                 </button>
             </div>
-            <p class="text-[14px] text-[#d1d5db] leading-relaxed">Signé un nouveau client high-ticket ce matin. 12k€ sur 6 mois, paiement en 2 fois. La méthode du questionnaire d'onboarding qu'on a mis en place fonctionne parfaitement, il est arrivé déjà convaincu à l'appel.</p>
+            <p class="text-[14px] text-[#6B7280] leading-relaxed">Signé un nouveau client high-ticket ce matin. 12k€ sur 6 mois, paiement en 2 fois. La méthode du questionnaire d'onboarding qu'on a mis en place fonctionne parfaitement, il est arrivé déjà convaincu à l'appel.</p>
         </article>
 
         <!-- Entry 2 - Inspiration avec lien -->
         <article class="glass-card rounded-[20px] p-6">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center gap-2">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-600 text-[10px] font-bold uppercase tracking-wider border border-amber-200">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                         Inspiration
                     </div>
-                    <span class="text-[11px] text-[#525866]">Hier, 18:15</span>
+                    <span class="text-[11px] text-[#9CA3AF]">Hier, 18:15</span>
                 </div>
             </div>
-            <p class="text-[14px] text-[#d1d5db] leading-relaxed">Vidéo d'Ali Abdaal sur le pricing qui m'a fait réfléchir sur la valeur perçue vs valeur réelle. Il explique que le client ne paie pas ton temps mais l'écart entre où il est et où il veut aller.
+            <p class="text-[14px] text-[#6B7280] leading-relaxed">Vidéo d'Ali Abdaal sur le pricing qui m'a fait réfléchir sur la valeur perçue vs valeur réelle. Il explique que le client ne paie pas ton temps mais l'écart entre où il est et où il veut aller.
                 <a href="#" class="inline-flex items-center gap-1 text-[#f97316] hover:underline ml-1">
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
                     YouTube
@@ -115,42 +115,42 @@
         <article class="glass-card rounded-[20px] p-6">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center gap-2">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider border border-blue-200">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
                         Leçon
                     </div>
-                    <span class="text-[11px] text-[#525866]">Hier, 14:30</span>
+                    <span class="text-[11px] text-[#9CA3AF]">Hier, 14:30</span>
                 </div>
             </div>
-            <p class="text-[14px] text-[#d1d5db] leading-relaxed">Grosse leçon avec Sarah aujourd'hui. Elle a échoué sur son dernier lancement parce qu'elle a voulu tout faire elle-même au lieu de déléguer. Le vrai problème, ce n'est pas le manque de temps, c'est la peur de lâcher prise. À appliquer avec les prochains clients.</p>
+            <p class="text-[14px] text-[#6B7280] leading-relaxed">Grosse leçon avec Sarah aujourd'hui. Elle a échoué sur son dernier lancement parce qu'elle a voulu tout faire elle-même au lieu de déléguer. Le vrai problème, ce n'est pas le manque de temps, c'est la peur de lâcher prise. À appliquer avec les prochains clients.</p>
         </article>
 
         <!-- Entry 4 - Idée -->
         <article class="glass-card rounded-[20px] p-6">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center gap-2">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-50 text-purple-600 text-[10px] font-bold uppercase tracking-wider border border-purple-200">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/></svg>
                         Idée
                     </div>
-                    <span class="text-[11px] text-[#525866]">Il y a 2 jours</span>
+                    <span class="text-[11px] text-[#9CA3AF]">Il y a 2 jours</span>
                 </div>
             </div>
-            <p class="text-[14px] text-[#d1d5db] leading-relaxed">Idée de vidéo YouTube : "Pourquoi 90% des coaches baissent leurs tarifs au mauvais moment". Angle contre-intuitif, on voit ce qu'on perd vraiment en baissant ses prix quand on devrait les augmenter. Hook potentiel avec mon propre exemple du passage de 2k à 6k.</p>
+            <p class="text-[14px] text-[#6B7280] leading-relaxed">Idée de vidéo YouTube : "Pourquoi 90% des coaches baissent leurs tarifs au mauvais moment". Angle contre-intuitif, on voit ce qu'on perd vraiment en baissant ses prix quand on devrait les augmenter. Hook potentiel avec mon propre exemple du passage de 2k à 6k.</p>
         </article>
 
         <!-- Entry 5 - Win -->
         <article class="glass-card rounded-[20px] p-6">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center gap-2">
-                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-wider border border-emerald-200">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6m12 0h1.5a2.5 2.5 0 010 5H18m-12 0v3a6 6 0 0012 0V9m-12 0h12M9 21h6M12 17v4"/></svg>
                         Win
                     </div>
-                    <span class="text-[11px] text-[#525866]">Il y a 3 jours</span>
+                    <span class="text-[11px] text-[#9CA3AF]">Il y a 3 jours</span>
                 </div>
             </div>
-            <p class="text-[14px] text-[#d1d5db] leading-relaxed">Reel Instagram à 58k vues en 48h. Le record absolu depuis qu'on a lancé la page. Le hook sur "les 3 erreurs qui tuent ton positionnement" a vraiment résonné. À décliner en thread LinkedIn et en vidéo YouTube long format.</p>
+            <p class="text-[14px] text-[#6B7280] leading-relaxed">Reel Instagram à 58k vues en 48h. Le record absolu depuis qu'on a lancé la page. Le hook sur "les 3 erreurs qui tuent ton positionnement" a vraiment résonné. À décliner en thread LinkedIn et en vidéo YouTube long format.</p>
         </article>
 
     </div>

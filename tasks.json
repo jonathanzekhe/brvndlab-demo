@@ -53,6 +53,13 @@
     {"id": 49, "ts": "2026-04-09T11:45", "category": "design", "module": "Brand OS", "title": "Story mockup refait avec 3 sections dynamiques (Parcours, Influences, Evolution)", "status": "done"},
     {"id": 50, "ts": "2026-04-09T11:50", "category": "fix", "module": "Brand OS", "title": "Hub refait en structure simple: 3 vidéos en haut + 12 modules avec lock", "status": "done"},
     {"id": 51, "ts": "2026-04-09T11:55", "category": "design", "module": "Journal", "title": "Journal créé: notes, wins, leçons, inspirations, idées avec entrée vocale", "status": "done"},
-    {"id": 52, "ts": "2026-04-09T12:00", "category": "milestone", "module": "Brand OS", "title": "Story VALIDÉ par Jonathan (3 sections dynamiques du code Next.js)", "status": "done"}
+    {"id": 52, "ts": "2026-04-09T12:00", "category": "milestone", "module": "Brand OS", "title": "Story VALIDÉ par Jonathan (3 sections dynamiques du code Next.js)", "status": "done"},
+    {"id": 53, "ts": "2026-04-09T12:15", "category": "milestone", "module": "Brand OS", "title": "Hub Brand OS VALIDÉ par Jonathan (3 vidéos en haut + 12 modules avec lock)", "status": "done"},
+    {"id": 54, "ts": "2026-04-09T12:15", "category": "milestone", "module": "Journal", "title": "Journal VALIDÉ par Jonathan", "status": "done"},
+    {"id": 55, "ts": "2026-04-09T12:20", "category": "fix", "module": "Brand OS", "title": "Marché rempli avec vrai contenu (niche, taille, concurrence, opportunités)", "status": "done"},
+    {"id": 56, "ts": "2026-04-09T12:20", "category": "fix", "module": "Brand OS", "title": "Positionnement rempli avec vrai contenu (phrase, différenciateurs, exclusions, rupture)", "status": "done"},
+    {"id": 57, "ts": "2026-04-09T12:25", "category": "fix", "module": "Brand OS", "title": "Story converti en mode clair par défaut", "status": "done"},
+    {"id": 58, "ts": "2026-04-09T12:25", "category": "fix", "module": "Journal", "title": "Journal converti en mode clair par défaut", "status": "done"},
+    {"id": 59, "ts": "2026-04-09T12:25", "category": "memory", "module": "Features", "title": "Feature toggle dark/light mode scellée, défaut clair, disponible dans Settings", "status": "done"}
   ]
 }
