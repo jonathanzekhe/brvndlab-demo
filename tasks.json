@@ -38,6 +38,8 @@
     {"id": 34, "ts": "2026-04-09T08:50", "category": "milestone", "module": "Onboarding", "title": "Questionnaire 23 questions VALIDÉ par Jonathan", "status": "done"},
     {"id": 35, "ts": "2026-04-09T09:05", "category": "memory", "module": "Rules", "title": "Règle toujours fournir le lien avant de demander validation", "status": "done"},
     {"id": 36, "ts": "2026-04-09T09:10", "category": "fix", "module": "Brand OS", "title": "Suppression doublons Problématiques et Offre (déjà dans Message)", "status": "done"},
-    {"id": 37, "ts": "2026-04-09T09:10", "category": "fix", "module": "Brand OS", "title": "Index mis à jour, 9 modules dans Brand OS au lieu de 11", "status": "done"}
+    {"id": 37, "ts": "2026-04-09T09:10", "category": "fix", "module": "Brand OS", "title": "Index mis à jour, 9 modules dans Brand OS au lieu de 11", "status": "done"},
+    {"id": 38, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Hub Brand OS VALIDÉ par Jonathan", "status": "done"},
+    {"id": 39, "ts": "2026-04-09T09:20", "category": "milestone", "module": "Brand OS", "title": "Message central et primaire VALIDÉ par Jonathan", "status": "done"}
   ]
 }
